@@ -116,21 +116,7 @@ fd(s) final demands /Household,GOVERNMENT,INVESTMENT,export,import/
 h(fd) households /Household,GOVERNMENT/
 ;
 
-*----------------------------------------------*
-*==sets for emission
-*----------------------------------------------*
-sets
-ef  effluent categories /CO2,SO2,NOX/
 
-ghg(ef) greenhouse gases /CO2/
-
-crit(ef) criteria pollutants /NOX,SO2/
-
-pollutant /CO2,SO2,NOX/
-air_p(pollutant) /SO2,NOX/
-Pitem /e,g,a/
-Psource /coal,roil,gas,process/
-;
 *----------------------------------------------*
 *==sets for dynamic process
 *----------------------------------------------*

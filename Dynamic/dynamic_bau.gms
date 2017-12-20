@@ -131,6 +131,16 @@ report8("output",t,"Total")=sum(sub_elec,report8("output",t,sub_elec));
 report8("share",t,sub_elec)$(not wse(sub_elec))=qelec.l(sub_elec)/report8("output",t,"Total");
 report8("share",t,sub_elec)$(wse(sub_elec))=qelec.l(sub_elec)/report8("output",t,"Total");
 
+report12("Billion Yuan",t,e)=qc.l(e)+sum(j,qin.l(e,j))+sum(sub_elec,qin_ele.l(e,sub_elec));
+report12("Billion Yuan",t,sub_elec)=report12("Billion Yuan",t,"elecutil")*report8("share",t,sub_elec);
+report12("coal equivalent calculation(Mt)",t,fe)=eet1(fe)/100*report12("Billion Yuan",t,fe)/report12("Billion Yuan","2010",fe);
+report12("coal equivalent calculation(Mt)",t,sub_elec)$(cfe(sub_elec))=eet1(sub_elec)/100*report12("Billion Yuan",t,sub_elec)/report12("Billion Yuan","2010",sub_elec);
+report12("coal equivalent calculation(Mt)",t,"Total")=sum(fe,report12("coal equivalent calculation(Mt)",t,fe))+sum(sub_elec,report12("coal equivalent calculation(Mt)",t,sub_elec));
+report12("coal equivalent calculation(Mt)",t,"nfshare")=sum(sub_elec,report12("coal equivalent calculation(Mt)",t,sub_elec))/report12("coal equivalent calculation(Mt)",t,"Total");
+report12("calorific value calculation(Mt)",t,fe)=eet2(fe)/100*report12("Billion Yuan",t,fe)/report12("Billion Yuan","2010",fe);
+report12("calorific value calculation(Mt)",t,sub_elec)$(cfe(sub_elec))=eet2(sub_elec)/100*report12("Billion Yuan",t,sub_elec)/report12("Billion Yuan","2010",sub_elec);
+report12("calorific value calculation(Mt)",t,"Total")=sum(fe,report12("calorific value calculation(Mt)",t,fe))+sum(sub_elec,report12("calorific value calculation(Mt)",t,sub_elec));
+report12("calorific value calculation(Mt)",t,"nfshare")=sum(sub_elec,report12("calorific value calculation(Mt)",t,sub_elec))/report12("calorific value calculation(Mt)",t,"Total");
 
 
 qlin.l(lm,"elec")=sum(sub_elec,qlin_ele.l(lm,sub_elec));

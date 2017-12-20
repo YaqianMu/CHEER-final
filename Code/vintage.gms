@@ -14,7 +14,7 @@ set v_i(i) sectors with vintage production;
 
       v_i(i)=0;
 *      v_i(i)$(not elec(i))=1;          
-      v_i(i)$(elec(i))=1;
+      v_i(i)=1;
 
 parameter       tmk         total supply of malleable capital
                 tvk         total supply of vintage capital
@@ -72,7 +72,7 @@ parameter   Vist_out(sub_ist)      vintage coefficient for output
             tvk_ist(sub_ist)=kist0(sub_ist)*phi_vk0("ist");
 
 *//update capital endowment
-            tvk(i)$(not elec(i))=fact0("capital",i)*phi_vk0(i);
+            tvk(i)$(not elec(i) and not ist(i))=fact0("capital",i)*phi_vk0(i);
             tmk=fact("capital")-sum(i,tvk(i))
                 -sum(sub_elec,tvk_elec(sub_elec))
                 -sum(sub_ist,tvk_ist(sub_ist));

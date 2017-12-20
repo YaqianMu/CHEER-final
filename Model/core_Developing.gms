@@ -84,7 +84,6 @@ pco2_a$clim_a          !shadow value of carbon selected sectors covered
 pco2_s(i)$clim_s(i)    !shadow value of carbon sector by sector
 pco2_h$clim_h          !shadow value of carbon for household sector
 
-*pco2_m(s)$clim_m(s)              !shadow value of carbon all sectors covered
 pco2_ms$clim_ms
 
 Pers$pflag             ! Price for permits of electricity generation
@@ -168,15 +167,15 @@ $prod:yelec(sub_elec)$wse(sub_elec) s:esub_elec("NR",sub_elec) b:esub_elec("IT",
 
 *     Production of backstop technologices
 $prod:ybt_elec(bt_elec)$Switch_bt(bt_elec)  s:0 sa(s):esub_bt("NR",bt_elec)   gva(sa):esub_bt("gva",bt_elec)  gl(gva):esub_l("l") sva(sa):esub_bt("SVA",bt_elec)  sl(sva):esub_l("l") roil(sa):0 coal(sa):0 gas(sa):0
-    o:pbt(bt_elec)                               q:1
-    i:pbf(bt_elec)                               q:(bsin("ffa",bt_elec)*bmkup(bt_elec))                    sa:
-    i:plo(lm,"elec")$ll(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
-    i:plo(lm,"elec")$hl(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
-    i:pk                                         q:(bsin("k",bt_elec)*bmkup(bt_elec))                      gva:
-    i:plo(lm,"elec")$ll(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
-    i:plo(lm,"elec")$hl(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
-    i:pk                                         q:(bsin("kseq",bt_elec)*bmkup(bt_elec))                   sva:
-    i:py_c(fe,"elec")                            q:(bsin(fe,bt_elec)*aeei("elec")*bmkup(bt_elec))                                                                fe.tl:
+        o:pbt(bt_elec)                               q:1
+        i:pbf(bt_elec)                               q:(bsin("ffa",bt_elec)*bmkup(bt_elec))                    sa:
+        i:plo(lm,"elec")$ll(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
+        i:plo(lm,"elec")$hl(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
+        i:pk                                         q:(bsin("k",bt_elec)*bmkup(bt_elec))                      gva:
+        i:plo(lm,"elec")$ll(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
+        i:plo(lm,"elec")$hl(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
+        i:pk                                         q:(bsin("kseq",bt_elec)*bmkup(bt_elec))                   sva:
+        i:py_c(fe,"elec")                            q:(bsin(fe,bt_elec)*aeei("elec")*bmkup(bt_elec))                                                                fe.tl:
 
 $prod:bres_ngcap$(Switch_bt("ngcap"))
         o:pbf("ngcap")                                          q:bres("ngcc")
@@ -311,17 +310,6 @@ $prod:yv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i)) s:0 coal:0 roi
         i:py(elec)                          q:V_int(elec,i)                          
         i:py_c(fe,i)                        q:(V_int(fe,i)*(1-r_feed(fe,i)))                            fe.tl:
 
-*$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0 
-*        o:pelec(sub_elec)$ffe(sub_elec)                      q:outputelec0(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
-*        o:pelec(sub_elec)$TD(sub_elec)                       q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)        
-*        o:pelec(sub_elec)$(not ffe(sub_elec) and not TD(sub_elec))                q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-*        i:py(i)$(not e(i))                                   q:(intelec0(i,sub_elec)*emkup(sub_elec))
-*        i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))
-*        i:py(elec)                                           q:(intelec0(elec,sub_elec)*emkup(sub_elec))
-*        i:pl_elec(sub_elec)                                  q:(lelec0(sub_elec)*emkup(sub_elec))                      
-*        i:pkv_elec(sub_elec)                                 q:(Kelec0(sub_elec)*emkup(sub_elec))                      
-*        i:py_c(fe,"elec")$intelec0(fe,sub_elec)              q:(intelec0(fe,sub_elec)*emkup(sub_elec))                         
-
 $prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0 
         o:pelec(sub_elec)$ffe(sub_elec)                      q:Velec_out(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
         o:pelec(sub_elec)$TD(sub_elec)                       q:Velec_out(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)        
@@ -334,7 +322,6 @@ $prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0
         i:pkv_elec(sub_elec)                                 q:Velec_k(sub_elec)
         i:py_c(fe,"elec")$intelec0(fe,sub_elec)              q:Velec_int(fe,sub_elec)
         I:Pers$(pflag and ffe(sub_elec))                     Q:((phi/(1-phi)))
-
 
 $prod:yv_ist(sub_ist)$(switch_vk and v_i("ist")) s:0
         o:pist(sub_ist)                     q:Vist_out(sub_ist)              p:(1-taxist0(sub_ist))  a:ra  t:taxist0(sub_ist)
@@ -385,13 +372,13 @@ $constraint:sff(x)$ffact0(x)
      sff(x)    =e= (pffact(x)/pu)**eta(x);
 
 $constraint:sffelec(sub_elec)$(ffelec0(sub_elec) and hne(sub_elec))
-    sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
+     sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
 
 $constraint:sffelec(sub_elec)$(wsb(sub_elec) and re_s eq 1)
-        sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
+     sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
 
 $constraint:sffelec(sub_elec)$(wsb(sub_elec) and re_s eq 0)
-   yelec(sub_elec) =e=ret0(sub_elec);
+     yelec(sub_elec) =e=ret0(sub_elec);
 *     sffelec(sub_elec) =e= 1;
 
 * wage curve for skilled labor
@@ -605,6 +592,8 @@ $include CHEER.gen
 
 *EXECUTE_LOADPOINT 'CHEER_p';
 solve CHEER using mcp;
+abort$(ABS(Smax(i,y.l(i)-1)) GT 1.E-4)
+            "*** CHEER benchmark does not calibrate";
 
 CHEER.Savepoint = 1;
 

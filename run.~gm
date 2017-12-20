@@ -97,7 +97,7 @@ parameter switch_ist switch for disaggregated ist production;
 switch_ist=1;
 
 parameter switch_vk switch for vintage production;
-switch_vk=0;
+switch_vk=1;
 
 *== in the data process to change the feed stock rate
 *parameter Switch_feed switch for feedstock ;
