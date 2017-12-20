@@ -1,0 +1,1366 @@
+Scenario,year,variable,sector,sector2,subsector,labor,qualifier,value,solvestat
+"BAU","2012","output","Elec","","","","output",4850.169685584,1.000000000
+"BAU","2012","Sectoral price","Elec","","","","Sectoral price",1.000000031,1.000000000
+"BAU","2012","employment","Elec","","","LabSk","employment",1450.169956311,1.000000000
+"BAU","2012","Sectoral wage","Elec","","","LabSk","Sectoral wage",0.112761840,1.000000000
+"BAU","2012","employment","Elec","","","LabUn","employment",2480.529204650,1.000000000
+"BAU","2012","Sectoral wage","Elec","","","LabUn","Sectoral wage",0.079323429,1.000000000
+"BAU","2012","output","Coal","","","","output",2748.764588186,1.000000000
+"BAU","2012","Sectoral price","Coal","","","","Sectoral price",1.000000016,1.000000000
+"BAU","2012","employment","Coal","","","LabSk","employment",573.101559254,1.000000000
+"BAU","2012","Sectoral wage","Coal","","","LabSk","Sectoral wage",0.173625455,1.000000000
+"BAU","2012","employment","Coal","","","LabUn","employment",4576.822854639,1.000000000
+"BAU","2012","Sectoral wage","Coal","","","LabUn","Sectoral wage",0.115713000,1.000000000
+"BAU","2012","output","Oilgas","","","","output",1133.067633586,1.000000000
+"BAU","2012","Sectoral price","Oilgas","","","","Sectoral price",1.000000043,1.000000000
+"BAU","2012","employment","Oilgas","","","LabSk","employment",419.061749272,1.000000000
+"BAU","2012","Sectoral wage","Oilgas","","","LabSk","Sectoral wage",0.373883740,1.000000000
+"BAU","2012","employment","Oilgas","","","LabUn","employment",695.641268544,1.000000000
+"BAU","2012","Sectoral wage","Oilgas","","","LabUn","Sectoral wage",0.264023926,1.000000000
+"BAU","2012","output","Roil","","","","output",3489.168125683,1.000000000
+"BAU","2012","Sectoral price","Roil","","","","Sectoral price",1.000000037,1.000000000
+"BAU","2012","employment","Roil","","","LabSk","employment",222.081269629,1.000000000
+"BAU","2012","Sectoral wage","Roil","","","LabSk","Sectoral wage",0.179664737,1.000000000
+"BAU","2012","employment","Roil","","","LabUn","employment",347.864902274,1.000000000
+"BAU","2012","Sectoral wage","Roil","","","LabUn","Sectoral wage",0.125579869,1.000000000
+"BAU","2012","output","Gas","","","","output",403.422892892,1.000000000
+"BAU","2012","Sectoral price","Gas","","","","Sectoral price",1.000000032,1.000000000
+"BAU","2012","employment","Gas","","","LabSk","employment",148.017059747,1.000000000
+"BAU","2012","Sectoral wage","Gas","","","LabSk","Sectoral wage",0.049998396,1.000000000
+"BAU","2012","employment","Gas","","","LabUn","employment",346.801406235,1.000000000
+"BAU","2012","Sectoral wage","Gas","","","LabUn","Sectoral wage",0.034716490,1.000000000
+"BAU","2012","output","Agri","","","","output",8952.767193646,1.000000000
+"BAU","2012","Sectoral price","Agri","","","","Sectoral price",1.000000006,1.000000000
+"BAU","2012","employment","Agri","","","LabSk","employment",7081.418654976,1.000000000
+"BAU","2012","Sectoral wage","Agri","","","LabSk","Sectoral wage",0.026637932,1.000000000
+"BAU","2012","employment","Agri","","","LabUn","employment",3.2943935357E+5,1.000000000
+"BAU","2012","Sectoral wage","Agri","","","LabUn","Sectoral wage",0.015514229,1.000000000
+"BAU","2012","output","mine","","","","output",1880.434788447,1.000000000
+"BAU","2012","Sectoral price","mine","","","","Sectoral price",1.000000020,1.000000000
+"BAU","2012","employment","mine","","","LabSk","employment",232.444240026,1.000000000
+"BAU","2012","Sectoral wage","mine","","","LabSk","Sectoral wage",0.206741699,1.000000000
+"BAU","2012","employment","mine","","","LabUn","employment",2117.962540815,1.000000000
+"BAU","2012","Sectoral wage","mine","","","LabUn","Sectoral wage",0.132384336,1.000000000
+"BAU","2012","output","Food","","","","output",8853.384595788,1.000000000
+"BAU","2012","Sectoral price","Food","","","","Sectoral price",1.000000006,1.000000000
+"BAU","2012","employment","Food","","","LabSk","employment",1032.779180104,1.000000000
+"BAU","2012","Sectoral wage","Food","","","LabSk","Sectoral wage",0.120163310,1.000000000
+"BAU","2012","employment","Food","","","LabUn","employment",8218.314633587,1.000000000
+"BAU","2012","Sectoral wage","Food","","","LabUn","Sectoral wage",0.062994800,1.000000000
+"BAU","2012","output","Paper","","","","output",1239.293338287,1.000000000
+"BAU","2012","Sectoral price","Paper","","","","Sectoral price",1.000000006,1.000000000
+"BAU","2012","employment","Paper","","","LabSk","employment",208.319455089,1.000000000
+"BAU","2012","Sectoral wage","Paper","","","LabSk","Sectoral wage",0.070189216,1.000000000
+"BAU","2012","employment","Paper","","","LabUn","employment",1980.883635585,1.000000000
+"BAU","2012","Sectoral wage","Paper","","","LabUn","Sectoral wage",0.047840369,1.000000000
+"BAU","2012","output","Chem","","","","output",2802.080998580,1.000000000
+"BAU","2012","Sectoral price","Chem","","","","Sectoral price",1.000000018,1.000000000
+"BAU","2012","employment","Chem","","","LabSk","employment",372.916627481,1.000000000
+"BAU","2012","Sectoral wage","Chem","","","LabSk","Sectoral wage",0.100010512,1.000000000
+"BAU","2012","employment","Chem","","","LabUn","employment",1338.667151080,1.000000000
+"BAU","2012","Sectoral wage","Chem","","","LabUn","Sectoral wage",0.066629954,1.000000000
+"BAU","2012","output","CM","","","","output",1681.405727385,1.000000000
+"BAU","2012","Sectoral price","CM","","","","Sectoral price",1.000000019,1.000000000
+"BAU","2012","employment","CM","","","LabSk","employment",243.362861450,1.000000000
+"BAU","2012","Sectoral wage","CM","","","LabSk","Sectoral wage",0.092135471,1.000000000
+"BAU","2012","employment","CM","","","LabUn","employment",2109.034910475,1.000000000
+"BAU","2012","Sectoral wage","CM","","","LabUn","Sectoral wage",0.062466256,1.000000000
+"BAU","2012","output","IST","","","","output",1601.223402621,1.000000000
+"BAU","2012","Sectoral price","IST","","","","Sectoral price",0.999999566,1.000000000
+"BAU","2012","employment","IST","","","LabSk","employment",0.000000000,1.000000000
+"BAU","2012","Sectoral wage","IST","","","LabSk","Sectoral wage",0.276431732,1.000000000
+"BAU","2012","employment","IST","","","LabUn","employment",0.000000000,1.000000000
+"BAU","2012","Sectoral wage","IST","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2012","output","NFM","","","","output",2338.406948057,1.000000000
+"BAU","2012","Sectoral price","NFM","","","","Sectoral price",1.000000011,1.000000000
+"BAU","2012","employment","NFM","","","LabSk","employment",195.295307583,1.000000000
+"BAU","2012","Sectoral wage","NFM","","","LabSk","Sectoral wage",0.162855222,1.000000000
+"BAU","2012","employment","NFM","","","LabUn","employment",839.415761030,1.000000000
+"BAU","2012","Sectoral wage","NFM","","","LabUn","Sectoral wage",0.111736665,1.000000000
+"BAU","2012","output","EII","","","","output",22445.984280124,1.000000000
+"BAU","2012","Sectoral price","EII","","","","Sectoral price",0.999999984,1.000000000
+"BAU","2012","employment","EII","","","LabSk","employment",2567.056649681,1.000000000
+"BAU","2012","Sectoral wage","EII","","","LabSk","Sectoral wage",0.122948164,1.000000000
+"BAU","2012","employment","EII","","","LabUn","employment",20209.591671110,1.000000000
+"BAU","2012","Sectoral wage","EII","","","LabUn","Sectoral wage",0.066568514,1.000000000
+"BAU","2012","output","OM","","","","output",50728.621217933,1.000000000
+"BAU","2012","Sectoral price","OM","","","","Sectoral price",0.999999998,1.000000000
+"BAU","2012","employment","OM","","","LabSk","employment",11598.088350362,1.000000000
+"BAU","2012","Sectoral wage","OM","","","LabSk","Sectoral wage",0.082219817,1.000000000
+"BAU","2012","employment","OM","","","LabUn","employment",1.0957377118E+5,1.000000000
+"BAU","2012","Sectoral wage","OM","","","LabUn","Sectoral wage",0.043356739,1.000000000
+"BAU","2012","output","Air","","","","output",509.799427697,1.000000000
+"BAU","2012","Sectoral price","Air","","","","Sectoral price",1.000000017,1.000000000
+"BAU","2012","employment","Air","","","LabSk","employment",279.779500864,1.000000000
+"BAU","2012","Sectoral wage","Air","","","LabSk","Sectoral wage",0.132826220,1.000000000
+"BAU","2012","employment","Air","","","LabUn","employment",183.359917996,1.000000000
+"BAU","2012","Sectoral wage","Air","","","LabUn","Sectoral wage",0.090457954,1.000000000
+"BAU","2012","output","Tran","","","","output",5040.606350719,1.000000000
+"BAU","2012","Sectoral price","Tran","","","","Sectoral price",1.000000012,1.000000000
+"BAU","2012","employment","Tran","","","LabSk","employment",2270.710218173,1.000000000
+"BAU","2012","Sectoral wage","Tran","","","LabSk","Sectoral wage",0.064571231,1.000000000
+"BAU","2012","employment","Tran","","","LabUn","employment",22039.234140953,1.000000000
+"BAU","2012","Sectoral wage","Tran","","","LabUn","Sectoral wage",0.036050845,1.000000000
+"BAU","2012","output","Serv","","","","output",39413.896285995,1.000000000
+"BAU","2012","Sectoral price","Serv","","","","Sectoral price",1.000000003,1.000000000
+"BAU","2012","employment","Serv","","","LabSk","employment",55969.497173329,1.000000000
+"BAU","2012","Sectoral wage","Serv","","","LabSk","Sectoral wage",0.094689478,1.000000000
+"BAU","2012","employment","Serv","","","LabUn","employment",1.2739757686E+5,1.000000000
+"BAU","2012","Sectoral wage","Serv","","","LabUn","Sectoral wage",0.036303776,1.000000000
+"BAU","2012","elec_output","","","T_D","","elec_output",4917.100137455,1.000000000
+"BAU","2012","elec_price","","","T_D","","elec_price",0.208262769,1.000000000
+"BAU","2012","elec_share","","","T_D","","elec_share",0.499999999,1.000000000
+"BAU","2012","elec_tax","","","T_D","","elec_tax",0.048282465,1.000000000
+"BAU","2012","employment","","","T_D","LabSk","employment",526.489089108,1.000000000
+"BAU","2012","employment","","","T_D","LabUn","employment",900.564488042,1.000000000
+"BAU","2012","elec_output","","","Coal_Power","","elec_output",3710.400148351,1.000000000
+"BAU","2012","elec_price","","","Coal_Power","","elec_price",0.690817887,1.000000000
+"BAU","2012","elec_share","","","Coal_Power","","elec_share",0.377295564,1.000000000
+"BAU","2012","elec_tax","","","Coal_Power","","elec_tax",0.054757713,1.000000000
+"BAU","2012","employment","","","Coal_Power","LabSk","employment",659.227735447,1.000000000
+"BAU","2012","employment","","","Coal_Power","LabUn","employment",1127.615173025,1.000000000
+"BAU","2012","elec_output","","","Gas_Power","","elec_output",109.200004157,1.000000000
+"BAU","2012","elec_price","","","Gas_Power","","elec_price",0.826455128,1.000000000
+"BAU","2012","elec_share","","","Gas_Power","","elec_share",0.011104106,1.000000000
+"BAU","2012","elec_tax","","","Gas_Power","","elec_tax",0.045770915,1.000000000
+"BAU","2012","employment","","","Gas_Power","LabSk","employment",11.300473717,1.000000000
+"BAU","2012","employment","","","Gas_Power","LabUn","employment",19.329565396,1.000000000
+"BAU","2012","elec_output","","","Oil_Power","","elec_output",5.400000248,1.000000000
+"BAU","2012","elec_price","","","Oil_Power","","elec_price",4.184584003,1.000000000
+"BAU","2012","elec_share","","","Oil_Power","","elec_share",0.000549104,1.000000000
+"BAU","2012","elec_tax","","","Oil_Power","","elec_tax",0.009039753,1.000000000
+"BAU","2012","employment","","","Oil_Power","LabSk","employment",1.299062608,1.000000000
+"BAU","2012","employment","","","Oil_Power","LabUn","employment",2.222058675,1.000000000
+"BAU","2012","elec_output","","","Nuclear","","elec_output",98.300000000,1.000000000
+"BAU","2012","elec_price","","","Nuclear","","elec_price",1.383167096,1.000000000
+"BAU","2012","elec_share","","","Nuclear","","elec_share",0.009995729,1.000000000
+"BAU","2012","elec_tax","","","Nuclear","","elec_tax",0.012888976,1.000000000
+"BAU","2012","employment","","","Nuclear","LabSk","employment",8.124785599,1.000000000
+"BAU","2012","employment","","","Nuclear","LabUn","employment",13.897521407,1.000000000
+"BAU","2012","elec_output","","","Hydro","","elec_output",855.600000000,1.000000000
+"BAU","2012","elec_price","","","Hydro","","elec_price",0.851496908,1.000000000
+"BAU","2012","elec_share","","","Hydro","","elec_share",0.087002499,1.000000000
+"BAU","2012","elec_tax","","","Hydro","","elec_tax",0.044424834,1.000000000
+"BAU","2012","employment","","","Hydro","LabSk","employment",224.572354563,1.000000000
+"BAU","2012","employment","","","Hydro","LabUn","employment",384.133103040,1.000000000
+"BAU","2012","elec_output","","","Wind","","elec_output",103.000000000,1.000000000
+"BAU","2012","elec_price","","","Wind","","elec_price",2.115316977,1.000000000
+"BAU","2012","elec_share","","","Wind","","elec_share",0.010473653,1.000000000
+"BAU","2012","elec_tax","","","Wind","","elec_tax",-0.053028648,1.000000000
+"BAU","2012","employment","","","Wind","LabSk","employment",5.232536852,1.000000000
+"BAU","2012","employment","","","Wind","LabUn","employment",8.950302987,1.000000000
+"BAU","2012","elec_output","","","Solar","","elec_output",3.600000000,1.000000000
+"BAU","2012","elec_price","","","Solar","","elec_price",2.247831644,1.000000000
+"BAU","2012","elec_share","","","Solar","","elec_share",0.000366069,1.000000000
+"BAU","2012","elec_tax","","","Solar","","elec_tax",-0.227851771,1.000000000
+"BAU","2012","employment","","","Solar","LabSk","employment",0.240459623,1.000000000
+"BAU","2012","employment","","","Solar","LabUn","employment",0.411308422,1.000000000
+"BAU","2012","elec_output","","","Biomass","","elec_output",31.600000000,1.000000000
+"BAU","2012","elec_price","","","Biomass","","elec_price",1.885714384,1.000000000
+"BAU","2012","elec_share","","","Biomass","","elec_share",0.003213276,1.000000000
+"BAU","2012","elec_tax","","","Biomass","","elec_tax",-0.165545967,1.000000000
+"BAU","2012","employment","","","Biomass","LabSk","employment",13.683458796,1.000000000
+"BAU","2012","employment","","","Biomass","LabUn","employment",23.405683656,1.000000000
+"BAU","2012","ECO2","Elec","","","","ECO2",2.507499265,1.000000000
+"BAU","2012","ECO2","Coal","","","","ECO2",0.829254910,1.000000000
+"BAU","2012","ECO2","Oilgas","","","","ECO2",0.013643859,1.000000000
+"BAU","2012","ECO2","Roil","","","","ECO2",0.092611046,1.000000000
+"BAU","2012","ECO2","Gas","","","","ECO2",0.122386898,1.000000000
+"BAU","2012","ECO2","Agri","","","","ECO2",0.055638183,1.000000000
+"BAU","2012","ECO2","mine","","","","ECO2",0.082489799,1.000000000
+"BAU","2012","ECO2","Food","","","","ECO2",0.056849157,1.000000000
+"BAU","2012","ECO2","Paper","","","","ECO2",0.070878860,1.000000000
+"BAU","2012","ECO2","Chem","","","","ECO2",0.429269388,1.000000000
+"BAU","2012","ECO2","CM","","","","ECO2",0.988311583,1.000000000
+"BAU","2012","ECO2","IST","","","","ECO2",0.000000000,1.000000000
+"BAU","2012","ECO2","NFM","","","","ECO2",0.128306425,1.000000000
+"BAU","2012","ECO2","EII","","","","ECO2",2.138266671,1.000000000
+"BAU","2012","ECO2","OM","","","","ECO2",0.304883784,1.000000000
+"BAU","2012","ECO2","Air","","","","ECO2",0.049413289,1.000000000
+"BAU","2012","ECO2","Tran","","","","ECO2",0.333656729,1.000000000
+"BAU","2012","ECO2","Serv","","","","ECO2",0.233545960,1.000000000
+"BAU","2012","ECO2","fd","","","","ECO2",0.202459980,1.000000000
+"BAU","2012","ECO2","","total","","","ECO2",8.639365788,1.000000000
+"BAU","2012","ESO2","Elec","","","","ESO2",9.543746624,1.000000000
+"BAU","2012","ESO2","Coal","","","","ESO2",0.187712781,1.000000000
+"BAU","2012","ESO2","Oilgas","","","","ESO2",0.000021688,1.000000000
+"BAU","2012","ESO2","Roil","","","","ESO2",1.883600137,1.000000000
+"BAU","2012","ESO2","Gas","","","","ESO2",0.000000000,1.000000000
+"BAU","2012","ESO2","Agri","","","","ESO2",0.004214357,1.000000000
+"BAU","2012","ESO2","mine","","","","ESO2",0.000000000,1.000000000
+"BAU","2012","ESO2","Food","","","","ESO2",0.836074011,1.000000000
+"BAU","2012","ESO2","Paper","","","","ESO2",0.792139253,1.000000000
+"BAU","2012","ESO2","Chem","","","","ESO2",2.288776825,1.000000000
+"BAU","2012","ESO2","CM","","","","ESO2",3.082516069,1.000000000
+"BAU","2012","ESO2","IST","","","","ESO2",3.860192220,1.000000000
+"BAU","2012","ESO2","NFM","","","","ESO2",1.835837103,1.000000000
+"BAU","2012","ESO2","EII","","","","ESO2",0.575880252,1.000000000
+"BAU","2012","ESO2","OM","","","","ESO2",0.817785448,1.000000000
+"BAU","2012","ESO2","Air","","","","ESO2",0.012249467,1.000000000
+"BAU","2012","ESO2","Tran","","","","ESO2",0.820742607,1.000000000
+"BAU","2012","ESO2","Serv","","","","ESO2",0.000000000,1.000000000
+"BAU","2012","ESO2","fd","","","","ESO2",2.326905187,1.000000000
+"BAU","2012","ESO2","","total","","","ESO2",28.868394028,1.000000000
+"BAU","2012","ENOX","Elec","","","","ENOX",8.547674366,1.000000000
+"BAU","2012","ENOX","Coal","","","","ENOX",0.023374205,1.000000000
+"BAU","2012","ENOX","Oilgas","","","","ENOX",0.002216589,1.000000000
+"BAU","2012","ENOX","Roil","","","","ENOX",1.018037069,1.000000000
+"BAU","2012","ENOX","Gas","","","","ENOX",0.000000000,1.000000000
+"BAU","2012","ENOX","Agri","","","","ENOX",0.789038190,1.000000000
+"BAU","2012","ENOX","mine","","","","ENOX",0.000000000,1.000000000
+"BAU","2012","ENOX","Food","","","","ENOX",0.222405241,1.000000000
+"BAU","2012","ENOX","Paper","","","","ENOX",0.252711022,1.000000000
+"BAU","2012","ENOX","Chem","","","","ENOX",0.653622575,1.000000000
+"BAU","2012","ENOX","CM","","","","ENOX",3.323746567,1.000000000
+"BAU","2012","ENOX","IST","","","","ENOX",1.201299673,1.000000000
+"BAU","2012","ENOX","NFM","","","","ENOX",0.284421227,1.000000000
+"BAU","2012","ENOX","EII","","","","ENOX",0.158964828,1.000000000
+"BAU","2012","ENOX","OM","","","","ENOX",0.206671855,1.000000000
+"BAU","2012","ENOX","Air","","","","ENOX",0.118602533,1.000000000
+"BAU","2012","ENOX","Tran","","","","ENOX",4.085202656,1.000000000
+"BAU","2012","ENOX","Serv","","","","ENOX",0.000000000,1.000000000
+"BAU","2012","ENOX","fd","","","","ENOX",1.224533137,1.000000000
+"BAU","2012","ENOX","","total","","","ENOX",22.112521732,1.000000000
+"BAU","2012","elec_CO2","","","T_D","","elec_CO2",0.003552070,1.000000000
+"BAU","2012","elec_CO2","","","Coal_Power","","elec_CO2",2.481686152,1.000000000
+"BAU","2012","elec_CO2","","","Gas_Power","","elec_CO2",0.025515862,1.000000000
+"BAU","2012","elec_CO2","","","Oil_Power","","elec_CO2",0.000297255,1.000000000
+"BAU","2012","elec_CO2","","","Nuclear","","elec_CO2",0.000763391,1.000000000
+"BAU","2012","elec_CO2","","","Hydro","","elec_CO2",0.000000000,1.000000000
+"BAU","2012","elec_CO2","","","Wind","","elec_CO2",0.000000000,1.000000000
+"BAU","2012","elec_CO2","","","Solar","","elec_CO2",0.000000000,1.000000000
+"BAU","2012","elec_CO2","","","Biomass","","elec_CO2",0.000000000,1.000000000
+"BAU","2012","unemployment","","","","LabSk","ur",0.048460280,1.000000000
+"BAU","2012","total employment","","","","LabSk","total employment",89564.321822354,1.000000000
+"BAU","2012","aggregated wage","","","","LabSk","aggregated wage",0.091361024,1.000000000
+"BAU","2012","unemployment","","","","LabUn","ur",0.027205098,1.000000000
+"BAU","2012","total employment","","","","LabUn","total employment",6.5317535639E+5,1.000000000
+"BAU","2012","aggregated wage","","","","LabUn","aggregated wage",0.029613461,1.000000000
+"BAU","2012","GDP","","","","","GDP",53680.019119627,1.000000000
+"BAU","2012","TFP","","","","","TFP",1.000000039,1.000000000
+"BAU","2012","Welfare","","","","","Welfare",52184.138435579,1.000000000
+"BAU","2012","subelec0","","","T_D","","subsidy",0.000000000,1.000000000
+"BAU","2012","markup","","","T_D","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Coal_Power","","subsidy",0.000000000,1.000000000
+"BAU","2012","markup","","","Coal_Power","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Gas_Power","","subsidy",0.000000000,1.000000000
+"BAU","2012","markup","","","Gas_Power","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Oil_Power","","subsidy",0.000000000,1.000000000
+"BAU","2012","markup","","","Oil_Power","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Nuclear","","subsidy",0.014459570,1.000000000
+"BAU","2012","markup","","","Nuclear","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Hydro","","subsidy",0.000000000,1.000000000
+"BAU","2012","markup","","","Hydro","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Wind","","subsidy",0.070911362,1.000000000
+"BAU","2012","markup","","","Wind","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Solar","","subsidy",0.244680259,1.000000000
+"BAU","2012","markup","","","Solar","","markup",1.000000000,1.000000000
+"BAU","2012","subelec0","","","Biomass","","subsidy",0.185606061,1.000000000
+"BAU","2012","markup","","","Biomass","","markup",1.000000000,1.000000000
+"BAU","2012","clim0","","","","","clim0",0.500000000,1.000000000
+"BAU","2012","tclim","","","","","tclim",9.169515762,1.000000000
+"BAU","2012","tclim_ms","","","","","tclim_ms",0.000000000,1.000000000
+"BAU","2012","pco2_ms","","","","","carbon price",0.000000000,1.000000000
+"BAU","2012","pco2","","","","","carbon price",0.000010000,1.000000000
+"BAU","2012","clim_s","","","Elec","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","Roil","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","Paper","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","Chem","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","CM","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","IST","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","NFM","","clim_s",0.000000000,1.000000000
+"BAU","2012","clim_s","","","Air","","clim_s",0.000000000,1.000000000
+"BAU","2012","pist","","","BOF","","pist","PIST('BOF')",1.000000000
+"BAU","2012","pist","","","EAF","","pist","PIST('EAF')",1.000000000
+"BAU","2015","output","Elec","","","","output",5486.748902357,1.000000000
+"BAU","2015","Sectoral price","Elec","","","","Sectoral price",0.748586220,1.000000000
+"BAU","2015","employment","Elec","","","LabSk","employment",1649.074190582,1.000000000
+"BAU","2015","Sectoral wage","Elec","","","LabSk","Sectoral wage",0.079522348,1.000000000
+"BAU","2015","employment","Elec","","","LabUn","employment",2820.756737864,1.000000000
+"BAU","2015","Sectoral wage","Elec","","","LabUn","Sectoral wage",0.055940781,1.000000000
+"BAU","2015","output","Coal","","","","output",2814.555084381,1.000000000
+"BAU","2015","Sectoral price","Coal","","","","Sectoral price",0.877282217,1.000000000
+"BAU","2015","employment","Coal","","","LabSk","employment",651.707743520,1.000000000
+"BAU","2015","Sectoral wage","Coal","","","LabSk","Sectoral wage",0.109425169,1.000000000
+"BAU","2015","employment","Coal","","","LabUn","employment",5204.576459342,1.000000000
+"BAU","2015","Sectoral wage","Coal","","","LabUn","Sectoral wage",0.072926604,1.000000000
+"BAU","2015","output","Oilgas","","","","output",1133.067590000,1.000000000
+"BAU","2015","Sectoral price","Oilgas","","","","Sectoral price",1.214153211,1.000000000
+"BAU","2015","employment","Oilgas","","","LabSk","employment",69.532968491,1.000000000
+"BAU","2015","Sectoral wage","Oilgas","","","LabSk","Sectoral wage",0.000000000,1.000000000
+"BAU","2015","employment","Oilgas","","","LabUn","employment",81.508855447,1.000000000
+"BAU","2015","Sectoral wage","Oilgas","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2015","output","Roil","","","","output",3424.537748007,1.000000000
+"BAU","2015","Sectoral price","Roil","","","","Sectoral price",1.139096834,1.000000000
+"BAU","2015","employment","Roil","","","LabSk","employment",252.541771641,1.000000000
+"BAU","2015","Sectoral wage","Roil","","","LabSk","Sectoral wage",0.126189028,1.000000000
+"BAU","2015","employment","Roil","","","LabUn","employment",395.577792479,1.000000000
+"BAU","2015","Sectoral wage","Roil","","","LabUn","Sectoral wage",0.088202069,1.000000000
+"BAU","2015","output","Gas","","","","output",437.089273034,1.000000000
+"BAU","2015","Sectoral price","Gas","","","","Sectoral price",0.987277538,1.000000000
+"BAU","2015","employment","Gas","","","LabSk","employment",168.318969741,1.000000000
+"BAU","2015","Sectoral wage","Gas","","","LabSk","Sectoral wage",0.042093315,1.000000000
+"BAU","2015","employment","Gas","","","LabUn","employment",394.368428115,1.000000000
+"BAU","2015","Sectoral wage","Gas","","","LabUn","Sectoral wage",0.029227581,1.000000000
+"BAU","2015","output","Agri","","","","output",10442.844522010,1.000000000
+"BAU","2015","Sectoral price","Agri","","","","Sectoral price",1.210813031,1.000000000
+"BAU","2015","employment","Agri","","","LabSk","employment",8052.700778833,1.000000000
+"BAU","2015","Sectoral wage","Agri","","","LabSk","Sectoral wage",0.035337847,1.000000000
+"BAU","2015","employment","Agri","","","LabUn","employment",3.7462500928E+5,1.000000000
+"BAU","2015","Sectoral wage","Agri","","","LabUn","Sectoral wage",0.020581158,1.000000000
+"BAU","2015","output","mine","","","","output",2319.376492248,1.000000000
+"BAU","2015","Sectoral price","mine","","","","Sectoral price",0.939002301,1.000000000
+"BAU","2015","employment","mine","","","LabSk","employment",264.326119368,1.000000000
+"BAU","2015","Sectoral wage","mine","","","LabSk","Sectoral wage",0.185793222,1.000000000
+"BAU","2015","employment","mine","","","LabUn","employment",2408.460701188,1.000000000
+"BAU","2015","Sectoral wage","mine","","","LabUn","Sectoral wage",0.118970254,1.000000000
+"BAU","2015","output","Food","","","","output",10973.799500559,1.000000000
+"BAU","2015","Sectoral price","Food","","","","Sectoral price",1.041707482,1.000000000
+"BAU","2015","employment","Food","","","LabSk","employment",1174.434405476,1.000000000
+"BAU","2015","Sectoral wage","Food","","","LabSk","Sectoral wage",0.098748743,1.000000000
+"BAU","2015","employment","Food","","","LabUn","employment",9345.532531172,1.000000000
+"BAU","2015","Sectoral wage","Food","","","LabUn","Sectoral wage",0.051768359,1.000000000
+"BAU","2015","output","Paper","","","","output",1499.791239184,1.000000000
+"BAU","2015","Sectoral price","Paper","","","","Sectoral price",0.964463871,1.000000000
+"BAU","2015","employment","Paper","","","LabSk","employment",236.892396845,1.000000000
+"BAU","2015","Sectoral wage","Paper","","","LabSk","Sectoral wage",0.057178469,1.000000000
+"BAU","2015","employment","Paper","","","LabUn","employment",2252.580155689,1.000000000
+"BAU","2015","Sectoral wage","Paper","","","LabUn","Sectoral wage",0.038972355,1.000000000
+"BAU","2015","output","Chem","","","","output",3265.715632514,1.000000000
+"BAU","2015","Sectoral price","Chem","","","","Sectoral price",0.934692596,1.000000000
+"BAU","2015","employment","Chem","","","LabSk","employment",424.065595168,1.000000000
+"BAU","2015","Sectoral wage","Chem","","","LabSk","Sectoral wage",0.082264807,1.000000000
+"BAU","2015","employment","Chem","","","LabUn","employment",1522.277737785,1.000000000
+"BAU","2015","Sectoral wage","Chem","","","LabUn","Sectoral wage",0.054807242,1.000000000
+"BAU","2015","output","CM","","","","output",1919.060293280,1.000000000
+"BAU","2015","Sectoral price","CM","","","","Sectoral price",0.941903349,1.000000000
+"BAU","2015","employment","CM","","","LabSk","employment",276.742330798,1.000000000
+"BAU","2015","Sectoral wage","CM","","","LabSk","Sectoral wage",0.073631118,1.000000000
+"BAU","2015","employment","CM","","","LabUn","employment",2398.308563737,1.000000000
+"BAU","2015","Sectoral wage","CM","","","LabUn","Sectoral wage",0.049920625,1.000000000
+"BAU","2015","output","IST","","","","output",1820.846015412,1.000000000
+"BAU","2015","Sectoral price","IST","","","","Sectoral price",6.615989186,1.000000000
+"BAU","2015","employment","IST","","","LabSk","employment",0.000000000,1.000000000
+"BAU","2015","Sectoral wage","IST","","","LabSk","Sectoral wage",19.826781537,1.000000000
+"BAU","2015","employment","IST","","","LabUn","employment",0.000000000,1.000000000
+"BAU","2015","Sectoral wage","IST","","","LabUn","Sectoral wage",0.459961676,1.000000000
+"BAU","2015","output","NFM","","","","output",2788.019841277,1.000000000
+"BAU","2015","Sectoral price","NFM","","","","Sectoral price",0.928290286,1.000000000
+"BAU","2015","employment","NFM","","","LabSk","employment",222.081866940,1.000000000
+"BAU","2015","Sectoral wage","NFM","","","LabSk","Sectoral wage",0.133951362,1.000000000
+"BAU","2015","employment","NFM","","","LabUn","employment",954.549399924,1.000000000
+"BAU","2015","Sectoral wage","NFM","","","LabUn","Sectoral wage",0.091905426,1.000000000
+"BAU","2015","output","EII","","","","output",25610.388300851,1.000000000
+"BAU","2015","Sectoral price","EII","","","","Sectoral price",1.298304710,1.000000000
+"BAU","2015","employment","EII","","","LabSk","employment",2919.152233383,1.000000000
+"BAU","2015","Sectoral wage","EII","","","LabSk","Sectoral wage",0.095329669,1.000000000
+"BAU","2015","employment","EII","","","LabUn","employment",22981.524171933,1.000000000
+"BAU","2015","Sectoral wage","EII","","","LabUn","Sectoral wage",0.051614878,1.000000000
+"BAU","2015","output","OM","","","","output",57845.357929395,1.000000000
+"BAU","2015","Sectoral price","OM","","","","Sectoral price",1.046805089,1.000000000
+"BAU","2015","employment","OM","","","LabSk","employment",13188.873535432,1.000000000
+"BAU","2015","Sectoral wage","OM","","","LabSk","Sectoral wage",0.060117488,1.000000000
+"BAU","2015","employment","OM","","","LabUn","employment",1.2460282780E+5,1.000000000
+"BAU","2015","Sectoral wage","OM","","","LabUn","Sectoral wage",0.031701582,1.000000000
+"BAU","2015","output","Air","","","","output",666.601545195,1.000000000
+"BAU","2015","Sectoral price","Air","","","","Sectoral price",0.987664962,1.000000000
+"BAU","2015","employment","Air","","","LabSk","employment",318.153849430,1.000000000
+"BAU","2015","Sectoral wage","Air","","","LabSk","Sectoral wage",0.153956218,1.000000000
+"BAU","2015","employment","Air","","","LabUn","employment",208.509427413,1.000000000
+"BAU","2015","Sectoral wage","Air","","","LabUn","Sectoral wage",0.104848008,1.000000000
+"BAU","2015","output","Tran","","","","output",6224.328387219,1.000000000
+"BAU","2015","Sectoral price","Tran","","","","Sectoral price",0.922406437,1.000000000
+"BAU","2015","employment","Tran","","","LabSk","employment",2582.159145405,1.000000000
+"BAU","2015","Sectoral wage","Tran","","","LabSk","Sectoral wage",0.063056486,1.000000000
+"BAU","2015","employment","Tran","","","LabUn","employment",25062.119036503,1.000000000
+"BAU","2015","Sectoral wage","Tran","","","LabUn","Sectoral wage",0.035205146,1.000000000
+"BAU","2015","output","Serv","","","","output",52082.836391319,1.000000000
+"BAU","2015","Sectoral price","Serv","","","","Sectoral price",0.905444057,1.000000000
+"BAU","2015","employment","Serv","","","LabSk","employment",63646.231841113,1.000000000
+"BAU","2015","Sectoral wage","Serv","","","LabSk","Sectoral wage",0.091664385,1.000000000
+"BAU","2015","employment","Serv","","","LabUn","employment",1.4487133336E+5,1.000000000
+"BAU","2015","Sectoral wage","Serv","","","LabUn","Sectoral wage",0.035143961,1.000000000
+"BAU","2015","elec_output","","","T_D","","elec_output",5562.463899387,1.000000000
+"BAU","2015","elec_price","","","T_D","","elec_price",0.181328801,1.000000000
+"BAU","2015","elec_share","","","T_D","","elec_share",0.509371439,1.000000000
+"BAU","2015","elec_tax","","","T_D","","elec_tax",0.048282465,1.000000000
+"BAU","2015","employment","","","T_D","LabSk","employment",595.590180402,1.000000000
+"BAU","2015","employment","","","T_D","LabUn","employment",1018.762543930,1.000000000
+"BAU","2015","elec_output","","","Coal_Power","","elec_output",3644.346383572,1.000000000
+"BAU","2015","elec_price","","","Coal_Power","","elec_price",0.543410696,1.000000000
+"BAU","2015","elec_share","","","Coal_Power","","elec_share",0.333723687,1.000000000
+"BAU","2015","elec_tax","","","Coal_Power","","elec_tax",0.054757713,1.000000000
+"BAU","2015","employment","","","Coal_Power","LabSk","employment",653.209412272,1.000000000
+"BAU","2015","employment","","","Coal_Power","LabUn","employment",1117.320770828,1.000000000
+"BAU","2015","elec_output","","","Gas_Power","","elec_output",90.645829318,1.000000000
+"BAU","2015","elec_price","","","Gas_Power","","elec_price",0.727276753,1.000000000
+"BAU","2015","elec_share","","","Gas_Power","","elec_share",0.008300709,1.000000000
+"BAU","2015","elec_tax","","","Gas_Power","","elec_tax",0.045770915,1.000000000
+"BAU","2015","employment","","","Gas_Power","LabSk","employment",9.595673121,1.000000000
+"BAU","2015","employment","","","Gas_Power","LabUn","employment",16.413488056,1.000000000
+"BAU","2015","elec_output","","","Oil_Power","","elec_output",3.745544223,1.000000000
+"BAU","2015","elec_price","","","Oil_Power","","elec_price",4.150834322,1.000000000
+"BAU","2015","elec_share","","","Oil_Power","","elec_share",0.000342991,1.000000000
+"BAU","2015","elec_tax","","","Oil_Power","","elec_tax",0.009039753,1.000000000
+"BAU","2015","employment","","","Oil_Power","LabSk","employment",0.930929851,1.000000000
+"BAU","2015","employment","","","Oil_Power","LabUn","employment",1.592364163,1.000000000
+"BAU","2015","elec_output","","","Nuclear","","elec_output",212.451559268,1.000000000
+"BAU","2015","elec_price","","","Nuclear","","elec_price",0.643133187,1.000000000
+"BAU","2015","elec_share","","","Nuclear","","elec_share",0.019454824,1.000000000
+"BAU","2015","elec_tax","","","Nuclear","","elec_tax",0.012888976,1.000000000
+"BAU","2015","employment","","","Nuclear","LabSk","employment",22.842176432,1.000000000
+"BAU","2015","employment","","","Nuclear","LabUn","employment",39.071755287,1.000000000
+"BAU","2015","elec_output","","","Hydro","","elec_output",1095.927263974,1.000000000
+"BAU","2015","elec_price","","","Hydro","","elec_price",0.561142264,1.000000000
+"BAU","2015","elec_share","","","Hydro","","elec_share",0.100357334,1.000000000
+"BAU","2015","elec_tax","","","Hydro","","elec_tax",0.044424834,1.000000000
+"BAU","2015","employment","","","Hydro","LabSk","employment",324.975077512,1.000000000
+"BAU","2015","employment","","","Hydro","LabUn","employment",555.872893098,1.000000000
+"BAU","2015","elec_output","","","Wind","","elec_output",219.268125611,1.000000000
+"BAU","2015","elec_price","","","Wind","","elec_price",0.993528837,1.000000000
+"BAU","2015","elec_share","","","Wind","","elec_share",0.020079037,1.000000000
+"BAU","2015","elec_tax","","","Wind","","elec_tax",-0.053028648,1.000000000
+"BAU","2015","employment","","","Wind","LabSk","employment",13.359521861,1.000000000
+"BAU","2015","employment","","","Wind","LabUn","employment",22.851586398,1.000000000
+"BAU","2015","elec_output","","","Solar","","elec_output",44.531826862,1.000000000
+"BAU","2015","elec_price","","","Solar","","elec_price",0.326649739,1.000000000
+"BAU","2015","elec_share","","","Solar","","elec_share",0.004077912,1.000000000
+"BAU","2015","elec_tax","","","Solar","","elec_tax",-0.227851771,1.000000000
+"BAU","2015","employment","","","Solar","LabSk","employment",3.565967795,1.000000000
+"BAU","2015","employment","","","Solar","LabUn","employment",6.099621078,1.000000000
+"BAU","2015","elec_output","","","Biomass","","elec_output",46.870447282,1.000000000
+"BAU","2015","elec_price","","","Biomass","","elec_price",1.126933905,1.000000000
+"BAU","2015","elec_share","","","Biomass","","elec_share",0.004292067,1.000000000
+"BAU","2015","elec_tax","","","Biomass","","elec_tax",-0.165545967,1.000000000
+"BAU","2015","employment","","","Biomass","LabSk","employment",25.005251336,1.000000000
+"BAU","2015","employment","","","Biomass","LabUn","employment",42.771715025,1.000000000
+"BAU","2015","ECO2","Elec","","","","ECO2",2.370801624,1.000000000
+"BAU","2015","ECO2","Coal","","","","ECO2",0.709746975,1.000000000
+"BAU","2015","ECO2","Oilgas","","","","ECO2",0.013242594,1.000000000
+"BAU","2015","ECO2","Roil","","","","ECO2",0.080311588,1.000000000
+"BAU","2015","ECO2","Gas","","","","ECO2",0.129872325,1.000000000
+"BAU","2015","ECO2","Agri","","","","ECO2",0.069356932,1.000000000
+"BAU","2015","ECO2","mine","","","","ECO2",0.093263192,1.000000000
+"BAU","2015","ECO2","Food","","","","ECO2",0.063049583,1.000000000
+"BAU","2015","ECO2","Paper","","","","ECO2",0.076405473,1.000000000
+"BAU","2015","ECO2","Chem","","","","ECO2",0.461585600,1.000000000
+"BAU","2015","ECO2","CM","","","","ECO2",1.098723968,1.000000000
+"BAU","2015","ECO2","IST","","","","ECO2",0.000000000,1.000000000
+"BAU","2015","ECO2","NFM","","","","ECO2",0.140690781,1.000000000
+"BAU","2015","ECO2","EII","","","","ECO2",2.152670690,1.000000000
+"BAU","2015","ECO2","OM","","","","ECO2",0.288623530,1.000000000
+"BAU","2015","ECO2","Air","","","","ECO2",0.055894841,1.000000000
+"BAU","2015","ECO2","Tran","","","","ECO2",0.328595487,1.000000000
+"BAU","2015","ECO2","Serv","","","","ECO2",0.251364063,1.000000000
+"BAU","2015","ECO2","fd","","","","ECO2",0.244986027,1.000000000
+"BAU","2015","ECO2","","total","","","ECO2",8.629185272,1.000000000
+"BAU","2015","ESO2","Elec","","","","ESO2",10.796352439,1.000000000
+"BAU","2015","ESO2","Coal","","","","ESO2",0.192205606,1.000000000
+"BAU","2015","ESO2","Oilgas","","","","ESO2",0.000021688,1.000000000
+"BAU","2015","ESO2","Roil","","","","ESO2",1.848709933,1.000000000
+"BAU","2015","ESO2","Gas","","","","ESO2",0.000000000,1.000000000
+"BAU","2015","ESO2","Agri","","","","ESO2",0.004915785,1.000000000
+"BAU","2015","ESO2","mine","","","","ESO2",0.000000000,1.000000000
+"BAU","2015","ESO2","Food","","","","ESO2",1.036316503,1.000000000
+"BAU","2015","ESO2","Paper","","","","ESO2",0.958645928,1.000000000
+"BAU","2015","ESO2","Chem","","","","ESO2",2.667479727,1.000000000
+"BAU","2015","ESO2","CM","","","","ESO2",3.518207470,1.000000000
+"BAU","2015","ESO2","IST","","","","ESO2",4.389653318,1.000000000
+"BAU","2015","ESO2","NFM","","","","ESO2",2.188819304,1.000000000
+"BAU","2015","ESO2","EII","","","","ESO2",0.657067059,1.000000000
+"BAU","2015","ESO2","OM","","","","ESO2",0.932512865,1.000000000
+"BAU","2015","ESO2","Air","","","","ESO2",0.016017110,1.000000000
+"BAU","2015","ESO2","Tran","","","","ESO2",1.013483528,1.000000000
+"BAU","2015","ESO2","Serv","","","","ESO2",0.000000000,1.000000000
+"BAU","2015","ESO2","fd","","","","ESO2",2.978931078,1.000000000
+"BAU","2015","ESO2","","total","","","ESO2",33.199339339,1.000000000
+"BAU","2015","ENOX","Elec","","","","ENOX",9.669546838,1.000000000
+"BAU","2015","ENOX","Coal","","","","ENOX",0.023933657,1.000000000
+"BAU","2015","ENOX","Oilgas","","","","ENOX",0.002216589,1.000000000
+"BAU","2015","ENOX","Roil","","","","ENOX",0.999179818,1.000000000
+"BAU","2015","ENOX","Gas","","","","ENOX",0.000000000,1.000000000
+"BAU","2015","ENOX","Agri","","","","ENOX",0.920363834,1.000000000
+"BAU","2015","ENOX","mine","","","","ENOX",0.000000000,1.000000000
+"BAU","2015","ENOX","Food","","","","ENOX",0.275672032,1.000000000
+"BAU","2015","ENOX","Paper","","","","ENOX",0.305830561,1.000000000
+"BAU","2015","ENOX","Chem","","","","ENOX",0.761771505,1.000000000
+"BAU","2015","ENOX","CM","","","","ENOX",3.793534159,1.000000000
+"BAU","2015","ENOX","IST","","","","ENOX",1.366069044,1.000000000
+"BAU","2015","ENOX","NFM","","","","ENOX",0.339107795,1.000000000
+"BAU","2015","ENOX","EII","","","","ENOX",0.181375471,1.000000000
+"BAU","2015","ENOX","OM","","","","ENOX",0.235665925,1.000000000
+"BAU","2015","ENOX","Air","","","","ENOX",0.155081837,1.000000000
+"BAU","2015","ENOX","Tran","","","","ENOX",5.044560334,1.000000000
+"BAU","2015","ENOX","Serv","","","","ENOX",0.000000000,1.000000000
+"BAU","2015","ENOX","fd","","","","ENOX",1.567661561,1.000000000
+"BAU","2015","ENOX","","total","","","ENOX",25.641570959,1.000000000
+"BAU","2015","elec_CO2","","","T_D","","elec_CO2",0.003900098,1.000000000
+"BAU","2015","elec_CO2","","","Coal_Power","","elec_CO2",2.350128550,1.000000000
+"BAU","2015","elec_CO2","","","Gas_Power","","elec_CO2",0.020474173,1.000000000
+"BAU","2015","elec_CO2","","","Oil_Power","","elec_CO2",0.000198906,1.000000000
+"BAU","2015","elec_CO2","","","Nuclear","","elec_CO2",0.001328737,1.000000000
+"BAU","2015","elec_CO2","","","Hydro","","elec_CO2",0.000000000,1.000000000
+"BAU","2015","elec_CO2","","","Wind","","elec_CO2",0.000000000,1.000000000
+"BAU","2015","elec_CO2","","","Solar","","elec_CO2",0.000000000,1.000000000
+"BAU","2015","elec_CO2","","","Biomass","","elec_CO2",0.000000000,1.000000000
+"BAU","2015","unemployment","","","","LabSk","ur",0.048460280,1.000000000
+"BAU","2015","total employment","","","","LabSk","total employment",92463.111445037,1.000000000
+"BAU","2015","aggregated wage","","","","LabSk","aggregated wage",0.165316338,1.000000000
+"BAU","2015","unemployment","","","","LabUn","ur",0.027205098,1.000000000
+"BAU","2015","total employment","","","","LabUn","total employment",6.7431567104E+5,1.000000000
+"BAU","2015","aggregated wage","","","","LabUn","aggregated wage",0.029568680,1.000000000
+"BAU","2015","GDP","","","","","GDP",66314.085160563,1.000000000
+"BAU","2015","TFP","","","","","TFP",1.101508484,1.000000000
+"BAU","2015","Welfare","","","","","Welfare",64910.605300908,1.000000000
+"BAU","2015","subelec0","","","T_D","","subsidy",0.000000000,1.000000000
+"BAU","2015","markup","","","T_D","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Coal_Power","","subsidy",0.000000000,1.000000000
+"BAU","2015","markup","","","Coal_Power","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Gas_Power","","subsidy",0.000000000,1.000000000
+"BAU","2015","markup","","","Gas_Power","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Oil_Power","","subsidy",0.000000000,1.000000000
+"BAU","2015","markup","","","Oil_Power","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Nuclear","","subsidy",0.014459570,1.000000000
+"BAU","2015","markup","","","Nuclear","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Hydro","","subsidy",0.000000000,1.000000000
+"BAU","2015","markup","","","Hydro","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Wind","","subsidy",0.070911362,1.000000000
+"BAU","2015","markup","","","Wind","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Solar","","subsidy",0.244680259,1.000000000
+"BAU","2015","markup","","","Solar","","markup",1.000000000,1.000000000
+"BAU","2015","subelec0","","","Biomass","","subsidy",0.185606061,1.000000000
+"BAU","2015","markup","","","Biomass","","markup",1.000000000,1.000000000
+"BAU","2015","clim0","","","","","clim0",0.500000000,1.000000000
+"BAU","2015","tclim","","","","","tclim",9.214320055,1.000000000
+"BAU","2015","tclim_ms","","","","","tclim_ms",0.000000000,1.000000000
+"BAU","2015","pco2_ms","","","","","carbon price",0.000000000,1.000000000
+"BAU","2015","pco2","","","","","carbon price",0.000010000,1.000000000
+"BAU","2015","clim_s","","","Elec","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","Roil","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","Paper","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","Chem","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","CM","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","IST","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","NFM","","clim_s",0.000000000,1.000000000
+"BAU","2015","clim_s","","","Air","","clim_s",0.000000000,1.000000000
+"BAU","2015","pist","","","BOF","","pist","PIST('BOF')",1.000000000
+"BAU","2015","pist","","","EAF","","pist","PIST('EAF')",1.000000000
+"BAU","2020","output","Elec","","","","output",6170.411197578,1.000000000
+"BAU","2020","Sectoral price","Elec","","","","Sectoral price",0.536204980,1.000000000
+"BAU","2020","employment","Elec","","","LabSk","employment",2006.274466662,1.000000000
+"BAU","2020","Sectoral wage","Elec","","","LabSk","Sectoral wage",0.047373414,1.000000000
+"BAU","2020","employment","Elec","","","LabUn","employment",3431.751143386,1.000000000
+"BAU","2020","Sectoral wage","Elec","","","LabUn","Sectoral wage",0.033325296,1.000000000
+"BAU","2020","output","Coal","","","","output",2851.997873378,1.000000000
+"BAU","2020","Sectoral price","Coal","","","","Sectoral price",0.755776041,1.000000000
+"BAU","2020","employment","Coal","","","LabSk","employment",792.871911414,1.000000000
+"BAU","2020","Sectoral wage","Coal","","","LabSk","Sectoral wage",0.051649526,1.000000000
+"BAU","2020","employment","Coal","","","LabUn","employment",6331.921847578,1.000000000
+"BAU","2020","Sectoral wage","Coal","","","LabUn","Sectoral wage",0.034421921,1.000000000
+"BAU","2020","output","Oilgas","","","","output",1133.067590000,1.000000000
+"BAU","2020","Sectoral price","Oilgas","","","","Sectoral price",1.681719755,1.000000000
+"BAU","2020","employment","Oilgas","","","LabSk","employment",69.532968491,1.000000000
+"BAU","2020","Sectoral wage","Oilgas","","","LabSk","Sectoral wage",0.000000000,1.000000000
+"BAU","2020","employment","Oilgas","","","LabUn","employment",81.508855447,1.000000000
+"BAU","2020","Sectoral wage","Oilgas","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2020","output","Roil","","","","output",3267.903239796,1.000000000
+"BAU","2020","Sectoral price","Roil","","","","Sectoral price",1.465037728,1.000000000
+"BAU","2020","employment","Roil","","","LabSk","employment",307.243974288,1.000000000
+"BAU","2020","Sectoral wage","Roil","","","LabSk","Sectoral wage",0.072031343,1.000000000
+"BAU","2020","employment","Roil","","","LabUn","employment",481.262536189,1.000000000
+"BAU","2020","Sectoral wage","Roil","","","LabUn","Sectoral wage",0.050347590,1.000000000
+"BAU","2020","output","Gas","","","","output",471.076233313,1.000000000
+"BAU","2020","Sectoral price","Gas","","","","Sectoral price",1.029807605,1.000000000
+"BAU","2020","employment","Gas","","","LabSk","employment",204.777961583,1.000000000
+"BAU","2020","Sectoral wage","Gas","","","LabSk","Sectoral wage",0.031432393,1.000000000
+"BAU","2020","employment","Gas","","","LabUn","employment",479.791215575,1.000000000
+"BAU","2020","Sectoral wage","Gas","","","LabUn","Sectoral wage",0.021825147,1.000000000
+"BAU","2020","output","Agri","","","","output",13256.795956993,1.000000000
+"BAU","2020","Sectoral price","Agri","","","","Sectoral price",1.788245487,1.000000000
+"BAU","2020","employment","Agri","","","LabSk","employment",9796.968536960,1.000000000
+"BAU","2020","Sectoral wage","Agri","","","LabSk","Sectoral wage",0.059301663,1.000000000
+"BAU","2020","employment","Agri","","","LabUn","employment",4.5577124275E+5,1.000000000
+"BAU","2020","Sectoral wage","Agri","","","LabUn","Sectoral wage",0.034537952,1.000000000
+"BAU","2020","output","mine","","","","output",3112.248769044,1.000000000
+"BAU","2020","Sectoral price","mine","","","","Sectoral price",0.854852900,1.000000000
+"BAU","2020","employment","mine","","","LabSk","employment",321.580888955,1.000000000
+"BAU","2020","Sectoral wage","mine","","","LabSk","Sectoral wage",0.150540567,1.000000000
+"BAU","2020","employment","mine","","","LabUn","employment",2930.149081682,1.000000000
+"BAU","2020","Sectoral wage","mine","","","LabUn","Sectoral wage",0.096396678,1.000000000
+"BAU","2020","output","Food","","","","output",14628.208316801,1.000000000
+"BAU","2020","Sectoral price","Food","","","","Sectoral price",1.251080590,1.000000000
+"BAU","2020","employment","Food","","","LabSk","employment",1428.824593783,1.000000000
+"BAU","2020","Sectoral wage","Food","","","LabSk","Sectoral wage",0.062274851,1.000000000
+"BAU","2020","employment","Food","","","LabUn","employment",11369.836157400,1.000000000
+"BAU","2020","Sectoral wage","Food","","","LabUn","Sectoral wage",0.032647168,1.000000000
+"BAU","2020","output","Paper","","","","output",2009.486419796,1.000000000
+"BAU","2020","Sectoral price","Paper","","","","Sectoral price",0.961301726,1.000000000
+"BAU","2020","employment","Paper","","","LabSk","employment",288.204842360,1.000000000
+"BAU","2020","Sectoral wage","Paper","","","LabSk","Sectoral wage",0.040083966,1.000000000
+"BAU","2020","employment","Paper","","","LabUn","employment",2740.503787897,1.000000000
+"BAU","2020","Sectoral wage","Paper","","","LabUn","Sectoral wage",0.027320888,1.000000000
+"BAU","2020","output","Chem","","","","output",4116.500706687,1.000000000
+"BAU","2020","Sectoral price","Chem","","","","Sectoral price",0.884866021,1.000000000
+"BAU","2020","employment","Chem","","","LabSk","employment",515.920981987,1.000000000
+"BAU","2020","Sectoral wage","Chem","","","LabSk","Sectoral wage",0.061886852,1.000000000
+"BAU","2020","employment","Chem","","","LabUn","employment",1852.013077580,1.000000000
+"BAU","2020","Sectoral wage","Chem","","","LabUn","Sectoral wage",0.041230847,1.000000000
+"BAU","2020","output","CM","","","","output",2299.080700922,1.000000000
+"BAU","2020","Sectoral price","CM","","","","Sectoral price",0.873304901,1.000000000
+"BAU","2020","employment","CM","","","LabSk","employment",336.686533145,1.000000000
+"BAU","2020","Sectoral wage","CM","","","LabSk","Sectoral wage",0.050905304,1.000000000
+"BAU","2020","employment","CM","","","LabUn","employment",2917.797924691,1.000000000
+"BAU","2020","Sectoral wage","CM","","","LabUn","Sectoral wage",0.034512916,1.000000000
+"BAU","2020","output","IST","","","","output",2215.253194373,1.000000000
+"BAU","2020","Sectoral price","IST","","","","Sectoral price",12.871081396,1.000000000
+"BAU","2020","employment","IST","","","LabSk","employment",0.000000000,1.000000000
+"BAU","2020","Sectoral wage","IST","","","LabSk","Sectoral wage",45.679210922,1.000000000
+"BAU","2020","employment","IST","","","LabUn","employment",0.000000000,1.000000000
+"BAU","2020","Sectoral wage","IST","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2020","output","NFM","","","","output",3559.720789431,1.000000000
+"BAU","2020","Sectoral price","NFM","","","","Sectoral price",0.843870911,1.000000000
+"BAU","2020","employment","NFM","","","LabSk","employment",270.186254624,1.000000000
+"BAU","2020","Sectoral wage","NFM","","","LabSk","Sectoral wage",0.096647177,1.000000000
+"BAU","2020","employment","NFM","","","LabUn","employment",1161.311059063,1.000000000
+"BAU","2020","Sectoral wage","NFM","","","LabUn","Sectoral wage",0.066310635,1.000000000
+"BAU","2020","output","EII","","","","output",31458.465211813,1.000000000
+"BAU","2020","Sectoral price","EII","","","","Sectoral price",1.639179195,1.000000000
+"BAU","2020","employment","EII","","","LabSk","employment",3551.459736368,1.000000000
+"BAU","2020","Sectoral wage","EII","","","LabSk","Sectoral wage",0.062903349,1.000000000
+"BAU","2020","employment","EII","","","LabUn","employment",27959.473000674,1.000000000
+"BAU","2020","Sectoral wage","EII","","","LabUn","Sectoral wage",0.034058113,1.000000000
+"BAU","2020","output","OM","","","","output",68249.669963692,1.000000000
+"BAU","2020","Sectoral price","OM","","","","Sectoral price",1.102148978,1.000000000
+"BAU","2020","employment","OM","","","LabSk","employment",16045.669970032,1.000000000
+"BAU","2020","Sectoral wage","OM","","","LabSk","Sectoral wage",0.032075011,1.000000000
+"BAU","2020","employment","OM","","","LabUn","employment",1.5159261735E+5,1.000000000
+"BAU","2020","Sectoral wage","OM","","","LabUn","Sectoral wage",0.016914023,1.000000000
+"BAU","2020","output","Air","","","","output",1014.780560162,1.000000000
+"BAU","2020","Sectoral price","Air","","","","Sectoral price",0.969384812,1.000000000
+"BAU","2020","employment","Air","","","LabSk","employment",387.068058083,1.000000000
+"BAU","2020","Sectoral wage","Air","","","LabSk","Sectoral wage",0.193387396,1.000000000
+"BAU","2020","employment","Air","","","LabUn","employment",253.673936616,1.000000000
+"BAU","2020","Sectoral wage","Air","","","LabUn","Sectoral wage",0.131701620,1.000000000
+"BAU","2020","output","Tran","","","","output",8904.294661529,1.000000000
+"BAU","2020","Sectoral price","Tran","","","","Sectoral price",0.805644752,1.000000000
+"BAU","2020","employment","Tran","","","LabSk","employment",3141.471737215,1.000000000
+"BAU","2020","Sectoral wage","Tran","","","LabSk","Sectoral wage",0.061398623,1.000000000
+"BAU","2020","employment","Tran","","","LabUn","employment",30490.738355664,1.000000000
+"BAU","2020","Sectoral wage","Tran","","","LabUn","Sectoral wage",0.034279542,1.000000000
+"BAU","2020","output","Serv","","","","output",83050.418700740,1.000000000
+"BAU","2020","Sectoral price","Serv","","","","Sectoral price",0.775859272,1.000000000
+"BAU","2020","employment","Serv","","","LabSk","employment",77432.422732316,1.000000000
+"BAU","2020","Sectoral wage","Serv","","","LabSk","Sectoral wage",0.085830780,1.000000000
+"BAU","2020","employment","Serv","","","LabUn","employment",1.7625141411E+5,1.000000000
+"BAU","2020","Sectoral wage","Serv","","","LabUn","Sectoral wage",0.032907367,1.000000000
+"BAU","2020","elec_output","","","T_D","","elec_output",6255.560467904,1.000000000
+"BAU","2020","elec_price","","","T_D","","elec_price",0.159174202,1.000000000
+"BAU","2020","elec_share","","","T_D","","elec_share",0.508789034,1.000000000
+"BAU","2020","elec_tax","","","T_D","","elec_tax",0.048282465,1.000000000
+"BAU","2020","employment","","","T_D","LabSk","employment",669.802168334,1.000000000
+"BAU","2020","employment","","","T_D","LabUn","employment",1145.702843292,1.000000000
+"BAU","2020","elec_output","","","Coal_Power","","elec_output",3467.186112625,1.000000000
+"BAU","2020","elec_price","","","Coal_Power","","elec_price",0.403213356,1.000000000
+"BAU","2020","elec_share","","","Coal_Power","","elec_share",0.281999716,1.000000000
+"BAU","2020","elec_tax","","","Coal_Power","","elec_tax",0.054757713,1.000000000
+"BAU","2020","employment","","","Coal_Power","LabSk","employment",589.654109990,1.000000000
+"BAU","2020","employment","","","Coal_Power","LabUn","employment",1008.608838796,1.000000000
+"BAU","2020","elec_output","","","Gas_Power","","elec_output",65.315671823,1.000000000
+"BAU","2020","elec_price","","","Gas_Power","","elec_price",0.649478914,1.000000000
+"BAU","2020","elec_share","","","Gas_Power","","elec_share",0.005312377,1.000000000
+"BAU","2020","elec_tax","","","Gas_Power","","elec_tax",0.045770915,1.000000000
+"BAU","2020","employment","","","Gas_Power","LabSk","employment",6.684572610,1.000000000
+"BAU","2020","employment","","","Gas_Power","LabUn","employment",11.434023612,1.000000000
+"BAU","2020","elec_output","","","Oil_Power","","elec_output",2.070747768,1.000000000
+"BAU","2020","elec_price","","","Oil_Power","","elec_price",4.422884673,1.000000000
+"BAU","2020","elec_share","","","Oil_Power","","elec_share",0.000168422,1.000000000
+"BAU","2020","elec_tax","","","Oil_Power","","elec_tax",0.009039753,1.000000000
+"BAU","2020","employment","","","Oil_Power","LabSk","employment",0.492976652,1.000000000
+"BAU","2020","employment","","","Oil_Power","LabUn","employment",0.843241149,1.000000000
+"BAU","2020","elec_output","","","Nuclear","","elec_output",502.682895784,1.000000000
+"BAU","2020","elec_price","","","Nuclear","","elec_price",0.259969977,1.000000000
+"BAU","2020","elec_share","","","Nuclear","","elec_share",0.040885153,1.000000000
+"BAU","2020","elec_tax","","","Nuclear","","elec_tax",0.012888976,1.000000000
+"BAU","2020","employment","","","Nuclear","LabSk","employment",81.848112633,1.000000000
+"BAU","2020","employment","","","Nuclear","LabUn","employment",140.001958536,1.000000000
+"BAU","2020","elec_output","","","Hydro","","elec_output",1235.230272177,1.000000000
+"BAU","2020","elec_price","","","Hydro","","elec_price",0.371883790,1.000000000
+"BAU","2020","elec_share","","","Hydro","","elec_share",0.100466077,1.000000000
+"BAU","2020","elec_tax","","","Hydro","","elec_tax",0.044424834,1.000000000
+"BAU","2020","employment","","","Hydro","LabSk","employment",437.465829317,1.000000000
+"BAU","2020","employment","","","Hydro","LabUn","employment",748.289372876,1.000000000
+"BAU","2020","elec_output","","","Wind","","elec_output",418.221589059,1.000000000
+"BAU","2020","elec_price","","","Wind","","elec_price",0.463665639,1.000000000
+"BAU","2020","elec_share","","","Wind","","elec_share",0.034015587,1.000000000
+"BAU","2020","elec_tax","","","Wind","","elec_tax",-0.053028648,1.000000000
+"BAU","2020","employment","","","Wind","LabSk","employment",29.499065103,1.000000000
+"BAU","2020","employment","","","Wind","LabUn","employment",50.458425353,1.000000000
+"BAU","2020","elec_output","","","Solar","","elec_output",110.354252199,1.000000000
+"BAU","2020","elec_price","","","Solar","","elec_price",0.128030961,1.000000000
+"BAU","2020","elec_share","","","Solar","","elec_share",0.008975540,1.000000000
+"BAU","2020","elec_tax","","","Solar","","elec_tax",-0.227851771,1.000000000
+"BAU","2020","employment","","","Solar","LabSk","employment",6.339223606,1.000000000
+"BAU","2020","employment","","","Solar","LabUn","employment",10.843300973,1.000000000
+"BAU","2020","elec_output","","","Biomass","","elec_output",238.376592978,1.000000000
+"BAU","2020","elec_price","","","Biomass","","elec_price",0.273506196,1.000000000
+"BAU","2020","elec_share","","","Biomass","","elec_share",0.019388094,1.000000000
+"BAU","2020","elec_tax","","","Biomass","","elec_tax",-0.165545967,1.000000000
+"BAU","2020","employment","","","Biomass","LabSk","employment",184.488408418,1.000000000
+"BAU","2020","employment","","","Biomass","LabUn","employment",315.569138800,1.000000000
+"BAU","2020","ECO2","Elec","","","","ECO2",2.117294400,1.000000000
+"BAU","2020","ECO2","Coal","","","","ECO2",0.514654429,1.000000000
+"BAU","2020","ECO2","Oilgas","","","","ECO2",0.012599874,1.000000000
+"BAU","2020","ECO2","Roil","","","","ECO2",0.062640398,1.000000000
+"BAU","2020","ECO2","Gas","","","","ECO2",0.134318346,1.000000000
+"BAU","2020","ECO2","Agri","","","","ECO2",0.098836628,1.000000000
+"BAU","2020","ECO2","mine","","","","ECO2",0.101447567,1.000000000
+"BAU","2020","ECO2","Food","","","","ECO2",0.058460021,1.000000000
+"BAU","2020","ECO2","Paper","","","","ECO2",0.076366241,1.000000000
+"BAU","2020","ECO2","Chem","","","","ECO2",0.488620214,1.000000000
+"BAU","2020","ECO2","CM","","","","ECO2",1.245042932,1.000000000
+"BAU","2020","ECO2","IST","","","","ECO2",0.000000000,1.000000000
+"BAU","2020","ECO2","NFM","","","","ECO2",0.147272629,1.000000000
+"BAU","2020","ECO2","EII","","","","ECO2",1.982491788,1.000000000
+"BAU","2020","ECO2","OM","","","","ECO2",0.215183149,1.000000000
+"BAU","2020","ECO2","Air","","","","ECO2",0.064001478,1.000000000
+"BAU","2020","ECO2","Tran","","","","ECO2",0.307510642,1.000000000
+"BAU","2020","ECO2","Serv","","","","ECO2",0.261248329,1.000000000
+"BAU","2020","ECO2","fd","","","","ECO2",0.314544675,1.000000000
+"BAU","2020","ECO2","","total","","","ECO2",8.202533740,1.000000000
+"BAU","2020","ESO2","Elec","","","","ESO2",12.141604284,1.000000000
+"BAU","2020","ESO2","Coal","","","","ESO2",0.194762569,1.000000000
+"BAU","2020","ESO2","Oilgas","","","","ESO2",0.000021688,1.000000000
+"BAU","2020","ESO2","Roil","","","","ESO2",1.764152018,1.000000000
+"BAU","2020","ESO2","Gas","","","","ESO2",0.000000000,1.000000000
+"BAU","2020","ESO2","Agri","","","","ESO2",0.006240403,1.000000000
+"BAU","2020","ESO2","mine","","","","ESO2",0.000000000,1.000000000
+"BAU","2020","ESO2","Food","","","","ESO2",1.381422513,1.000000000
+"BAU","2020","ESO2","Paper","","","","ESO2",1.284436076,1.000000000
+"BAU","2020","ESO2","Chem","","","","ESO2",3.362412230,1.000000000
+"BAU","2020","ESO2","CM","","","","ESO2",4.214897742,1.000000000
+"BAU","2020","ESO2","IST","","","","ESO2",5.340480992,1.000000000
+"BAU","2020","ESO2","NFM","","","","ESO2",2.794666475,1.000000000
+"BAU","2020","ESO2","EII","","","","ESO2",0.807106904,1.000000000
+"BAU","2020","ESO2","OM","","","","ESO2",1.100238594,1.000000000
+"BAU","2020","ESO2","Air","","","","ESO2",0.024383159,1.000000000
+"BAU","2020","ESO2","Tran","","","","ESO2",1.449852162,1.000000000
+"BAU","2020","ESO2","Serv","","","","ESO2",0.000000000,1.000000000
+"BAU","2020","ESO2","fd","","","","ESO2",4.190167316,1.000000000
+"BAU","2020","ESO2","","total","","","ESO2",40.056845124,1.000000000
+"BAU","2020","ENOX","Elec","","","","ENOX",10.874395957,1.000000000
+"BAU","2020","ENOX","Coal","","","","ENOX",0.024252052,1.000000000
+"BAU","2020","ENOX","Oilgas","","","","ENOX",0.002216589,1.000000000
+"BAU","2020","ENOX","Roil","","","","ENOX",0.953478456,1.000000000
+"BAU","2020","ENOX","Gas","","","","ENOX",0.000000000,1.000000000
+"BAU","2020","ENOX","Agri","","","","ENOX",1.168367060,1.000000000
+"BAU","2020","ENOX","mine","","","","ENOX",0.000000000,1.000000000
+"BAU","2020","ENOX","Food","","","","ENOX",0.367474175,1.000000000
+"BAU","2020","ENOX","Paper","","","","ENOX",0.409765268,1.000000000
+"BAU","2020","ENOX","Chem","","","","ENOX",0.960228413,1.000000000
+"BAU","2020","ENOX","CM","","","","ENOX",4.544745782,1.000000000
+"BAU","2020","ENOX","IST","","","","ENOX",1.661968550,1.000000000
+"BAU","2020","ENOX","NFM","","","","ENOX",0.432970042,1.000000000
+"BAU","2020","ENOX","EII","","","","ENOX",0.222792169,1.000000000
+"BAU","2020","ENOX","OM","","","","ENOX",0.278053800,1.000000000
+"BAU","2020","ENOX","Air","","","","ENOX",0.236084111,1.000000000
+"BAU","2020","ENOX","Tran","","","","ENOX",7.216561990,1.000000000
+"BAU","2020","ENOX","Serv","","","","ENOX",0.000000000,1.000000000
+"BAU","2020","ENOX","fd","","","","ENOX",2.205074258,1.000000000
+"BAU","2020","ENOX","","total","","","ENOX",31.558428673,1.000000000
+"BAU","2020","elec_CO2","","","T_D","","elec_CO2",0.004173185,1.000000000
+"BAU","2020","elec_CO2","","","Coal_Power","","elec_CO2",2.103232261,1.000000000
+"BAU","2020","elec_CO2","","","Gas_Power","","elec_CO2",0.013958242,1.000000000
+"BAU","2020","elec_CO2","","","Oil_Power","","elec_CO2",0.000103900,1.000000000
+"BAU","2020","elec_CO2","","","Nuclear","","elec_CO2",0.002205300,1.000000000
+"BAU","2020","elec_CO2","","","Hydro","","elec_CO2",0.000000000,1.000000000
+"BAU","2020","elec_CO2","","","Wind","","elec_CO2",0.000000000,1.000000000
+"BAU","2020","elec_CO2","","","Solar","","elec_CO2",0.000000000,1.000000000
+"BAU","2020","elec_CO2","","","Biomass","","elec_CO2",0.000000000,1.000000000
+"BAU","2020","unemployment","","","","LabSk","ur",0.048460280,1.000000000
+"BAU","2020","total employment","","","","LabSk","total employment",86040.295270930,1.000000000
+"BAU","2020","aggregated wage","","","","LabSk","aggregated wage",0.266032490,1.000000000
+"BAU","2020","unemployment","","","","LabUn","ur",0.027205098,1.000000000
+"BAU","2020","total employment","","","","LabUn","total employment",6.2747530918E+5,1.000000000
+"BAU","2020","aggregated wage","","","","LabUn","aggregated wage",0.031267082,1.000000000
+"BAU","2020","GDP","","","","","GDP",90856.043820753,1.000000000
+"BAU","2020","TFP","","","","","TFP",1.440139655,1.000000000
+"BAU","2020","Welfare","","","","","Welfare",90053.451304762,1.000000000
+"BAU","2020","subelec0","","","T_D","","subsidy",0.000000000,1.000000000
+"BAU","2020","markup","","","T_D","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Coal_Power","","subsidy",0.000000000,1.000000000
+"BAU","2020","markup","","","Coal_Power","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Gas_Power","","subsidy",0.000000000,1.000000000
+"BAU","2020","markup","","","Gas_Power","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Oil_Power","","subsidy",0.000000000,1.000000000
+"BAU","2020","markup","","","Oil_Power","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Nuclear","","subsidy",0.014459570,1.000000000
+"BAU","2020","markup","","","Nuclear","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Hydro","","subsidy",0.000000000,1.000000000
+"BAU","2020","markup","","","Hydro","","markup",1.000000000,1.000000000
+"BAU","2020","subelec0","","","Wind","","subsidy",0.070911362,1.000000000
+"BAU","2020","markup","","","Wind","","markup",0.908782711,1.000000000
+"BAU","2020","subelec0","","","Solar","","subsidy",0.244680259,1.000000000
+"BAU","2020","markup","","","Solar","","markup",0.607380691,1.000000000
+"BAU","2020","subelec0","","","Biomass","","subsidy",0.185606061,1.000000000
+"BAU","2020","markup","","","Biomass","","markup",0.937979404,1.000000000
+"BAU","2020","clim0","","","","","clim0",0.500000000,1.000000000
+"BAU","2020","tclim","","","","","tclim",8.879862003,1.000000000
+"BAU","2020","tclim_ms","","","","","tclim_ms",0.000000000,1.000000000
+"BAU","2020","pco2_ms","","","","","carbon price",0.000000000,1.000000000
+"BAU","2020","pco2","","","","","carbon price",0.000010000,1.000000000
+"BAU","2020","clim_s","","","Elec","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","Roil","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","Paper","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","Chem","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","CM","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","IST","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","NFM","","clim_s",0.000000000,1.000000000
+"BAU","2020","clim_s","","","Air","","clim_s",0.000000000,1.000000000
+"BAU","2020","pist","","","BOF","","pist","PIST('BOF')",1.000000000
+"BAU","2020","pist","","","EAF","","pist","PIST('EAF')",1.000000000
+"BAU","2025","output","Elec","","","","output",6639.646239429,1.000000000
+"BAU","2025","Sectoral price","Elec","","","","Sectoral price",0.442721013,1.000000000
+"BAU","2025","employment","Elec","","","LabSk","employment",2480.277854531,1.000000000
+"BAU","2025","Sectoral wage","Elec","","","LabSk","Sectoral wage",0.027050783,1.000000000
+"BAU","2025","employment","Elec","","","LabUn","employment",4242.538351182,1.000000000
+"BAU","2025","Sectoral wage","Elec","","","LabUn","Sectoral wage",0.019029140,1.000000000
+"BAU","2025","output","Coal","","","","output",3019.179209552,1.000000000
+"BAU","2025","Sectoral price","Coal","","","","Sectoral price",0.689543852,1.000000000
+"BAU","2025","employment","Coal","","","LabSk","employment",980.196217435,1.000000000
+"BAU","2025","Sectoral wage","Coal","","","LabSk","Sectoral wage",0.028140004,1.000000000
+"BAU","2025","employment","Coal","","","LabUn","employment",7827.904807962,1.000000000
+"BAU","2025","Sectoral wage","Coal","","","LabUn","Sectoral wage",0.018753957,1.000000000
+"BAU","2025","output","Oilgas","","","","output",1133.067590000,1.000000000
+"BAU","2025","Sectoral price","Oilgas","","","","Sectoral price",2.429544585,1.000000000
+"BAU","2025","employment","Oilgas","","","LabSk","employment",69.532968491,1.000000000
+"BAU","2025","Sectoral wage","Oilgas","","","LabSk","Sectoral wage",0.000000000,1.000000000
+"BAU","2025","employment","Oilgas","","","LabUn","employment",81.508855447,1.000000000
+"BAU","2025","Sectoral wage","Oilgas","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2025","output","Roil","","","","output",3138.384178968,1.000000000
+"BAU","2025","Sectoral price","Roil","","","","Sectoral price",2.013206591,1.000000000
+"BAU","2025","employment","Roil","","","LabSk","employment",379.833586095,1.000000000
+"BAU","2025","Sectoral wage","Roil","","","LabSk","Sectoral wage",0.044754161,1.000000000
+"BAU","2025","employment","Roil","","","LabUn","employment",594.965858962,1.000000000
+"BAU","2025","Sectoral wage","Roil","","","LabUn","Sectoral wage",0.031281718,1.000000000
+"BAU","2025","output","Gas","","","","output",482.350633362,1.000000000
+"BAU","2025","Sectoral price","Gas","","","","Sectoral price",1.179819711,1.000000000
+"BAU","2025","employment","Gas","","","LabSk","employment",253.158903056,1.000000000
+"BAU","2025","Sectoral wage","Gas","","","LabSk","Sectoral wage",0.023562566,1.000000000
+"BAU","2025","employment","Gas","","","LabUn","employment",593.146923418,1.000000000
+"BAU","2025","Sectoral wage","Gas","","","LabUn","Sectoral wage",0.016360717,1.000000000
+"BAU","2025","output","Agri","","","","output",16922.951219924,1.000000000
+"BAU","2025","Sectoral price","Agri","","","","Sectoral price",2.503654004,1.000000000
+"BAU","2025","employment","Agri","","","LabSk","employment",12111.605120602,1.000000000
+"BAU","2025","Sectoral wage","Agri","","","LabSk","Sectoral wage",0.089612990,1.000000000
+"BAU","2025","employment","Agri","","","LabUn","employment",5.6345198004E+5,1.000000000
+"BAU","2025","Sectoral wage","Agri","","","LabUn","Sectoral wage",0.052191608,1.000000000
+"BAU","2025","output","mine","","","","output",4112.268735866,1.000000000
+"BAU","2025","Sectoral price","mine","","","","Sectoral price",0.792226670,1.000000000
+"BAU","2025","employment","mine","","","LabSk","employment",397.557747242,1.000000000
+"BAU","2025","Sectoral wage","mine","","","LabSk","Sectoral wage",0.126882624,1.000000000
+"BAU","2025","employment","mine","","","LabUn","employment",3622.427540434,1.000000000
+"BAU","2025","Sectoral wage","mine","","","LabUn","Sectoral wage",0.081247624,1.000000000
+"BAU","2025","output","Food","","","","output",18928.113677609,1.000000000
+"BAU","2025","Sectoral price","Food","","","","Sectoral price",1.569101488,1.000000000
+"BAU","2025","employment","Food","","","LabSk","employment",1766.399391936,1.000000000
+"BAU","2025","Sectoral wage","Food","","","LabSk","Sectoral wage",0.039209820,1.000000000
+"BAU","2025","employment","Food","","","LabUn","employment",14056.079222821,1.000000000
+"BAU","2025","Sectoral wage","Food","","","LabUn","Sectoral wage",0.020555482,1.000000000
+"BAU","2025","output","Paper","","","","output",2685.867761028,1.000000000
+"BAU","2025","Sectoral price","Paper","","","","Sectoral price",0.998312266,1.000000000
+"BAU","2025","employment","Paper","","","LabSk","employment",356.296259536,1.000000000
+"BAU","2025","Sectoral wage","Paper","","","LabSk","Sectoral wage",0.029507147,1.000000000
+"BAU","2025","employment","Paper","","","LabUn","employment",3387.976556552,1.000000000
+"BAU","2025","Sectoral wage","Paper","","","LabUn","Sectoral wage",0.020111819,1.000000000
+"BAU","2025","output","Chem","","","","output",5228.643298485,1.000000000
+"BAU","2025","Sectoral price","Chem","","","","Sectoral price",0.889603153,1.000000000
+"BAU","2025","employment","Chem","","","LabSk","employment",637.812725813,1.000000000
+"BAU","2025","Sectoral wage","Chem","","","LabSk","Sectoral wage",0.050367072,1.000000000
+"BAU","2025","employment","Chem","","","LabUn","employment",2289.570595370,1.000000000
+"BAU","2025","Sectoral wage","Chem","","","LabUn","Sectoral wage",0.033556030,1.000000000
+"BAU","2025","output","CM","","","","output",2788.086363081,1.000000000
+"BAU","2025","Sectoral price","CM","","","","Sectoral price",0.820574638,1.000000000
+"BAU","2025","employment","CM","","","LabSk","employment",416.232258324,1.000000000
+"BAU","2025","Sectoral wage","CM","","","LabSk","Sectoral wage",0.037863453,1.000000000
+"BAU","2025","employment","CM","","","LabUn","employment",3607.158293036,1.000000000
+"BAU","2025","Sectoral wage","CM","","","LabUn","Sectoral wage",0.025670767,1.000000000
+"BAU","2025","output","IST","","","","output",2738.629998777,1.000000000
+"BAU","2025","Sectoral price","IST","","","","Sectoral price",15.122075513,1.000000000
+"BAU","2025","employment","IST","","","LabSk","employment",0.000000000,1.000000000
+"BAU","2025","Sectoral wage","IST","","","LabSk","Sectoral wage",54.367948230,1.000000000
+"BAU","2025","employment","IST","","","LabUn","employment",0.000000000,1.000000000
+"BAU","2025","Sectoral wage","IST","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2025","output","NFM","","","","output",4541.542727780,1.000000000
+"BAU","2025","Sectoral price","NFM","","","","Sectoral price",0.785468867,1.000000000
+"BAU","2025","employment","NFM","","","LabSk","employment",334.020591438,1.000000000
+"BAU","2025","Sectoral wage","NFM","","","LabSk","Sectoral wage",0.074790545,1.000000000
+"BAU","2025","employment","NFM","","","LabUn","employment",1435.682979293,1.000000000
+"BAU","2025","Sectoral wage","NFM","","","LabUn","Sectoral wage",0.051314572,1.000000000
+"BAU","2025","output","EII","","","","output",39279.671121845,1.000000000
+"BAU","2025","Sectoral price","EII","","","","Sectoral price",1.760270603,1.000000000
+"BAU","2025","employment","EII","","","LabSk","employment",4390.529352660,1.000000000
+"BAU","2025","Sectoral wage","EII","","","LabSk","Sectoral wage",0.044601566,1.000000000
+"BAU","2025","employment","EII","","","LabUn","employment",34565.191800931,1.000000000
+"BAU","2025","Sectoral wage","EII","","","LabUn","Sectoral wage",0.024148876,1.000000000
+"BAU","2025","output","OM","","","","output",81440.719932799,1.000000000
+"BAU","2025","Sectoral price","OM","","","","Sectoral price",1.117394713,1.000000000
+"BAU","2025","employment","OM","","","LabSk","employment",19836.627813937,1.000000000
+"BAU","2025","Sectoral wage","OM","","","LabSk","Sectoral wage",0.018301657,1.000000000
+"BAU","2025","employment","OM","","","LabUn","employment",1.8740796345E+5,1.000000000
+"BAU","2025","Sectoral wage","OM","","","LabUn","Sectoral wage",0.009650960,1.000000000
+"BAU","2025","output","Air","","","","output",1481.811587108,1.000000000
+"BAU","2025","Sectoral price","Air","","","","Sectoral price",0.978224319,1.000000000
+"BAU","2025","employment","Air","","","LabSk","employment",478.516947014,1.000000000
+"BAU","2025","Sectoral wage","Air","","","LabSk","Sectoral wage",0.237980938,1.000000000
+"BAU","2025","employment","Air","","","LabUn","employment",313.607065263,1.000000000
+"BAU","2025","Sectoral wage","Air","","","LabUn","Sectoral wage",0.162070929,1.000000000
+"BAU","2025","output","Tran","","","","output",12564.312314879,1.000000000
+"BAU","2025","Sectoral price","Tran","","","","Sectoral price",0.725868666,1.000000000
+"BAU","2025","employment","Tran","","","LabSk","employment",3883.677388076,1.000000000
+"BAU","2025","Sectoral wage","Tran","","","LabSk","Sectoral wage",0.060550521,1.000000000
+"BAU","2025","employment","Tran","","","LabUn","employment",37694.495149819,1.000000000
+"BAU","2025","Sectoral wage","Tran","","","LabUn","Sectoral wage",0.033806037,1.000000000
+"BAU","2025","output","Serv","","","","output",1.2661154380E+5,1.000000000
+"BAU","2025","Sectoral price","Serv","","","","Sectoral price",0.690229291,1.000000000
+"BAU","2025","employment","Serv","","","LabSk","employment",95726.644841949,1.000000000
+"BAU","2025","Sectoral wage","Serv","","","LabSk","Sectoral wage",0.076647616,1.000000000
+"BAU","2025","employment","Serv","","","LabUn","employment",2.1789265963E+5,1.000000000
+"BAU","2025","Sectoral wage","Serv","","","LabUn","Sectoral wage",0.029386559,1.000000000
+"BAU","2025","elec_output","","","T_D","","elec_output",6731.270770503,1.000000000
+"BAU","2025","elec_price","","","T_D","","elec_price",0.156292916,1.000000000
+"BAU","2025","elec_share","","","T_D","","elec_share",0.502806172,1.000000000
+"BAU","2025","elec_tax","","","T_D","","elec_tax",0.048282465,1.000000000
+"BAU","2025","employment","","","T_D","LabSk","employment",720.737938847,1.000000000
+"BAU","2025","employment","","","T_D","LabUn","employment",1232.828952731,1.000000000
+"BAU","2025","elec_output","","","Coal_Power","","elec_output",3333.016383977,1.000000000
+"BAU","2025","elec_price","","","Coal_Power","","elec_price",0.329667188,1.000000000
+"BAU","2025","elec_share","","","Coal_Power","","elec_share",0.248966542,1.000000000
+"BAU","2025","elec_tax","","","Coal_Power","","elec_tax",0.054757713,1.000000000
+"BAU","2025","employment","","","Coal_Power","LabSk","employment",579.080207763,1.000000000
+"BAU","2025","employment","","","Coal_Power","LabUn","employment",990.522080605,1.000000000
+"BAU","2025","elec_output","","","Gas_Power","","elec_output",46.100664254,1.000000000
+"BAU","2025","elec_price","","","Gas_Power","","elec_price",0.652458475,1.000000000
+"BAU","2025","elec_share","","","Gas_Power","","elec_share",0.003443584,1.000000000
+"BAU","2025","elec_tax","","","Gas_Power","","elec_tax",0.045770915,1.000000000
+"BAU","2025","employment","","","Gas_Power","LabSk","employment",4.952460003,1.000000000
+"BAU","2025","employment","","","Gas_Power","LabUn","employment",8.471228890,1.000000000
+"BAU","2025","elec_output","","","Oil_Power","","elec_output",1.152642888,1.000000000
+"BAU","2025","elec_price","","","Oil_Power","","elec_price",5.205249813,1.000000000
+"BAU","2025","elec_share","","","Oil_Power","","elec_share",0.000086099,1.000000000
+"BAU","2025","elec_tax","","","Oil_Power","","elec_tax",0.009039753,1.000000000
+"BAU","2025","employment","","","Oil_Power","LabSk","employment",0.291614813,1.000000000
+"BAU","2025","employment","","","Oil_Power","LabUn","employment",0.498809849,1.000000000
+"BAU","2025","elec_output","","","Nuclear","","elec_output",647.200318218,1.000000000
+"BAU","2025","elec_price","","","Nuclear","","elec_price",0.174934095,1.000000000
+"BAU","2025","elec_share","","","Nuclear","","elec_share",0.048343964,1.000000000
+"BAU","2025","elec_tax","","","Nuclear","","elec_tax",0.012888976,1.000000000
+"BAU","2025","employment","","","Nuclear","LabSk","employment",172.999138442,1.000000000
+"BAU","2025","employment","","","Nuclear","LabUn","employment",295.916636625,1.000000000
+"BAU","2025","elec_output","","","Hydro","","elec_output",1467.178915300,1.000000000
+"BAU","2025","elec_price","","","Hydro","","elec_price",0.264057288,1.000000000
+"BAU","2025","elec_share","","","Hydro","","elec_share",0.109593959,1.000000000
+"BAU","2025","elec_tax","","","Hydro","","elec_tax",0.044424834,1.000000000
+"BAU","2025","employment","","","Hydro","LabSk","employment",704.075595133,1.000000000
+"BAU","2025","employment","","","Hydro","LabUn","employment",1204.327858726,1.000000000
+"BAU","2025","elec_output","","","Wind","","elec_output",728.714099642,1.000000000
+"BAU","2025","elec_price","","","Wind","","elec_price",0.255007003,1.000000000
+"BAU","2025","elec_share","","","Wind","","elec_share",0.054432805,1.000000000
+"BAU","2025","elec_tax","","","Wind","","elec_tax",-0.053028648,1.000000000
+"BAU","2025","employment","","","Wind","LabSk","employment",66.624447413,1.000000000
+"BAU","2025","employment","","","Wind","LabUn","employment",113.961737397,1.000000000
+"BAU","2025","elec_output","","","Solar","","elec_output",181.287976540,1.000000000
+"BAU","2025","elec_price","","","Solar","","elec_price",0.073233434,1.000000000
+"BAU","2025","elec_share","","","Solar","","elec_share",0.013541680,1.000000000
+"BAU","2025","elec_tax","","","Solar","","elec_tax",-0.227851771,1.000000000
+"BAU","2025","employment","","","Solar","LabSk","employment",11.313572078,1.000000000
+"BAU","2025","employment","","","Solar","LabUn","employment",19.351970244,1.000000000
+"BAU","2025","elec_output","","","Biomass","","elec_output",251.485045514,1.000000000
+"BAU","2025","elec_price","","","Biomass","","elec_price",0.210175687,1.000000000
+"BAU","2025","elec_share","","","Biomass","","elec_share",0.018785195,1.000000000
+"BAU","2025","elec_tax","","","Biomass","","elec_tax",-0.165545967,1.000000000
+"BAU","2025","employment","","","Biomass","LabSk","employment",220.202880040,1.000000000
+"BAU","2025","employment","","","Biomass","LabUn","employment",376.659076114,1.000000000
+"BAU","2025","ECO2","Elec","","","","ECO2",1.914802276,1.000000000
+"BAU","2025","ECO2","Coal","","","","ECO2",0.405019665,1.000000000
+"BAU","2025","ECO2","Oilgas","","","","ECO2",0.011988348,1.000000000
+"BAU","2025","ECO2","Roil","","","","ECO2",0.052086054,1.000000000
+"BAU","2025","ECO2","Gas","","","","ECO2",0.134611925,1.000000000
+"BAU","2025","ECO2","Agri","","","","ECO2",0.129348038,1.000000000
+"BAU","2025","ECO2","mine","","","","ECO2",0.109884954,1.000000000
+"BAU","2025","ECO2","Food","","","","ECO2",0.050710196,1.000000000
+"BAU","2025","ECO2","Paper","","","","ECO2",0.075136726,1.000000000
+"BAU","2025","ECO2","Chem","","","","ECO2",0.528451477,1.000000000
+"BAU","2025","ECO2","CM","","","","ECO2",1.441036002,1.000000000
+"BAU","2025","ECO2","IST","","","","ECO2",0.000000000,1.000000000
+"BAU","2025","ECO2","NFM","","","","ECO2",0.155919461,1.000000000
+"BAU","2025","ECO2","EII","","","","ECO2",1.858626659,1.000000000
+"BAU","2025","ECO2","OM","","","","ECO2",0.163196555,1.000000000
+"BAU","2025","ECO2","Air","","","","ECO2",0.068568699,1.000000000
+"BAU","2025","ECO2","Tran","","","","ECO2",0.279367226,1.000000000
+"BAU","2025","ECO2","Serv","","","","ECO2",0.248930822,1.000000000
+"BAU","2025","ECO2","fd","","","","ECO2",0.381147321,1.000000000
+"BAU","2025","ECO2","","total","","","ECO2",8.008832401,1.000000000
+"BAU","2025","ESO2","Elec","","","","ESO2",13.064924629,1.000000000
+"BAU","2025","ESO2","Coal","","","","ESO2",0.206179361,1.000000000
+"BAU","2025","ESO2","Oilgas","","","","ESO2",0.000021688,1.000000000
+"BAU","2025","ESO2","Roil","","","","ESO2",1.694232166,1.000000000
+"BAU","2025","ESO2","Gas","","","","ESO2",0.000000000,1.000000000
+"BAU","2025","ESO2","Agri","","","","ESO2",0.007966181,1.000000000
+"BAU","2025","ESO2","mine","","","","ESO2",0.000000000,1.000000000
+"BAU","2025","ESO2","Food","","","","ESO2",1.787486327,1.000000000
+"BAU","2025","ESO2","Paper","","","","ESO2",1.716769724,1.000000000
+"BAU","2025","ESO2","Chem","","","","ESO2",4.270825010,1.000000000
+"BAU","2025","ESO2","CM","","","","ESO2",5.111390353,1.000000000
+"BAU","2025","ESO2","IST","","","","ESO2",6.602225646,1.000000000
+"BAU","2025","ESO2","NFM","","","","ESO2",3.565475484,1.000000000
+"BAU","2025","ESO2","EII","","","","ESO2",1.007769881,1.000000000
+"BAU","2025","ESO2","OM","","","","ESO2",1.312888740,1.000000000
+"BAU","2025","ESO2","Air","","","","ESO2",0.035604986,1.000000000
+"BAU","2025","ESO2","Tran","","","","ESO2",2.045798804,1.000000000
+"BAU","2025","ESO2","Serv","","","","ESO2",0.000000000,1.000000000
+"BAU","2025","ESO2","fd","","","","ESO2",5.584536235,1.000000000
+"BAU","2025","ESO2","","total","","","ESO2",48.014095215,1.000000000
+"BAU","2025","ENOX","Elec","","","","ENOX",11.701350187,1.000000000
+"BAU","2025","ENOX","Coal","","","","ENOX",0.025673684,1.000000000
+"BAU","2025","ENOX","Oilgas","","","","ENOX",0.002216589,1.000000000
+"BAU","2025","ENOX","Roil","","","","ENOX",0.915688587,1.000000000
+"BAU","2025","ENOX","Gas","","","","ENOX",0.000000000,1.000000000
+"BAU","2025","ENOX","Agri","","","","ENOX",1.491477943,1.000000000
+"BAU","2025","ENOX","mine","","","","ENOX",0.000000000,1.000000000
+"BAU","2025","ENOX","Food","","","","ENOX",0.475491790,1.000000000
+"BAU","2025","ENOX","Paper","","","","ENOX",0.547689853,1.000000000
+"BAU","2025","ENOX","Chem","","","","ENOX",1.219650430,1.000000000
+"BAU","2025","ENOX","CM","","","","ENOX",5.511395808,1.000000000
+"BAU","2025","ENOX","IST","","","","ENOX",2.054626054,1.000000000
+"BAU","2025","ENOX","NFM","","","","ENOX",0.552389376,1.000000000
+"BAU","2025","ENOX","EII","","","","ENOX",0.278182774,1.000000000
+"BAU","2025","ENOX","OM","","","","ENOX",0.331795036,1.000000000
+"BAU","2025","ENOX","Air","","","","ENOX",0.344736769,1.000000000
+"BAU","2025","ENOX","Tran","","","","ENOX",10.182854694,1.000000000
+"BAU","2025","ENOX","Serv","","","","ENOX",0.000000000,1.000000000
+"BAU","2025","ENOX","fd","","","","ENOX",2.938860471,1.000000000
+"BAU","2025","ENOX","","total","","","ENOX",38.574080045,1.000000000
+"BAU","2025","elec_CO2","","","T_D","","elec_CO2",0.004272594,1.000000000
+"BAU","2025","elec_CO2","","","Coal_Power","","elec_CO2",1.905410691,1.000000000
+"BAU","2025","elec_CO2","","","Gas_Power","","elec_CO2",0.009336770,1.000000000
+"BAU","2025","elec_CO2","","","Oil_Power","","elec_CO2",0.000054812,1.000000000
+"BAU","2025","elec_CO2","","","Nuclear","","elec_CO2",0.001936906,1.000000000
+"BAU","2025","elec_CO2","","","Hydro","","elec_CO2",0.000000000,1.000000000
+"BAU","2025","elec_CO2","","","Wind","","elec_CO2",0.000000000,1.000000000
+"BAU","2025","elec_CO2","","","Solar","","elec_CO2",0.000000000,1.000000000
+"BAU","2025","elec_CO2","","","Biomass","","elec_CO2",0.000000000,1.000000000
+"BAU","2025","unemployment","","","","LabSk","ur",0.048460280,1.000000000
+"BAU","2025","total employment","","","","LabSk","total employment",82258.291438752,1.000000000
+"BAU","2025","aggregated wage","","","","LabSk","aggregated wage",0.295815840,1.000000000
+"BAU","2025","unemployment","","","","LabUn","ur",0.027205098,1.000000000
+"BAU","2025","total employment","","","","LabUn","total employment",5.9989388333E+5,1.000000000
+"BAU","2025","aggregated wage","","","","LabUn","aggregated wage",0.037661971,1.000000000
+"BAU","2025","GDP","","","","","GDP",1.2158588174E+5,1.000000000
+"BAU","2025","TFP","","","","","TFP",1.862244955,1.000000000
+"BAU","2025","Welfare","","","","","Welfare",1.2194953183E+5,1.000000000
+"BAU","2025","subelec0","","","T_D","","subsidy",0.000000000,1.000000000
+"BAU","2025","markup","","","T_D","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Coal_Power","","subsidy",0.000000000,1.000000000
+"BAU","2025","markup","","","Coal_Power","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Gas_Power","","subsidy",0.000000000,1.000000000
+"BAU","2025","markup","","","Gas_Power","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Oil_Power","","subsidy",0.000000000,1.000000000
+"BAU","2025","markup","","","Oil_Power","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Nuclear","","subsidy",0.014459570,1.000000000
+"BAU","2025","markup","","","Nuclear","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Hydro","","subsidy",0.000000000,1.000000000
+"BAU","2025","markup","","","Hydro","","markup",1.000000000,1.000000000
+"BAU","2025","subelec0","","","Wind","","subsidy",0.070911362,1.000000000
+"BAU","2025","markup","","","Wind","","markup",0.837451217,1.000000000
+"BAU","2025","subelec0","","","Solar","","subsidy",0.244680259,1.000000000
+"BAU","2025","markup","","","Solar","","markup",0.507382231,1.000000000
+"BAU","2025","subelec0","","","Biomass","","subsidy",0.185606061,1.000000000
+"BAU","2025","markup","","","Biomass","","markup",0.720231326,1.000000000
+"BAU","2025","clim0","","","","","clim0",0.500000000,1.000000000
+"BAU","2025","tclim","","","","","tclim",8.805546161,1.000000000
+"BAU","2025","tclim_ms","","","","","tclim_ms",0.000000000,1.000000000
+"BAU","2025","pco2_ms","","","","","carbon price",0.000000000,1.000000000
+"BAU","2025","pco2","","","","","carbon price",0.000010000,1.000000000
+"BAU","2025","clim_s","","","Elec","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","Roil","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","Paper","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","Chem","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","CM","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","IST","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","NFM","","clim_s",0.000000000,1.000000000
+"BAU","2025","clim_s","","","Air","","clim_s",0.000000000,1.000000000
+"BAU","2025","pist","","","BOF","","pist","PIST('BOF')",1.000000000
+"BAU","2025","pist","","","EAF","","pist","PIST('EAF')",1.000000000
+"BAU","2030","output","Elec","","","","output",6764.574946383,1.000000000
+"BAU","2030","Sectoral price","Elec","","","","Sectoral price",0.385970176,1.000000000
+"BAU","2030","employment","Elec","","","LabSk","employment",2955.749895826,1.000000000
+"BAU","2030","Sectoral wage","Elec","","","LabSk","Sectoral wage",0.017698407,1.000000000
+"BAU","2030","employment","Elec","","","LabUn","employment",5055.837700428,1.000000000
+"BAU","2030","Sectoral wage","Elec","","","LabUn","Sectoral wage",0.012450119,1.000000000
+"BAU","2030","output","Coal","","","","output",3020.951548274,1.000000000
+"BAU","2030","Sectoral price","Coal","","","","Sectoral price",0.638318015,1.000000000
+"BAU","2030","employment","Coal","","","LabSk","employment",1168.100929612,1.000000000
+"BAU","2030","Sectoral wage","Coal","","","LabSk","Sectoral wage",0.014410626,1.000000000
+"BAU","2030","employment","Coal","","","LabUn","employment",9328.522918935,1.000000000
+"BAU","2030","Sectoral wage","Coal","","","LabUn","Sectoral wage",0.009603988,1.000000000
+"BAU","2030","output","Oilgas","","","","output",1133.067590000,1.000000000
+"BAU","2030","Sectoral price","Oilgas","","","","Sectoral price",3.356875519,1.000000000
+"BAU","2030","employment","Oilgas","","","LabSk","employment",69.532968491,1.000000000
+"BAU","2030","Sectoral wage","Oilgas","","","LabSk","Sectoral wage",0.000000000,1.000000000
+"BAU","2030","employment","Oilgas","","","LabUn","employment",81.508855447,1.000000000
+"BAU","2030","Sectoral wage","Oilgas","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2030","output","Roil","","","","output",3015.631377345,1.000000000
+"BAU","2030","Sectoral price","Roil","","","","Sectoral price",2.697484585,1.000000000
+"BAU","2030","employment","Roil","","","LabSk","employment",452.648109760,1.000000000
+"BAU","2030","Sectoral wage","Roil","","","LabSk","Sectoral wage",0.028247238,1.000000000
+"BAU","2030","employment","Roil","","","LabUn","employment",709.021479882,1.000000000
+"BAU","2030","Sectoral wage","Roil","","","LabUn","Sectoral wage",0.019743910,1.000000000
+"BAU","2030","output","Gas","","","","output",467.479977645,1.000000000
+"BAU","2030","Sectoral price","Gas","","","","Sectoral price",1.369306143,1.000000000
+"BAU","2030","employment","Gas","","","LabSk","employment",301.689748174,1.000000000
+"BAU","2030","Sectoral wage","Gas","","","LabSk","Sectoral wage",0.017102551,1.000000000
+"BAU","2030","employment","Gas","","","LabUn","employment",706.853852362,1.000000000
+"BAU","2030","Sectoral wage","Gas","","","LabUn","Sectoral wage",0.011875192,1.000000000
+"BAU","2030","output","Agri","","","","output",20829.289219461,1.000000000
+"BAU","2030","Sectoral price","Agri","","","","Sectoral price",3.371967631,1.000000000
+"BAU","2030","employment","Agri","","","LabSk","employment",14433.413380727,1.000000000
+"BAU","2030","Sectoral wage","Agri","","","LabSk","Sectoral wage",0.128025102,1.000000000
+"BAU","2030","employment","Agri","","","LabUn","employment",6.7146635511E+5,1.000000000
+"BAU","2030","Sectoral wage","Agri","","","LabUn","Sectoral wage",0.074563252,1.000000000
+"BAU","2030","output","mine","","","","output",5114.524354547,1.000000000
+"BAU","2030","Sectoral price","mine","","","","Sectoral price",0.724087369,1.000000000
+"BAU","2030","employment","mine","","","LabSk","employment",473.770012440,1.000000000
+"BAU","2030","Sectoral wage","mine","","","LabSk","Sectoral wage",0.097106013,1.000000000
+"BAU","2030","employment","mine","","","LabUn","employment",4316.850953368,1.000000000
+"BAU","2030","Sectoral wage","mine","","","LabUn","Sectoral wage",0.062180562,1.000000000
+"BAU","2030","output","Food","","","","output",23558.108126467,1.000000000
+"BAU","2030","Sectoral price","Food","","","","Sectoral price",1.979533970,1.000000000
+"BAU","2030","employment","Food","","","LabSk","employment",2105.020132790,1.000000000
+"BAU","2030","Sectoral wage","Food","","","LabSk","Sectoral wage",0.022241670,1.000000000
+"BAU","2030","employment","Food","","","LabUn","employment",16750.645338328,1.000000000
+"BAU","2030","Sectoral wage","Food","","","LabUn","Sectoral wage",0.011660044,1.000000000
+"BAU","2030","output","Paper","","","","output",3473.816038780,1.000000000
+"BAU","2030","Sectoral price","Paper","","","","Sectoral price",1.062407463,1.000000000
+"BAU","2030","employment","Paper","","","LabSk","employment",424.598651350,1.000000000
+"BAU","2030","Sectoral wage","Paper","","","LabSk","Sectoral wage",0.020356175,1.000000000
+"BAU","2030","employment","Paper","","","LabUn","employment",4037.455453529,1.000000000
+"BAU","2030","Sectoral wage","Paper","","","LabUn","Sectoral wage",0.013874594,1.000000000
+"BAU","2030","output","Chem","","","","output",6385.392256857,1.000000000
+"BAU","2030","Sectoral price","Chem","","","","Sectoral price",0.913332830,1.000000000
+"BAU","2030","employment","Chem","","","LabSk","employment",760.082139359,1.000000000
+"BAU","2030","Sectoral wage","Chem","","","LabSk","Sectoral wage",0.039457519,1.000000000
+"BAU","2030","employment","Chem","","","LabUn","employment",2728.483840492,1.000000000
+"BAU","2030","Sectoral wage","Chem","","","LabUn","Sectoral wage",0.026287763,1.000000000
+"BAU","2030","output","CM","","","","output",3243.621814165,1.000000000
+"BAU","2030","Sectoral price","CM","","","","Sectoral price",0.769332823,1.000000000
+"BAU","2030","employment","CM","","","LabSk","employment",496.024448202,1.000000000
+"BAU","2030","Sectoral wage","CM","","","LabSk","Sectoral wage",0.026716503,1.000000000
+"BAU","2030","employment","CM","","","LabUn","employment",4298.654574157,1.000000000
+"BAU","2030","Sectoral wage","CM","","","LabUn","Sectoral wage",0.018113327,1.000000000
+"BAU","2030","output","IST","","","","output",3263.628435340,1.000000000
+"BAU","2030","Sectoral price","IST","","","","Sectoral price",16.273668615,1.000000000
+"BAU","2030","employment","IST","","","LabSk","employment",0.000000000,1.000000000
+"BAU","2030","Sectoral wage","IST","","","LabSk","Sectoral wage",58.872766814,1.000000000
+"BAU","2030","employment","IST","","","LabUn","employment",0.000000000,1.000000000
+"BAU","2030","Sectoral wage","IST","","","LabUn","Sectoral wage",0.000000000,1.000000000
+"BAU","2030","output","NFM","","","","output",5494.774855081,1.000000000
+"BAU","2030","Sectoral price","NFM","","","","Sectoral price",0.729330827,1.000000000
+"BAU","2030","employment","NFM","","","LabSk","employment",398.052712741,1.000000000
+"BAU","2030","Sectoral wage","NFM","","","LabSk","Sectoral wage",0.054059265,1.000000000
+"BAU","2030","employment","NFM","","","LabUn","employment",1710.905012927,1.000000000
+"BAU","2030","Sectoral wage","NFM","","","LabUn","Sectoral wage",0.037090625,1.000000000
+"BAU","2030","output","EII","","","","output",47368.939456921,1.000000000
+"BAU","2030","Sectoral price","EII","","","","Sectoral price",1.825078406,1.000000000
+"BAU","2030","employment","EII","","","LabSk","employment",5232.198744604,1.000000000
+"BAU","2030","Sectoral wage","EII","","","LabSk","Sectoral wage",0.029613572,1.000000000
+"BAU","2030","employment","EII","","","LabUn","employment",41191.377747007,1.000000000
+"BAU","2030","Sectoral wage","EII","","","LabUn","Sectoral wage",0.016033842,1.000000000
+"BAU","2030","output","OM","","","","output",92550.179093150,1.000000000
+"BAU","2030","Sectoral price","OM","","","","Sectoral price",1.129147723,1.000000000
+"BAU","2030","employment","OM","","","LabSk","employment",23639.331572259,1.000000000
+"BAU","2030","Sectoral wage","OM","","","LabSk","Sectoral wage",0.009254877,1.000000000
+"BAU","2030","employment","OM","","","LabUn","employment",2.2333427975E+5,1.000000000
+"BAU","2030","Sectoral wage","OM","","","LabUn","Sectoral wage",0.004880348,1.000000000
+"BAU","2030","output","Air","","","","output",2078.041839995,1.000000000
+"BAU","2030","Sectoral price","Air","","","","Sectoral price",0.952332176,1.000000000
+"BAU","2030","employment","Air","","","LabSk","employment",570.249181439,1.000000000
+"BAU","2030","Sectoral wage","Air","","","LabSk","Sectoral wage",0.271117347,1.000000000
+"BAU","2030","employment","Air","","","LabUn","employment",373.725890595,1.000000000
+"BAU","2030","Sectoral wage","Air","","","LabUn","Sectoral wage",0.184637646,1.000000000
+"BAU","2030","output","Tran","","","","output",17892.754329923,1.000000000
+"BAU","2030","Sectoral price","Tran","","","","Sectoral price",0.637651553,1.000000000
+"BAU","2030","employment","Tran","","","LabSk","employment",4628.182691007,1.000000000
+"BAU","2030","Sectoral wage","Tran","","","LabSk","Sectoral wage",0.058675073,1.000000000
+"BAU","2030","employment","Tran","","","LabUn","employment",44920.572049514,1.000000000
+"BAU","2030","Sectoral wage","Tran","","","LabUn","Sectoral wage",0.032758954,1.000000000
+"BAU","2030","output","Serv","","","","output",1.8510636330E+5,1.000000000
+"BAU","2030","Sectoral price","Serv","","","","Sectoral price",0.616284392,1.000000000
+"BAU","2030","employment","Serv","","","LabSk","employment",1.1407754982E+5,1.000000000
+"BAU","2030","Sectoral wage","Serv","","","LabSk","Sectoral wage",0.060940623,1.000000000
+"BAU","2030","employment","Serv","","","LabUn","employment",2.5966292629E+5,1.000000000
+"BAU","2030","Sectoral wage","Serv","","","LabUn","Sectoral wage",0.023364526,1.000000000
+"BAU","2030","elec_output","","","T_D","","elec_output",6857.923444936,1.000000000
+"BAU","2030","elec_price","","","T_D","","elec_price",0.162188041,1.000000000
+"BAU","2030","elec_share","","","T_D","","elec_share",0.487895040,1.000000000
+"BAU","2030","elec_tax","","","T_D","","elec_tax",0.048282465,1.000000000
+"BAU","2030","employment","","","T_D","LabSk","employment",734.299031789,1.000000000
+"BAU","2030","employment","","","T_D","LabUn","employment",1256.025327956,1.000000000
+"BAU","2030","elec_output","","","Coal_Power","","elec_output",2976.507674548,1.000000000
+"BAU","2030","elec_price","","","Coal_Power","","elec_price",0.280513237,1.000000000
+"BAU","2030","elec_share","","","Coal_Power","","elec_share",0.211758464,1.000000000
+"BAU","2030","elec_tax","","","Coal_Power","","elec_tax",0.054757713,1.000000000
+"BAU","2030","employment","","","Coal_Power","LabSk","employment",459.168808894,1.000000000
+"BAU","2030","employment","","","Coal_Power","LabUn","employment",785.412517412,1.000000000
+"BAU","2030","elec_output","","","Gas_Power","","elec_output",30.422933467,1.000000000
+"BAU","2030","elec_price","","","Gas_Power","","elec_price",0.679225968,1.000000000
+"BAU","2030","elec_share","","","Gas_Power","","elec_share",0.002164387,1.000000000
+"BAU","2030","elec_tax","","","Gas_Power","","elec_tax",0.045770915,1.000000000
+"BAU","2030","employment","","","Gas_Power","LabSk","employment",2.948963759,1.000000000
+"BAU","2030","employment","","","Gas_Power","LabUn","employment",5.044229932,1.000000000
+"BAU","2030","elec_output","","","Oil_Power","","elec_output",0.623374222,1.000000000
+"BAU","2030","elec_price","","","Oil_Power","","elec_price",6.187704174,1.000000000
+"BAU","2030","elec_share","","","Oil_Power","","elec_share",0.000044349,1.000000000
+"BAU","2030","elec_tax","","","Oil_Power","","elec_tax",0.009039753,1.000000000
+"BAU","2030","employment","","","Oil_Power","LabSk","employment",0.136816124,1.000000000
+"BAU","2030","employment","","","Oil_Power","LabUn","employment",0.234025252,1.000000000
+"BAU","2030","elec_output","","","Nuclear","","elec_output",882.588544153,1.000000000
+"BAU","2030","elec_price","","","Nuclear","","elec_price",0.112249762,1.000000000
+"BAU","2030","elec_share","","","Nuclear","","elec_share",0.062790228,1.000000000
+"BAU","2030","elec_tax","","","Nuclear","","elec_tax",0.012888976,1.000000000
+"BAU","2030","employment","","","Nuclear","LabSk","employment",339.115769099,1.000000000
+"BAU","2030","employment","","","Nuclear","LabUn","employment",580.060679402,1.000000000
+"BAU","2030","elec_output","","","Hydro","","elec_output",1705.438152884,1.000000000
+"BAU","2030","elec_price","","","Hydro","","elec_price",0.188474920,1.000000000
+"BAU","2030","elec_share","","","Hydro","","elec_share",0.121330432,1.000000000
+"BAU","2030","elec_tax","","","Hydro","","elec_tax",0.044424834,1.000000000
+"BAU","2030","employment","","","Hydro","LabSk","employment",979.786617546,1.000000000
+"BAU","2030","employment","","","Hydro","LabUn","employment",1675.934128140,1.000000000
+"BAU","2030","elec_output","","","Wind","","elec_output",993.559264083,1.000000000
+"BAU","2030","elec_price","","","Wind","","elec_price",0.163650893,1.000000000
+"BAU","2030","elec_share","","","Wind","","elec_share",0.070685046,1.000000000
+"BAU","2030","elec_tax","","","Wind","","elec_tax",-0.053028648,1.000000000
+"BAU","2030","employment","","","Wind","LabSk","employment",101.378184061,1.000000000
+"BAU","2030","employment","","","Wind","LabUn","employment",173.408327131,1.000000000
+"BAU","2030","elec_output","","","Solar","","elec_output",327.188269795,1.000000000
+"BAU","2030","elec_price","","","Solar","","elec_price",0.038983508,1.000000000
+"BAU","2030","elec_share","","","Solar","","elec_share",0.023277241,1.000000000
+"BAU","2030","elec_tax","","","Solar","","elec_tax",-0.227851771,1.000000000
+"BAU","2030","employment","","","Solar","LabSk","employment",20.547760358,1.000000000
+"BAU","2030","employment","","","Solar","LabUn","employment",35.147135314,1.000000000
+"BAU","2030","elec_output","","","Biomass","","elec_output",281.893368010,1.000000000
+"BAU","2030","elec_price","","","Biomass","","elec_price",0.153694392,1.000000000
+"BAU","2030","elec_share","","","Biomass","","elec_share",0.020054814,1.000000000
+"BAU","2030","elec_tax","","","Biomass","","elec_tax",-0.165545967,1.000000000
+"BAU","2030","employment","","","Biomass","LabSk","employment",318.367944197,1.000000000
+"BAU","2030","employment","","","Biomass","LabUn","employment",544.571329889,1.000000000
+"BAU","2030","ECO2","Elec","","","","ECO2",1.612460701,1.000000000
+"BAU","2030","ECO2","Coal","","","","ECO2",0.288717382,1.000000000
+"BAU","2030","ECO2","Oilgas","","","","ECO2",0.011406502,1.000000000
+"BAU","2030","ECO2","Roil","","","","ECO2",0.043679662,1.000000000
+"BAU","2030","ECO2","Gas","","","","ECO2",0.127545681,1.000000000
+"BAU","2030","ECO2","Agri","","","","ECO2",0.160909655,1.000000000
+"BAU","2030","ECO2","mine","","","","ECO2",0.103557839,1.000000000
+"BAU","2030","ECO2","Food","","","","ECO2",0.037125936,1.000000000
+"BAU","2030","ECO2","Paper","","","","ECO2",0.065081185,1.000000000
+"BAU","2030","ECO2","Chem","","","","ECO2",0.519383676,1.000000000
+"BAU","2030","ECO2","CM","","","","ECO2",1.591368885,1.000000000
+"BAU","2030","ECO2","IST","","","","ECO2",0.000000000,1.000000000
+"BAU","2030","ECO2","NFM","","","","ECO2",0.145049882,1.000000000
+"BAU","2030","ECO2","EII","","","","ECO2",1.540966011,1.000000000
+"BAU","2030","ECO2","OM","","","","ECO2",0.104211475,1.000000000
+"BAU","2030","ECO2","Air","","","","ECO2",0.067504122,1.000000000
+"BAU","2030","ECO2","Tran","","","","ECO2",0.247364619,1.000000000
+"BAU","2030","ECO2","Serv","","","","ECO2",0.208278759,1.000000000
+"BAU","2030","ECO2","fd","","","","ECO2",0.436956345,1.000000000
+"BAU","2030","ECO2","","total","","","ECO2",7.311568317,1.000000000
+"BAU","2030","ESO2","Elec","","","","ESO2",13.310748590,1.000000000
+"BAU","2030","ESO2","Coal","","","","ESO2",0.206300394,1.000000000
+"BAU","2030","ESO2","Oilgas","","","","ESO2",0.000021688,1.000000000
+"BAU","2030","ESO2","Roil","","","","ESO2",1.627965025,1.000000000
+"BAU","2030","ESO2","Gas","","","","ESO2",0.000000000,1.000000000
+"BAU","2030","ESO2","Agri","","","","ESO2",0.009805020,1.000000000
+"BAU","2030","ESO2","mine","","","","ESO2",0.000000000,1.000000000
+"BAU","2030","ESO2","Food","","","","ESO2",2.224722278,1.000000000
+"BAU","2030","ESO2","Paper","","","","ESO2",2.220415424,1.000000000
+"BAU","2030","ESO2","Chem","","","","ESO2",5.215672861,1.000000000
+"BAU","2030","ESO2","CM","","","","ESO2",5.946522127,1.000000000
+"BAU","2030","ESO2","IST","","","","ESO2",7.867879693,1.000000000
+"BAU","2030","ESO2","NFM","","","","ESO2",4.313839197,1.000000000
+"BAU","2030","ESO2","EII","","","","ESO2",1.215310341,1.000000000
+"BAU","2030","ESO2","OM","","","","ESO2",1.491981998,1.000000000
+"BAU","2030","ESO2","Air","","","","ESO2",0.049931213,1.000000000
+"BAU","2030","ESO2","Tran","","","","ESO2",2.913408588,1.000000000
+"BAU","2030","ESO2","Serv","","","","ESO2",0.000000000,1.000000000
+"BAU","2030","ESO2","fd","","","","ESO2",7.006301655,1.000000000
+"BAU","2030","ESO2","","total","","","ESO2",55.620826092,1.000000000
+"BAU","2030","ENOX","Elec","","","","ENOX",11.921517723,1.000000000
+"BAU","2030","ENOX","Coal","","","","ENOX",0.025688755,1.000000000
+"BAU","2030","ENOX","Oilgas","","","","ENOX",0.002216589,1.000000000
+"BAU","2030","ENOX","Roil","","","","ENOX",0.879872915,1.000000000
+"BAU","2030","ENOX","Gas","","","","ENOX",0.000000000,1.000000000
+"BAU","2030","ENOX","Agri","","","","ENOX",1.835756957,1.000000000
+"BAU","2030","ENOX","mine","","","","ENOX",0.000000000,1.000000000
+"BAU","2030","ENOX","Food","","","","ENOX",0.591801549,1.000000000
+"BAU","2030","ENOX","Paper","","","","ENOX",0.708364658,1.000000000
+"BAU","2030","ENOX","Chem","","","","ENOX",1.489477473,1.000000000
+"BAU","2030","ENOX","CM","","","","ENOX",6.411883042,1.000000000
+"BAU","2030","ENOX","IST","","","","ENOX",2.448500168,1.000000000
+"BAU","2030","ENOX","NFM","","","","ENOX",0.668331321,1.000000000
+"BAU","2030","ENOX","EII","","","","ENOX",0.335471825,1.000000000
+"BAU","2030","ENOX","OM","","","","ENOX",0.377055728,1.000000000
+"BAU","2030","ENOX","Air","","","","ENOX",0.483447043,1.000000000
+"BAU","2030","ENOX","Tran","","","","ENOX",14.501336233,1.000000000
+"BAU","2030","ENOX","Serv","","","","ENOX",0.000000000,1.000000000
+"BAU","2030","ENOX","fd","","","","ENOX",3.687064085,1.000000000
+"BAU","2030","ENOX","","total","","","ENOX",46.367786065,1.000000000
+"BAU","2030","elec_CO2","","","T_D","","elec_CO2",0.004141716,1.000000000
+"BAU","2030","elec_CO2","","","Coal_Power","","elec_CO2",1.606585722,1.000000000
+"BAU","2030","elec_CO2","","","Gas_Power","","elec_CO2",0.005846841,1.000000000
+"BAU","2030","elec_CO2","","","Oil_Power","","elec_CO2",0.000028137,1.000000000
+"BAU","2030","elec_CO2","","","Nuclear","","elec_CO2",0.001853942,1.000000000
+"BAU","2030","elec_CO2","","","Hydro","","elec_CO2",0.000000000,1.000000000
+"BAU","2030","elec_CO2","","","Wind","","elec_CO2",0.000000000,1.000000000
+"BAU","2030","elec_CO2","","","Solar","","elec_CO2",0.000000000,1.000000000
+"BAU","2030","elec_CO2","","","Biomass","","elec_CO2",0.000000000,1.000000000
+"BAU","2030","unemployment","","","","LabSk","ur",0.048460280,1.000000000
+"BAU","2030","total employment","","","","LabSk","total employment",73625.147997630,1.000000000
+"BAU","2030","aggregated wage","","","","LabSk","aggregated wage",0.305350952,1.000000000
+"BAU","2030","unemployment","","","","LabUn","ur",0.027205098,1.000000000
+"BAU","2030","total employment","","","","LabUn","total employment",5.3693403025E+5,1.000000000
+"BAU","2030","aggregated wage","","","","LabUn","aggregated wage",0.046585426,1.000000000
+"BAU","2030","GDP","","","","","GDP",1.5517781908E+5,1.000000000
+"BAU","2030","TFP","","","","","TFP",2.479463145,1.000000000
+"BAU","2030","Welfare","","","","","Welfare",1.5689913031E+5,1.000000000
+"BAU","2030","subelec0","","","T_D","","subsidy",0.000000000,1.000000000
+"BAU","2030","markup","","","T_D","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Coal_Power","","subsidy",0.000000000,1.000000000
+"BAU","2030","markup","","","Coal_Power","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Gas_Power","","subsidy",0.000000000,1.000000000
+"BAU","2030","markup","","","Gas_Power","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Oil_Power","","subsidy",0.000000000,1.000000000
+"BAU","2030","markup","","","Oil_Power","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Nuclear","","subsidy",0.014459570,1.000000000
+"BAU","2030","markup","","","Nuclear","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Hydro","","subsidy",0.000000000,1.000000000
+"BAU","2030","markup","","","Hydro","","markup",1.000000000,1.000000000
+"BAU","2030","subelec0","","","Wind","","subsidy",0.070911362,1.000000000
+"BAU","2030","markup","","","Wind","","markup",0.780605438,1.000000000
+"BAU","2030","subelec0","","","Solar","","subsidy",0.244680259,1.000000000
+"BAU","2030","markup","","","Solar","","markup",0.459833979,1.000000000
+"BAU","2030","subelec0","","","Biomass","","subsidy",0.185606061,1.000000000
+"BAU","2030","markup","","","Biomass","","markup",0.713996672,1.000000000
+"BAU","2030","clim0","","","","","clim0",0.500000000,1.000000000
+"BAU","2030","tclim","","","","","tclim",8.214932352,1.000000000
+"BAU","2030","tclim_ms","","","","","tclim_ms",0.000000000,1.000000000
+"BAU","2030","pco2_ms","","","","","carbon price",0.000000000,1.000000000
+"BAU","2030","pco2","","","","","carbon price",0.000010000,1.000000000
+"BAU","2030","clim_s","","","Elec","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","Roil","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","Paper","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","Chem","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","CM","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","IST","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","NFM","","clim_s",0.000000000,1.000000000
+"BAU","2030","clim_s","","","Air","","clim_s",0.000000000,1.000000000
+"BAU","2030","pist","","","BOF","","pist","PIST('BOF')",1.000000000
+"BAU","2030","pist","","","EAF","","pist","PIST('EAF')",1.000000000
