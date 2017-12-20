@@ -43,7 +43,7 @@ set        mapif(fuel,fe) maping from sectors to fuel/
 parameter
            Emission(fuel)           China total CO2 emission from the combustion of fuel in 2012 in 100 million tonnes CO2 equivalent
            C(fuel)                  Carbon intensity per unit of energy released from the combustion of fuel    in 100 Million tonnes carbon per EJ
-           eet(fuel)                The quantity of fuel combustion in China in 10 000 tce according to coal equivalent calculation(Mt)
+           eet                      The quantity of fuel combustion in China in 10 000 tce according to coal equivalent calculation(Mt)
            emissionfactor(fuel)     Emission factor by fuel  (100 million tonnes CO2 equivalent per 10 thousand Yuan Input)
            CO2at                    Aggregated co2 emission (100 million tonnes CO2 equivalent)
            Sat_feedstock            Feedstock rate for aggregated sectors;
