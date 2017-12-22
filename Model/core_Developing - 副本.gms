@@ -14,10 +14,6 @@ simu_s=1;
 tax_s(sub_elec)=1;
 re_s=1;
 
-parameter          phi        percentage target of permits energy;
-parameter          pflag        flag for electricity permits             /0/         ;
-
-
 $ONTEXT
 $Model:CHEER
 
@@ -84,10 +80,9 @@ pco2_a$clim_a          !shadow value of carbon selected sectors covered
 pco2_s(i)$clim_s(i)    !shadow value of carbon sector by sector
 pco2_h$clim_h          !shadow value of carbon for household sector
 
-*pco2_m(s)$clim_m(s)              !shadow value of carbon all sectors covered
 pco2_ms$clim_ms
 
-Pers$pflag             ! Price for permits of electricity generation
+Pers$switch_nfs             ! Price for permits of electricity generation
 
 $consumers:
 ra                     !income level for representative agent
@@ -121,7 +116,7 @@ $prod:y(i)$elec(i)   s:esub_gt   b(s):0 a(b):esub_pe     c(a):esub_be
         i:pelec("OIL_Power")                  q:outputelec0("OIL_Power")  p:(costelec0("OIL_Power"))  a:
         i:pelec(sub_elec)$hnb(sub_elec)       q:outputelec0(sub_elec)     p:(costelec0(sub_elec))  a:
         i:pelec(sub_elec)$wse(sub_elec)       q:outputelec0(sub_elec)     p:(costelec0(sub_elec))  a:
-*        i:pbt(bt)$Switch_bt(bt)               q:1    b:
+        i:pbt(bt)$Switch_bt(bt)               q:1    b:
 
 *       Production of T&D electricity
 $prod:yelec(sub_elec)$TD(sub_elec) s:esub_elec("IT","T_D")      
@@ -141,58 +136,30 @@ $prod:yelec(sub_elec)$ffe(sub_elec) s:esub_elec("IT",sub_elec)   kle(s):esub_ele
         i:pl_elec(sub_elec)              q:(lelec0(sub_elec)*emkup(sub_elec))                         kl:
         i:pk                             q:(kelec0(sub_elec)*emkup(sub_elec))                         kl:
         i:py_c(fe,"elec")                q:(intelec0(fe,sub_elec)*aeei("elec")*emkup(sub_elec))       kle:              
-        I:Pers$pflag                     Q:((phi/(1-phi))*outputelec0(sub_elec))
+*        I:Pers$switch_nfs                     Q:((nfs/(1-nfs))*outputelec0(sub_elec))
 
 
 *       Production of hybro and nuclear biomass electricity      va2 from wang ke
 $prod:yelec(sub_elec)$hnb(sub_elec)  s:esub_elec("NR",sub_elec) a:esub_elec("IT",sub_elec) va(a):esub_elec("KL",sub_elec) l(va):esub_l("l")
-        o:pelec(sub_elec)$hne(sub_elec)  q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-        o:pelec(sub_elec)$wsb(sub_elec)  q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-        o:Pers$pflag                     Q:(1*(outputelec0(sub_elec)))
-        i:py(i)$(not elec(i))            q:(intelec0(i,sub_elec)*emkup(sub_elec))                                              a:
-        i:py(elec)                       q:(intelec0(elec,sub_elec)*emkup(sub_elec))                                              a:
-        i:pl_elec(sub_elec)              q:(lelec0(sub_elec)*emkup(sub_elec))                      va:
-        i:pk                             q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
-        i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))      P:1
+        o:pelec(sub_elec)$hne(sub_elec)         q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
+        o:pelec(sub_elec)$wsb(sub_elec)         q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
+        o:Pers$switch_nfs                       Q:((outputelec0(sub_elec)))
+        i:py(i)$(not elec(i))                   q:(intelec0(i,sub_elec)*emkup(sub_elec))                                              a:
+        i:py(elec)                              q:(intelec0(elec,sub_elec)*emkup(sub_elec))                                              a:
+        i:pl_elec(sub_elec)                     q:(lelec0(sub_elec)*emkup(sub_elec))                      va:
+        i:pk                                    q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
+        i:pffelec(sub_elec)$ffelec0(sub_elec)   q:(ffelec0(sub_elec)*emkup(sub_elec))      P:1
 
 
 *       Production of wind, solar  electricity      va2 from wang ke
 $prod:yelec(sub_elec)$wse(sub_elec) s:esub_elec("NR",sub_elec) b:esub_elec("IT",sub_elec) va(b):esub_elec("KL",sub_elec) l(va):esub_l("l")
         o:pelec(sub_elec)        q:(outputelec0(sub_elec))               p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))  a:ra  N:t_re(sub_elec)
-        O:Pers$pflag             Q:(1*(outputelec0(sub_elec)))
+        O:Pers$switch_nfs             Q:(outputelec0(sub_elec))
         i:py(i)$(not elec(i))    q:(intelec0(i,sub_elec)*emkup(sub_elec))                                              b:
         i:py(elec)               q:(intelec0(elec,sub_elec)*emkup(sub_elec))   b:
         i:pl_elec(sub_elec)      q:(lelec0(sub_elec)*emkup(sub_elec))                     va:
         i:pk                     q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
         i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))      P:1
-
-*     Production of backstop technologices
-$prod:ybt_elec(bt_elec)$Switch_bt(bt_elec)  s:0 sa(s):esub_bt("NR",bt_elec)   gva(sa):esub_bt("gva",bt_elec)  gl(gva):esub_l("l") sva(sa):esub_bt("SVA",bt_elec)  sl(sva):esub_l("l") roil(sa):0 coal(sa):0 gas(sa):0
-    o:pbt(bt_elec)                               q:1
-    i:pbf(bt_elec)                               q:(bsin("ffa",bt_elec)*bmkup(bt_elec))                    sa:
-    i:plo(lm,"elec")$ll(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
-    i:plo(lm,"elec")$hl(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
-    i:pk                                         q:(bsin("k",bt_elec)*bmkup(bt_elec))                      gva:
-    i:plo(lm,"elec")$ll(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
-    i:plo(lm,"elec")$hl(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
-    i:pk                                         q:(bsin("kseq",bt_elec)*bmkup(bt_elec))                   sva:
-    i:py_c(fe,"elec")                            q:(bsin(fe,bt_elec)*aeei("elec")*bmkup(bt_elec))                                                                fe.tl:
-
-$prod:bres_ngcap$(Switch_bt("ngcap"))
-        o:pbf("ngcap")                                          q:bres("ngcc")
-        i:pbf("ngcc")                                           q:bres("ngcc")
-
-$prod:BT2T("ngcc")$(Switch_bt("ngcc"))
-        o:pelec("Gas_Power")                                    q:1
-        i:pbt("ngcc")                                           q:1
-
-$prod:BT2T("ngcap")$(Switch_bt("ngcap"))
-        o:pelec("Gas_Power")                                    q:1
-        i:pbt("ngcap")                                          q:1
-
-$prod:BT2T("igcap")$(Switch_bt("igcap"))
-        o:pelec("coal_Power")                                   q:1
-        i:pbt("igcap")                                          q:1                
 
 *// IST sector
 $prod:y(i)$(switch_ist and ist(i))   s:0
@@ -207,27 +174,11 @@ $prod:yist(sub_ist)$switch_ist s:esub("IT","Ist")  kle:esub("KLE","Ist") kl(kle)
         i:pl_IST(sub_IST)        q:lIST0(sub_IST)           kl:
         i:pk                     q:kist0(sub_ist)           kl:
 
-$prod:ybt_ist("BOFA")$Switch_bt("BOFA") s:0
-        o:pist("BOF")            q:(outputist0("BOF"))              p:(1-taxist0("BOF"))  a:ra  t:taxist0("BOF")
-        i:py(i)$(not e(i))       q:(intist0(i,"BOF")*bsrist(i,"BOFA"))
-        i:py(elec)               q:(intist0(elec,"BOF")*aeei("IST")*bsrist(elec,"BOFA"))
-        i:py_c(fe,"ist")         q:(intist0(fe,"BOF")*aeei("IST")*bsrist(fe,"BOFA"))
-        i:plo(lm,"ist")$ll(lm)   q:(laborist0(lm,"BOF")*bsrist(lm,"BOFA"))        p:labor_w0(lm,"ist")           
-        i:plo(lm,"ist")$hl(lm)   q:(laborist0(lm,"BOF")*bsrist(lm,"BOFA"))        p:labor_w0(lm,"ist")           
-        i:pk                     q:(kist0("BOF")*bsrist("capital","BOFA"))
-
-$prod:ybt_ist("EAFA")$Switch_bt("EAFA") s:0
-        o:pist("EAF")            q:(outputist0("EAF"))              p:(1-taxist0("EAF"))  a:ra  t:taxist0("EAF")
-        i:py(i)$(not e(i))       q:(intist0(i,"EAF")*bsrist(i,"EAFA"))
-        i:py(elec)               q:(intist0(elec,"EAF")*aeei("IST")*bsrist(elec,"EAFA"))
-        i:py_c(fe,"ist")         q:(intist0(fe,"EAF")*aeei("IST")*bsrist(fe,"EAFA"))
-        i:plo(lm,"ist")$ll(lm)   q:(laborist0(lm,"EAF")*bsrist(lm,"EAFA"))        p:labor_w0(lm,"ist")           
-        i:plo(lm,"ist")$hl(lm)   q:(laborist0(lm,"EAF")*bsrist(lm,"EAFA"))        p:labor_w0(lm,"ist")           
-        i:pk                     q:(kist0("EAF")*bsrist("capital","EAFA"))
 
 *// other sectors
 $prod:y(i)$(not elec(i) and not ist(i)) s:esub("TOP",i) a:esub("NR",i) b(a):esub("IT",i)  kle(b):esub("KLE",i) kl(kle):esub("KL",i) e(kle):esub("E",i)  ne(e):esub("NELE",i)
         o:py(i)                             q:(output0(i))                    p:(1-tx0(i))     a:ra    t:tx0(i)
+        i:Pers$(fe(i) and switch_nfs)            Q:(nf2ff(i)*output0(i))
         i:pco2$clim                         q:(emission0("co2","e","process",i))      p:1e-5
         i:pco2_s(i)$clim_s(i)               q:(emission0("co2","e","process",i))      p:1e-5
         i:pco2_a$(clim_a and cm(i))         q:(emission0("co2","e","process",i))      p:1e-5
@@ -238,12 +189,12 @@ $prod:y(i)$(not elec(i) and not ist(i)) s:esub("TOP",i) a:esub("NR",i) b(a):esub
         i:pk                                q:fact0("capital",i)                              kl:
         i:pl(i)                             q:fact0("labor",i)                                kl:
         i:py(elec)                          q:(int0(elec,i)*aeei(i))                          e:
-        i:py_c(fe,i)                            q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))       ne:
+        i:py_c(fe,i)                        q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))       ne:
 
 *// energy demand include co2 emission
 $prod:yco2_i(fe,i) s:0
         o:py_c(fe,i)                        q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))
-        i:py(fe)                            q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))                      
+        i:py(fe)                            q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))   
         i:pco2#(fe)$clim                    q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             
         i:pco2_s(i)#(fe)$clim_s(i)          q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5          
         i:pco2_a#(fe)$(clim_a and cm(i))    q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5           
@@ -311,60 +262,73 @@ $prod:yv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i)) s:0 coal:0 roi
         i:py(elec)                          q:V_int(elec,i)                          
         i:py_c(fe,i)                        q:(V_int(fe,i)*(1-r_feed(fe,i)))                            fe.tl:
 
-*       Production of T&D electricity
-$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec") and TD(sub_elec)) s:0      
-        o:pelec(sub_elec)        q:(outputelec0(sub_elec))              p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
-        i:py(i)$(not e(i))       q:intelec0(i,sub_elec)
-        i:py(elec)               q:(intelec0(elec,sub_elec)*aeei("elec"))
-        i:py_c(fe,i)                 q:(intelec0(fe,sub_elec)*aeei("elec"))
-        i:pl_elec(sub_elec)      q:(lelec0(sub_elec)*emkup(sub_elec))                     
-        i:pkv_elec(sub_elec)     q:kelec0(sub_elec)
-
-
-*       Production of fossile fuel electricity
-$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec") and ffe(sub_elec)) s:0 coal:0 roil:0 gas:0
-        o:pelec(sub_elec)                   q:(outputelec0(sub_elec))                 p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
-        i:py(i)$(not e(i))                  q:(intelec0(i,sub_elec)*emkup(sub_elec))
-        i:py(elec)                          q:(intelec0(elec,sub_elec)*aeei("elec")*emkup(sub_elec))
-        i:pl_elec(sub_elec)                 q:(lelec0(sub_elec)*emkup(sub_elec))                    
-        i:pkv_elec(sub_elec)                q:(kelec0(sub_elec)*emkup(sub_elec))                        
-        i:py_c(fe,i)$intelec0(fe,sub_elec)      q:(intelec0(fe,sub_elec)*aeei("elec")*emkup(sub_elec))                            fe.tl:
-        i:pco2#(fe)$clim                    q:(emissionelec0("co2","e",fe,sub_elec)*aeei("elec")*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_s("elec")#(fe)$clim_s("elec")         q:(emissionelec0("co2","e",fe,sub_elec)*aeei("elec")*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_a#(fe)$(clim_a and cm("elec"))        q:(emissionelec0("co2","e",fe,sub_elec)*aeei("elec")*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_ms#(fe)$clim_m("elec")                q:(emissionelec0("co2","e",fe,sub_elec)*aeei("elec")*emkup(sub_elec))      p:1e-5             fe.tl:
-
-$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec") and hnb(sub_elec))  s:0 
-        o:pelec(sub_elec)$hne(sub_elec)  q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-        o:pelec(sub_elec)$wsb(sub_elec)  q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-        i:py(i)$(not elec(i))            q:(intelec0(i,sub_elec)*emkup(sub_elec))                                             
-        i:py(elec)                       q:(intelec0(elec,sub_elec)*emkup(sub_elec))                                              
-        i:pl_elec(sub_elec)              q:(lelec0(sub_elec)*emkup(sub_elec))                      
-        i:pkv_elec(sub_elec)             q:(kelec0(sub_elec)*emkup(sub_elec))                                                 
-        i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))   
-
-
-*       Production of wind, solar  electricity      va2 from wang ke
-$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec") and wse(sub_elec)) s:0 coal:0 roil:0 gas:0
-        o:pelec(sub_elec)                   q:(outputelec0(sub_elec))               p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))  a:ra  N:t_re(sub_elec)
-        i:py(i)$(not elec(i))               q:(intelec0(i,sub_elec)*emkup(sub_elec))                                           
-        i:py(elec)                          q:(intelec0(elec,sub_elec)*emkup(sub_elec))  
-        i:pl_elec(sub_elec)                 q:(lelec0(sub_elec)*emkup(sub_elec))                     
-        i:pkv_elec(sub_elec)                q:(kelec0(sub_elec)*emkup(sub_elec))                                                
-        i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))      
-
+$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0 
+        o:pelec(sub_elec)$ffe(sub_elec)                      q:Velec_out(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
+        o:pelec(sub_elec)$TD(sub_elec)                       q:Velec_out(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)        
+        o:pelec(sub_elec)$(not ffe(sub_elec) and not TD(sub_elec))                q:Velec_out(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
+        o:Pers$(switch_nfs and cfe(sub_elec))                     Q:Velec_out(sub_elec)
+        i:py(i)$(not e(i))                                   q:Velec_int(i,sub_elec)
+        i:pffelec(sub_elec)$ffelec0(sub_elec)                q:Velec_ff(sub_elec)
+        i:py(elec)                                           q:Velec_int(elec,sub_elec)
+        i:pl_elec(sub_elec)                                  q:Velec_l(sub_elec)
+        i:pkv_elec(sub_elec)                                 q:Velec_k(sub_elec)
+        i:py_c(fe,"elec")$intelec0(fe,sub_elec)              q:Velec_int(fe,sub_elec)
+*        I:Pers$(switch_nfs and ffe(sub_elec))                     Q:((nfs/(1-nfs)))
 
 $prod:yv_ist(sub_ist)$(switch_vk and v_i("ist")) s:0
-        o:pist(sub_ist)                         q:Vist_out(sub_ist)              p:(1-taxist0(sub_ist))  a:ra  t:taxist0(sub_ist)
-        i:py(i)$(not e(i))                      q:Vist_int(i,sub_ist)
-        i:py(elec)                              q:Vist_int(elec,sub_ist)
-        i:py_c(fe,i)                                q:Vist_int(fe,sub_ist)
-        i:pl_IST(sub_IST)                       q:Vist_L(sub_IST)          
-        i:pkv_ist(sub_IST)                     q:Vist_K(sub_ist)
-        i:pco2#(fe)$clim                       q:Vist_CO2(fe,sub_ist)      p:1e-5             
-        i:pco2_s(i)#(fe)$clim_s("IST")         q:Vist_CO2(fe,sub_ist)      p:1e-5             
-        i:pco2_a#(fe)$(clim_a and cm("IST"))   q:Vist_CO2(fe,sub_ist)      p:1e-5             
-        i:pco2_ms#(fe)$clim_m("IST")           q:Vist_CO2(fe,sub_ist)      p:1e-5   
+        o:pist(sub_ist)                     q:Vist_out(sub_ist)              p:(1-taxist0(sub_ist))  a:ra  t:taxist0(sub_ist)
+        i:py(i)$(not e(i))                  q:Vist_int(i,sub_ist)
+        i:py(elec)                          q:Vist_int(elec,sub_ist)
+        i:py_c(fe,"ist")                    q:Vist_int(fe,sub_ist)
+        i:pl_IST(sub_IST)                   q:Vist_L(sub_IST)          
+        i:pkv_ist(sub_IST)                  q:Vist_K(sub_ist)
+
+
+*//     Production of backstop technologices
+$prod:ybt_elec(bt_elec)$Switch_bt(bt_elec)  s:0 sa(s):esub_bt("NR",bt_elec)   gva(sa):esub_bt("gva",bt_elec)  gl(gva):esub_l("l") sva(sa):esub_bt("SVA",bt_elec)  sl(sva):esub_l("l") roil(sa):0 coal(sa):0 gas(sa):0
+        o:pbt(bt_elec)                               q:1
+        i:pbf(bt_elec)                               q:(bsin("ffa",bt_elec)*bmkup(bt_elec))                    sa:
+        i:plo(lm,"elec")$ll(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
+        i:plo(lm,"elec")$hl(lm)                      q:(bslin("gen",lm,bt_elec)*bmkup(bt_elec))                gl:
+        i:pk                                         q:(bsin("k",bt_elec)*bmkup(bt_elec))                      gva:
+        i:plo(lm,"elec")$ll(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
+        i:plo(lm,"elec")$hl(lm)                      q:(bslin("CCS",lm,bt_elec)*bmkup(bt_elec))                sl:
+        i:pk                                         q:(bsin("kseq",bt_elec)*bmkup(bt_elec))                   sva:
+        i:py_c(fe,"elec")                            q:(bsin(fe,bt_elec)*aeei("elec")*bmkup(bt_elec))                                                                fe.tl:
+
+$prod:bres_ngcap$(Switch_bt("ngcap"))
+        o:pbf("ngcap")                                          q:bres("ngcc")
+        i:pbf("ngcc")                                           q:bres("ngcc")
+
+$prod:BT2T("ngcc")$(Switch_bt("ngcc"))
+        o:pelec("Gas_Power")                                    q:1
+        i:pbt("ngcc")                                           q:1
+
+$prod:BT2T("ngcap")$(Switch_bt("ngcap"))
+        o:pelec("Gas_Power")                                    q:1
+        i:pbt("ngcap")                                          q:1
+
+$prod:BT2T("igcap")$(Switch_bt("igcap"))
+        o:pelec("coal_Power")                                   q:1
+        i:pbt("igcap")                                          q:1                
+
+$prod:ybt_ist("BOFA")$Switch_bt("BOFA") s:0
+        o:pist("BOF")            q:(outputist0("BOF"))              p:(1-taxist0("BOF"))  a:ra  t:taxist0("BOF")
+        i:py(i)$(not e(i))       q:(intist0(i,"BOF")*bsrist(i,"BOFA"))
+        i:py(elec)               q:(intist0(elec,"BOF")*aeei("IST")*bsrist(elec,"BOFA"))
+        i:py_c(fe,"ist")         q:(intist0(fe,"BOF")*aeei("IST")*bsrist(fe,"BOFA"))
+        i:plo(lm,"ist")$ll(lm)   q:(laborist0(lm,"BOF")*bsrist(lm,"BOFA"))        p:labor_w0(lm,"ist")           
+        i:plo(lm,"ist")$hl(lm)   q:(laborist0(lm,"BOF")*bsrist(lm,"BOFA"))        p:labor_w0(lm,"ist")           
+        i:pk                     q:(kist0("BOF")*bsrist("capital","BOFA"))
+
+$prod:ybt_ist("EAFA")$Switch_bt("EAFA") s:0
+        o:pist("EAF")            q:(outputist0("EAF"))              p:(1-taxist0("EAF"))  a:ra  t:taxist0("EAF")
+        i:py(i)$(not e(i))       q:(intist0(i,"EAF")*bsrist(i,"EAFA"))
+        i:py(elec)               q:(intist0(elec,"EAF")*aeei("IST")*bsrist(elec,"EAFA"))
+        i:py_c(fe,"ist")         q:(intist0(fe,"EAF")*aeei("IST")*bsrist(fe,"EAFA"))
+        i:plo(lm,"ist")$ll(lm)   q:(laborist0(lm,"EAF")*bsrist(lm,"EAFA"))        p:labor_w0(lm,"ist")           
+        i:plo(lm,"ist")$hl(lm)   q:(laborist0(lm,"EAF")*bsrist(lm,"EAFA"))        p:labor_w0(lm,"ist")           
+        i:pk                     q:(kist0("EAF")*bsrist("capital","EAFA"))
 
 $demand:ra
 
@@ -377,8 +341,8 @@ e:pk$switch_vk                           q:tmk                                  
 e:pk$(not switch_vk)                     q:fact("capital")                         r:gprod
 
 e:pkv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i))          q:tvk(i)                                  r:gprod
-e:pkv_elec(sub_elec)$(switch_vk and v_i("elec"))        q:tvk_elec(sub_elec)                                  r:gprod
-e:pkv_ist(sub_ist)$(switch_vk and v_i("ist"))           q:tvk_ist(sub_ist)                                  r:gprod
+e:pkv_elec(sub_elec)$(switch_vk and v_i("elec"))                        q:tvk_elec(sub_elec)                      r:gprod
+e:pkv_ist(sub_ist)$(switch_vk and v_i("ist"))                           q:tvk_ist(sub_ist)                        r:gprod
 
 
 e:pls(lm)                q:(tlabor_s0(lm))                                                 r:gprod
@@ -407,13 +371,13 @@ $constraint:sff(x)$ffact0(x)
      sff(x)    =e= (pffact(x)/pu)**eta(x);
 
 $constraint:sffelec(sub_elec)$(ffelec0(sub_elec) and hne(sub_elec))
-    sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
+     sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
 
 $constraint:sffelec(sub_elec)$(wsb(sub_elec) and re_s eq 1)
-        sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
+     sffelec(sub_elec) =e=  (pffelec(sub_elec)/pu)**eta(sub_elec);
 
 $constraint:sffelec(sub_elec)$(wsb(sub_elec) and re_s eq 0)
-   yelec(sub_elec) =e=ret0(sub_elec);
+     yelec(sub_elec) =e=ret0(sub_elec);
 *     sffelec(sub_elec) =e= 1;
 
 * wage curve for skilled labor
@@ -596,10 +560,6 @@ clim_m(cm) = 0;
 *clim0 =0.8;
 *tclim.fx=clim0*temission2("co2");
 
-*== switch for renewable quota
-pflag=0;
-phi=0.1;
-
 *== FIT
 *pelec.fx(sub_elec)$wsb(sub_elec)=1.1*costelec0(sub_elec);
 
@@ -627,6 +587,8 @@ $include CHEER.gen
 
 *EXECUTE_LOADPOINT 'CHEER_p';
 solve CHEER using mcp;
+*abort$(ABS(Smax(i,y.l(i)-1)) GT 1.E-4)
+*            "*** CHEER benchmark does not calibrate";
 
 CHEER.Savepoint = 1;
 
@@ -635,80 +597,15 @@ display CHEER.modelstat, CHEER.solvestat,ur.l,clim;
 *check2 =   (tlabor_q0(lm)/(1-ur0(lm))*ur.l(lm))-
 *check2(lm) = (1-ur.l(lm))*tlabor_s0(lm)-    sum(j,qlin.l(lm,j))- sum(sub_elec, qlin_ele.l(lm,sub_elec));
 parameter check;
-check(sub_elec)= outputelec0(sub_elec)*(1-taxelec0(sub_elec))*costelec0(sub_elec)-sum(i,intelec0(i,sub_elec)*emkup(sub_elec))
-                                -sum(lm,laborelec0(lm,sub_elec)*emkup(sub_elec)*labor_w0(lm,"elec"))
-                                -kelec0(sub_elec)*emkup(sub_elec)
-                                -ffelec0(sub_elec)*emkup(sub_elec)
+check= sum(cfe,qelec.l(cfe)*GWh2J)/
+        (sum(cfe,qelec.l(cfe)*GWh2J)
+        +sum(fe,qdout.l(fe)*Y2J(fe)))
                                 ;
+*check = sum(sub_elec,eet(sub_elec))/
+*       (sum(sub_elec,eet(sub_elec))
+*        +sum(fe,eet(fe)))
 display check;
 
 $ontext
-$prod:y(i)$(not fe(i) and not elec(i) and not ist(i) ) s:esub("TOP",i) a:esub("NR",i) b(a):esub("IT",i)  kle(b):esub("KLE",i) kl(kle):esub("KL",i)  l(kl):esub_l("l") e(kle):esub("E",i)  ne(e):esub("NELE",i)   coal(ne):0 roil(ne):0 gas(ne):0
-        o:py(i)                  q:(output0(i))                    p:(1-tx0(i))     a:ra    t:tx0(i)
-        i:pco2$clim         q:(emission0("co2","e","process",i))      p:1e-5
-        i:pco2_s(i)$clim_s(i)         q:(emission0("co2","e","process",i))      p:1e-5
-        i:pco2_a$(clim_a and cm(i))         q:(emission0("co2","e","process",i))      p:1e-5
-        i:pco2_ms$clim_m(i)        q:(emission0("co2","e","process",i))      p:1e-5
-        i:pffact(i)$ffact0(i)    q:ffact0(i)                                           a:
-        i:py(j)$(not e(j))       q:int0(j,i)                                         b:
-        i:py(fe)                 q:(int0(fe,i)*r_feed(fe,i))                     b:
-        i:pk                     q:fact0("capital",i)                              kl:
-        i:plo(lm,i)$ll(lm)        q:labor_q0(lm,i)              p:labor_w0(lm,i)             l:
-        i:plo(lm,i)$hl(lm)        q:labor_q0(lm,i)              p:labor_w0(lm,i)             l:
-        i:py(elec)               q:(int0(elec,i)*aeei(i))                          e:
-        i:py(fe)                 q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))                            fe.tl:
-        i:pco2#(fe)$clim         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-        i:pco2_s(i)#(fe)$clim_s(i)         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-        i:pco2_a#(fe)$(clim_a and cm(i))         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-        i:pco2_ms#(fe)$clim_m(i)        q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-
-$prod:y(i)$(fe(i) ) s:esub("NR",i) b(s):esub("IT",i)  kle(b):esub("KLE",i) kl(kle):esub("KL",i)  l(kl):esub_l("l") e(kle):esub("E",i)  ne(e):esub("NELE",i)  coal(ne):0 roil(ne):0 gas(ne):0
-                o:py(i)                  q:(output0(i))                    p:(1-tx0(i))     a:ra    t:tx0(i)
-                i:pffact(i)$ffact0(i)    q:ffact0(i)
-                i:py(j)$(not e(j))       q:int0(j,i)                                         b:
-                i:py(fe)                 q:(int0(fe,i)*r_feed(fe,i))                            b:
-                i:pk                     q:fact0("capital",i)                              kl:
-                i:plo(lm,i)$ll(lm)        q:labor_q0(lm,i)              p:labor_w0(lm,i)             l:
-                i:plo(lm,i)$hl(lm)        q:labor_q0(lm,i)              p:labor_w0(lm,i)             l:
-                i:py(elec)               q:(int0(elec,i)*aeei(i))                          e:
-                i:py(fe)                 q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))                            fe.tl:
-                i:pco2#(fe)$clim         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-                i:pco2_s(i)#(fe)$clim_s(i)         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-                i:pco2_a#(fe)$(clim_a and cm(i))         q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-                i:pco2_ms#(fe)$clim_m(i)        q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             fe.tl:
-
-$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0 coal:0 roil:0 gas:0
-        o:pelec(sub_elec)$ffe(sub_elec)                      q:outputelec0(sub_elec)             p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
-        o:pelec(sub_elec)$TD(sub_elec)                       q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)        
-        o:pelec(sub_elec)$(not ffe(sub_elec) and not TD(sub_elec))                q:outputelec0(sub_elec)              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-        i:py(i)$(not e(i))                                  q:(intelec0(i,sub_elec)*emkup(sub_elec))
-        i:pffelec(sub_elec)$ffelec0(sub_elec)   q:(ffelec0(sub_elec)*emkup(sub_elec))
-        i:py(elec)                              q:(intelec0(elec,sub_elec)*emkup(sub_elec))
-        i:pl_elec(sub_elec)                     q:(lelec0(sub_elec)*emkup(sub_elec))                      
-        i:pkv_elec(sub_elec)                    q:(Kelec0(sub_elec)*emkup(sub_elec))                      
-        i:py(fe)$intelec0(fe,sub_elec)          q:(intelec0(fe,sub_elec)*emkup(sub_elec))                            fe.tl:
-        i:pco2#(fe)$clim                        q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_s("elec")#(fe)$clim_s("elec")    q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_a#(fe)$(clim_a and cm("elec"))   q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec))      p:1e-5             fe.tl:
-        i:pco2_ms#(fe)$clim_m("elec")           q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec))      p:1e-5             fe.tl:
-
-*$prod:yv_elec(sub_elec)$(switch_vk and v_i("elec")) s:0 coal:0 roil:0 gas:0
-*        o:pelec(sub_elec)$ffe(sub_elec)                      q:1              p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)
-*        o:pelec(sub_elec)$TD(sub_elec)                       q:1              p:((1-taxelec0(sub_elec))*costelec0(sub_elec))  a:ra  t:taxelec0(sub_elec)        
-*        o:pelec(sub_elec)$(not ffe(sub_elec) and not TD(sub_elec))                q:1              p:((1-taxelec0(sub_elec)+subelec0(sub_elec))*costelec0(sub_elec))   a:ra  N:t_re(sub_elec)
-*        i:py(i)$(not e(i))                                  q:Velec_int(i,sub_elec)
-*        i:pffelec(sub_elec)$ffelec0(sub_elec)   q:Velec_ff(sub_elec)
-*        i:py(elec)                              q:Velec_int(elec,sub_elec)
-*        i:pl_elec(sub_elec)                     q:Velec_l(sub_elec)                      
-*        i:pkv_elec(sub_elec)                    q:Velec_k(sub_elec)                      
-*        i:py(fe)$intelec0(fe,sub_elec)          q:Velec_int(fe,sub_elec)                            fe.tl:
-*        i:pco2#(fe)$clim                        q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec)/outputelec0(sub_elec))      p:1e-5             fe.tl:
-*        i:pco2_s("elec")#(fe)$clim_s("elec")    q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec)/outputelec0(sub_elec))      p:1e-5             fe.tl:
-*        i:pco2_a#(fe)$(clim_a and cm("elec"))   q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec)/outputelec0(sub_elec))      p:1e-5             fe.tl:
-*        I:Pers$pflag                            Q:((phi/(1-phi)))
-*        i:pco2_ms#(fe)$clim_m("elec")           q:(emissionelec0("co2","e",fe,sub_elec)*emkup(sub_elec)/outputelec0(sub_elec))      p:1e-5             fe.tl:
-
-
-
 
 $offtext
