@@ -24,90 +24,81 @@ $offtext
 *----------------------------------------------*
 
 *----------------------------------------------*
-*==Read trend data
+*// Read trend data
 *----------------------------------------------*
-Parameter PAT(*,*) parameters with trend;
-Parameter RET1(*,*) renewable electricity trend;
-Parameter RET2(*,*) renewable electricity trend;
-Parameter sffelec_b(*,*)      benchmark fixed factor trend;
-Parameter sffelec_bau(*,*)      benchmark fixed factor trend;
-Parameter subsidy_b(*,*)      benchmark renewable tax trend;
-Parameter subsidy_h(*,*)      higher renewable tax trend;
-Parameter price_co2_t(*)  exogenous carbon price trend;
+Parameter   PAT(*,*)            parameters with trend
+            RET1(*,*)           renewable electricity trend
+            RET2(*,*)           renewable electricity trend
+            sffelec_b(*,*)      benchmark fixed factor trend
+            sffelec_bau(*,*)    benchmark fixed factor trend
+            subsidy_b(*,*)      benchmark renewable tax trend
+            subsidy_h(*,*)      higher renewable tax trend
+            price_co2_t(*)      exogenous carbon price trend;
 
-$GDXIN %DataPath%\trend_TR_output.gdx
-$LOAD PAT RET1 RET2 sffelec_b sffelec_bau subsidy_b subsidy_h
+$GDXIN      %DataPath%\trend_TR_output.gdx
+$LOAD       PAT RET1 RET2 sffelec_b sffelec_bau subsidy_b subsidy_h
 $GDXIN
 
 *============================macro parameter with trend=========================
+Parameter   rgdp_b(t)      real gdp pathway
+            rgdp0          benchmark real gdp
+            gprod_b(*)     productivity index pathway
+            gprod0         benchmark productivity index
+            lgrowth_b(t)   labor growth rate
+            aeei(s)        auto energy effiency index;
 
-Parameter rgdp_b(t)      real gdp pathway;
-Parameter rgdp0          real gdp;
+            rgdp_b(t)       =   PAT(t,"rgdp");
+            rgdp0           =   rgdp_b("2012");
 
-Parameter gprod_b(*)    benchmark productivity index;
-Parameter gprod0        benchmark productivity index;
-Parameter lgrowth_b(t)      labor growth rate;
+            gprod_b(t)      =   PAT(t,"gprod");
+*            gprod0=gprod_b("2012");
+            gprod0          =   1;
+            lgrowth_b(t)    =   PAT(t,"lgrowth");
 
-Parameter aeei(s)        auto energy effiency index;
+            price_co2_t(t)  =   PAT(t,"PCO2");
 
-rgdp_b(t)=PAT(t,"rgdp");
-rgdp0=rgdp_b("2012");
-
-gprod_b(t)=PAT(t,"gprod");
-*gprod0=gprod_b("2012");
-gprod0=1;
-lgrowth_b(t)=PAT(t,"lgrowth");
-
-price_co2_t(t) = PAT(t,"PCO2");
-
-aeei(i)=1;
-aeei("fd")=1;
+            aeei(i)         =   1;
+            aeei("fd")      =   1;
 
 *============================elec parameter with trend=========================
+Parameter   ret0                    renewable electricity trend
+            ret_b(t,*)              benchmark renewable electricity trend
+            mkup_t(t,sub_elec)      markup factor trend
+            sffelec0                benchmark fixed factor trend
+            sffelec1                benchmark fixed factor trend in BAU;
 
-Parameter ret0      renewable electricity trend;
-Parameter ret_b(t,*)      benchmark renewable electricity trend;
-Parameter mkup_t(t,sub_elec)     markup factor trend
+            mkup_t(t,sub_elec)    =   1;
 
-Parameter sffelec0      benchmark fixed factor trend;
-Parameter sffelec1      benchmark fixed factor trend in BAU;
+            sffelec0(sub_elec)    =   1;
+            sffelec1(sub_elec)    =   1;
 
-mkup_t(t,sub_elec)=1;
+*//base Scenario
+            ret_b(t,sub_elec)     =   RET1(t,sub_elec);
 
-sffelec0(sub_elec)=1;
-sffelec1(sub_elec)=1;
+*//high share scenatio
+*           ret_b(t,sub_elec)     =   RET2(t,sub_elec);
 
+            ret0(sub_elec)        =   ret_b("2012",sub_elec);
 
-
-*base Scenario
-ret_b(t,sub_elec)=RET1(t,sub_elec);
-
-*high share scenatio
-*ret_b(t,sub_elec)=RET2(t,sub_elec);
-
-ret0(sub_elec)=ret_b("2012",sub_elec);
-
-display aeei,PAT,rgdp0,ret0,ret_b;
+display     aeei,PAT,rgdp0,ret0,ret_b;
 
 *============================labor parameter with trend=========================
+parameter   tlprop(t,lm)    share of each labor in total supply;
 
-parameter tlprop(t,lm)   share of each labor in total supply;
-
-tlprop("2012",lm) =tlabor_s0(lm)/tqlabor_s0;
-
+            tlprop("2012",lm)     =   tlabor_s0(lm)/tqlabor_s0;
 
 *============================emission parameter with trend=========================
 parameter
-clim          carbon emission allowance
-clim_t        trend of carbon emission allowance
-clim0         benchmark of carbon emission allowance
-clim_s(i)     sectoral carbon emission allowance
-clim_h        household carbon emission allowance
-clim_a        selected sectors carbon emission allowance
-clim_m(s)        selected sectors carbon emission allowance
-clim_ms        selected sectors carbon emission allowance
-price_co2     exogenous carbon price
-;
+            clim          carbon emission allowance
+            clim_t        trend of carbon emission allowance
+            clim0         benchmark of carbon emission allowance
+            clim_s(i)     sectoral carbon emission allowance
+            clim_h        household carbon emission allowance
+            clim_a        selected sectors carbon emission allowance
+            clim_m(s)     selected sectors carbon emission allowance
+            clim_ms       selected sectors carbon emission allowance
+            price_co2     exogenous carbon price
+            ;
 $ontext
 * before 1218,excluding cement production emission
 table climit(*,*)     input of emission cap
@@ -133,7 +124,7 @@ table climit(*,*)     input of emission cap
 $offtext
 *2015        0.898062425        0.869232219
 
-table climit(*,*)     input of emission cap
+table       climit(*,*)     input of emission cap
             lower           higher
 2012        1                   1
 2015        1.155953355         1.155953355
@@ -154,17 +145,17 @@ table climit(*,*)     input of emission cap
 2030        0.50048701        0.437926134
 ;
 
-slim                     =0;
-clim                     =0;
-clim_s(i)                =0;
-clim_h                   =0;
-clim_a                   =0;
-clim_t(t) = climit(t,"lower");
-clim0=1;
-price_co2=0;
+            slim         =    0;
+            clim         =    0;
+            clim_s(i)    =    0;
+            clim_h       =    0;
+            clim_a       =    0;
+            clim_t(t)    =    climit(t,"lower");
+            clim0        =    1;
+            price_co2    =    0;
 
-clim_m(s)=0;
-clim_ms=0;
+            clim_m(s)    =    0;
+            clim_ms      =    0;
 
 display     climit,clim_t,clim0,Temission1,Temission2;
 

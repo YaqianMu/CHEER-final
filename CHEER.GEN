@@ -133,7 +133,7 @@ PUT   MPS,'$MODEL:CHEER'/;
 {   65}  IF ((CLIM_MS),
 {   65}    PUT /,'PCO2_MS';
 {   65}  );
-{   67}  IF ((PFLAG),
+{   67}  IF ((SWITCH_NFS),
 {   67}    PUT /,'PERS';
 {   67}  );
 {   69}  PUT /;
@@ -222,6 +222,13 @@ PUT   MPS,'$MODEL:CHEER'/;
 {  100}        PUT /,'+Q:'OUTPUTELEC0(SUB_ELEC);
 {  100}        PUT /,'+P:'(COSTELEC0(SUB_ELEC));
 {  100}        PUT /'+','A:';
+{  101}      );
+{  101}    );
+{  101}    LOOP((BT)$(SWITCH_BT(BT)),
+{  101}      IF(ABS(1) GT MPSEPS,
+{  101}        PUT /,'I:PBT''.'BT.TL;
+{  101}        PUT /,'+Q:'1;
+{  101}        PUT /,'+B:' ;
 {  104}      );
 {  104}    );
 {  104}  );
@@ -336,10 +343,10 @@ PUT   MPS,'$MODEL:CHEER'/;
 {  127}        PUT /'+','N:T_RE''.'SUB_ELEC.TL;
 {  128}      );
 {  128}    );
-{  128}    IF ((PFLAG),
-{  128}      IF(ABS((1*(OUTPUTELEC0(SUB_ELEC)))) GT MPSEPS,
+{  128}    IF ((SWITCH_NFS),
+{  128}      IF(ABS(((OUTPUTELEC0(SUB_ELEC)))) GT MPSEPS,
 {  128}        PUT /,'O:PERS';
-{  128}        PUT /,'+Q:'(1*(OUTPUTELEC0(SUB_ELEC)));
+{  128}        PUT /,'+Q:'((OUTPUTELEC0(SUB_ELEC)));
 {  129}      );
 {  129}    );
 {  129}    LOOP((I)$(NOT ELEC(I)),
@@ -389,7 +396,7 @@ PUT   MPS,'$MODEL:CHEER'/;
 {  138}      PUT /'+','A:RA';
 {  138}      PUT /'+','N:T_RE''.'SUB_ELEC.TL;
 {  139}    );
-{  139}    IF ((PFLAG),
+{  139}    IF ((SWITCH_NFS),
 {  139}      IF(ABS((OUTPUTELEC0(SUB_ELEC))) GT MPSEPS,
 {  139}        PUT /,'O:PERS';
 {  139}        PUT /,'+Q:'(OUTPUTELEC0(SUB_ELEC));
@@ -508,7 +515,7 @@ PUT   MPS,'$MODEL:CHEER'/;
 {  162}      PUT /'+','A:RA';
 {  162}      IF ((ABS(TX0(I)) GT MPSEPS),PUT /,'+T:'TX0(I);  );
 {  163}    );
-{  163}    IF ((FE(I) AND PFLAG),
+{  163}    IF ((FE(I) AND SWITCH_NFS),
 {  163}      IF(ABS((NF2FF(I)*OUTPUT0(I))) GT MPSEPS,
 {  163}        PUT /,'I:PERS';
 {  163}        PUT /,'+Q:'(NF2FF(I)*OUTPUT0(I));
@@ -940,7 +947,7 @@ PUT   MPS,'$MODEL:CHEER'/;
 {  250}        PUT /'+','N:T_RE''.'SUB_ELEC.TL;
 {  251}      );
 {  251}    );
-{  251}    IF ((PFLAG AND CFE(SUB_ELEC)),
+{  251}    IF ((SWITCH_NFS AND CFE(SUB_ELEC)),
 {  251}      IF(ABS(VELEC_OUT(SUB_ELEC)) GT MPSEPS,
 {  251}        PUT /,'O:PERS';
 {  251}        PUT /,'+Q:'VELEC_OUT(SUB_ELEC);
@@ -1599,6 +1606,6 @@ PUT / '$PEPS:1.E-6'/;
 PUT / '$SOLVE'/;
 PUTCLOSE   MPS;
 CHEER.INTEGER1 = CHEER.INTEGER1 + 1;
-$IF %CHEER%=="12/20/1721:50:53" $EXIT
+$IF %CHEER%=="12/21/1720:00:09" $EXIT
 $error model.gen file is inconsistent
 $abort preprocessor must be reinvoked

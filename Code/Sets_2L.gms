@@ -13,8 +13,8 @@ $offsymxref
 *==sets for sectors
 *----------------------------------------------*
 SETS
-s all labels in SAM
-/      Elec
+    s  all labels in SAM
+      /Elec
        Coal
        Oilgas
        Roil
@@ -39,11 +39,10 @@ s all labels in SAM
        capital "Physical capital"
 
        Household,GOVERNMENT,INVESTMENT,export,import
+       /
 
-       /
-i(s) commodities in SAM table(produced goods represented by sector name
-       /
-       Elec
+    i(s) commodities in SAM table(produced goods represented by sector name
+      /Elec
        Coal
        Oilgas
        Roil
@@ -62,105 +61,98 @@ i(s) commodities in SAM table(produced goods represented by sector name
        Tran
        Serv
        /
-e(i) energy supply sectors
-       /Elec
-       Coal
-       Roil
-       Gas/
-fe(i) fuel energy supply sectors
-/Coal,roil,gas/
-x(i) exhaustible resource sectors
-/agri,coal,Oilgas,Mine,gas/
 
-elec(i) electrici power sector
-/elec/
-ist(i) ist sector
-/ist/
+*// subset for specific sector groups 
+    e(i)    energy supply sectors
+      /Elec,Coal,Roil,Gas/
 
-cm(i) sectors selected in carbon market
-/roil,elec,Paper, Chem,CM,IST,NFM,Air/
+    fe(i)   fuel energy supply sectors
+      /Coal,roil,gas/
 
-agrmine(i) agriculture and non-energy mine
-/agri,mine/
+    x(i)    exhaustible resource sectors
+      /agri,coal,Oilgas,Mine,gas/
 
-mfg(i) manufacturing
-       /Food
-       Paper
-       Chem
-       CM
-       IST
-       NFM
-       EII
-       OM/
+    elec(i) electrici power sector
+      /elec/
 
-Trans(i)  transport
-         /       Tran/
+    ist(i)  ist sector
+      /ist/
 
-Serv(i)   services
-         /serv/
+    cm(i)   sectors selected in carbon market
+      /roil,elec,Paper, Chem,CM,IST,NFM,Air/
+
+    agrmine(i)  agriculture and non-energy mine
+      /agri,mine/
+
+    mfg(i)      manufacturing
+      /Food,Paper,Chem,CM,IST,NFM,EII,OM/
+
+    Trans(i)    transport
+      /Tran/
+
+    Serv(i)     services
+      /serv/
 
 alias (i,j),(e,ee),(fe,fee);
 *----------------------------------------------*
 *==sets for factors and final demands
 *----------------------------------------------*
 sets
-f(s) primary factors
-/Labor "Labour"
-capital "Physical capital"
-/
+    f(s)    primary factors
+    /Labor  "Labour"
+    capital "Physical capital"/
 
-lab(f) labor /labor/
+    lab(f)  labor 
+    /labor/
 
-fd(s) final demands /Household,GOVERNMENT,INVESTMENT,export,import/
+    fd(s)   final demands 
+    /Household,GOVERNMENT,INVESTMENT,export,import/
 
-h(fd) households /Household,GOVERNMENT/
-;
-
+    h(fd)   households 
+    /Household,GOVERNMENT/
+    ;
 
 *----------------------------------------------*
 *==sets for dynamic process
 *----------------------------------------------*
 sets
-yr time in years /2005*2050/
-t(yr) time in 5 years periods /2012,2015,2020,2025,2030/
-*,2015,2020,2025,2030/
-baseyear(yr) baseyear /2012/
-*/2010*2030/
-*,2035,2040,2045,2050
-year years within each time period /1*5/
+    yr      time in years   /2005*2050/
+    t(yr)   time in 5 years periods   /2012,2015,2020,2025,2030/
+    baseyear(yr) baseyear   /2012/
+    year years within each time period  /1*5/
 ;
 
 *----------------------------------------------*
 *==sets for disaggregated electricity sector
 *----------------------------------------------*
-set      sub_elec /T_D, Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Wind, Solar, Biomass/
-         TD(sub_elec)  transport and distribution /T_D/
-         gen(sub_elec) /Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Wind, Solar, Biomass/
-         bse(sub_elec) base load electricity /Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Biomass/
-         ffe(sub_elec) fossil fuel electricity /Coal_Power, Gas_Power, Oil_Power/
-         cge(sub_elec) fossil fuel electricity /Coal_Power, Gas_Power/
-         cfe(sub_elec) carbon free electricity /Nuclear, Hydro, Wind, Solar, Biomass/
-         hnb(sub_elec) hydro and nuclear biomass electricity /Nuclear, Hydro,Biomass/
+set      sub_elec       /T_D, Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Wind, Solar, Biomass/
+         TD(sub_elec)   transport and distribution /T_D/
+         gen(sub_elec)  /Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Wind, Solar, Biomass/
+         bse(sub_elec)  base load electricity /Coal_Power, Gas_Power, Oil_Power, Nuclear, Hydro, Biomass/
+         ffe(sub_elec)  fossil fuel electricity /Coal_Power, Gas_Power, Oil_Power/
+         cge(sub_elec)  fossil fuel electricity /Coal_Power, Gas_Power/
+         cfe(sub_elec)  carbon free electricity /Nuclear, Hydro, Wind, Solar, Biomass/
+         hnb(sub_elec)  hydro and nuclear biomass electricity /Nuclear, Hydro,Biomass/
          wse(sub_elec)  wind and solar /Wind, Solar/
          hne(sub_elec)  hydro and nuclear electricity /Nuclear, Hydro/
          wsb(sub_elec)  wind and solar biomass/Wind, Solar, Biomass/;
 
-alias (sub_elec,sub_elecc),(gen,genn);
+alias   (sub_elec,sub_elecc),(gen,genn);
 
 *----------------------------------------------*
 *==sets for disaggregated IST sector
 *----------------------------------------------*
 set     sub_ist /BOF,EAF/
 
-alias (sub_ist,sub_istt); 
+alias   (sub_ist,sub_istt);
 
 *----------------------------------------------*
 *==sets for Backstop technologies
 *----------------------------------------------*
-set bt /ngcc,ngcap,igcap,BOFA,EAFA,DRP/
-    bt_elec(bt)/ngcc,ngcap,igcap/
+set bt  /ngcc,ngcap,igcap,BOFA,EAFA,DRP/
+    bt_elec(bt) /ngcc,ngcap,igcap/
     ngcap(bt_elec) /ngcap/
-    bt_ist(bt)/BOFA,EAFA/;
+    bt_ist(bt)  /BOFA,EAFA/;
 
 *----------------------------------------------*
 *==sets for labor market
@@ -197,13 +189,13 @@ set lmo original labor type /
 
 *== change here to do other labor aggregation
 set lm   aggregared labor type
-          /
-          LabSk
-          LabUn
-          /;
-alias (lm,lmm)             ;
+       /LabSk
+        LabUn/;
+
+alias (lm,lmm);
 
 display lm;
+
 set maplmo (lmo,lm) /
               L1      .       LabUn
               L2      .       LabUn
@@ -234,11 +226,11 @@ set maplmo (lmo,lm) /
               L27     .       LabSk
               L28     .       LabSk
                 /;
-set ll(lm) low level labor type /
-            LabUn
-             /;
+set ll(lm) low level labor type 
+      /LabUn/;
+
 set hl(lm) high level labor type ;
 
-hl(lm)$(not ll(lm)) = 1;
+      hl(lm)$(not ll(lm)) = 1;
 
 display ll,hl;

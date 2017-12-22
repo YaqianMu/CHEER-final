@@ -17,12 +17,12 @@ $offtext
 
 *----------------------------------------------*
 
-parameter active(bt);
+parameter 	active(bt);
 
-active(bt)=0;
-active("ngcap")=0;
-active("igcap")=0;
-table bsin(*,bt)   backstop input structure  for China
+			active(bt)=0;
+			active("ngcap")=0;
+			active("igcap")=0;
+table 	bsin(*,bt)   backstop input structure  for China
         ngcc         ngcap        igcap
 gas     0.732        0.590
 coal                              0.231
@@ -34,14 +34,16 @@ ffa     0.010        0.010        0.010
 frseq                0.900        0.900
 ;
 
-parameter bslin base labor input share for backstop technologies;
-bslin("gen",lm,bt)=bsin("l",bt)*sum(sub_elec,laborelec0(lm,sub_elec))/sum((lmm,sub_elec),laborelec0(lmm,sub_elec));
-bslin("CCS",lm,bt)=bsin("lseq",bt)*sum(sub_elec,laborelec0(lm,sub_elec))/sum((lmm,sub_elec),laborelec0(lmm,sub_elec));
+parameter 	bslin base labor input share for backstop technologies;
+			bslin("gen",lm,bt)	=	bsin("l",bt)*sum(sub_elec,laborelec0(lm,sub_elec))
+									/sum((lmm,sub_elec),laborelec0(lmm,sub_elec));
+			bslin("CCS",lm,bt)	=	bsin("lseq",bt)*sum(sub_elec,laborelec0(lm,sub_elec))
+									/sum((lmm,sub_elec),laborelec0(lmm,sub_elec));
 
-parameter emissionbt0 base emission for backstop technologies;
-emissionbt0('co2','e',fe,bt)=ccoef_p(fe)*bsin(fe,bt);
+parameter 	emissionbt0 base emission for backstop technologies;
+			emissionbt0('co2','e',fe,bt)=ccoef_p(fe)*bsin(fe,bt);
 
-*== delete the T&D cost in the original EPPA data
+*// delete the T&D cost in the original EPPA data
 $ontext
 table bsin(bt,*,*)   backstop input structure
 
@@ -76,15 +78,16 @@ igcap   .       frseq   0.9000  0.9000  0.9000  0.9000  0.9000  0.9000  0.9000  
 
 $offtext
 
-parameter  bmkup(bt)  backstop markup factor       /
-ngcc        1.058
-ngcap       1.445
-igcap       1.55     /
-;
+parameter  	bmkup(bt)  backstop markup factor/
+			ngcc        1.058
+			ngcap       1.445
+			igcap       1.55     
+			/
+			;
 
 *bmkup(bt)=bmkup(bt)*10;
 
-table esub_bt(*,*) substitution elasticity for backstop technologies
+table 	esub_bt(*,*) substitution elasticity for backstop technologies
 
         ngcc         ngcap        igcap
 NR      0.2          0.15         0.2
@@ -100,24 +103,24 @@ SVA     0.5          0.5          0.5
 
 parameters
 
-inish(bt)     initial share of backstop penetration
-bbres(bt,t)     BAU backstop resource supply by t
-bres(bt)     backstop resource supply by t
-;
+		inish(bt)     initial share of backstop penetration
+		bbres(bt,t)   BAU backstop resource supply by t
+		bres(bt)     	backstop resource supply by t
+		;
 
-* old inish from EPPA5
-*inish(bt,r)      = 0.003;
-* new inish from Jen and John.  YHC: 20140821
-inish(bt)      = 0.014;
-
-
-* For backstop technologies (ngcc and ngcap share the same resource supply)
-bbres(bt,"2012")     = max(0.00001, bsin("ffa",bt)*inish(bt)*output0("elec"));
-
-bres(bt)= bbres(bt,"2012");
+*//old inish from EPPA5
+*		inish(bt,r)    = 0.003;
+*//new inish from Jen and John.  YHC: 20140821
+		inish(bt)      =	0.014;
 
 
-*backstop technologies for IST sector
+*// For backstop technologies (ngcc and ngcap share the same resource supply)
+		bbres(bt,"2012")=	max(0.00001, bsin("ffa",bt)*inish(bt)*output0("elec"));
+
+		bres(bt)		=	bbres(bt,"2012");
+
+
+*//backstop technologies for IST sector
 $ontext
 *Schumacher, 2007
 			BOF		BOFA	EAF		EAFA
@@ -126,14 +129,13 @@ coal		4.54	4.08
 coke		9.88	8.89	
 $offtext	
 
+parameter 	bsrist(*,bt)   backstop input reduction proporation;
+			bsrist(i,bt)=1;
+			bsrist(lm,bt)=1;
+			bsrist("capital",bt)=1;
 
-parameter bsrist(*,bt)   backstop input reduction proporation;
-bsrist(i,bt)=1;
-bsrist(lm,bt)=1;
-bsrist("capital",bt)=1;
-
-bsrist("elec","BOFA")=0.949;
-bsrist("coal","BOFA")=0.899;
-bsrist("elec","EAFA")=0.683;
-bsrist("oilgas","EAFA")=0;
-bsrist("gas","EAFA")=0;
+			bsrist("elec","BOFA")=0.949;
+			bsrist("coal","BOFA")=0.899;
+			bsrist("elec","EAFA")=0.683;
+			bsrist("oilgas","EAFA")=0;
+			bsrist("gas","EAFA")=0;

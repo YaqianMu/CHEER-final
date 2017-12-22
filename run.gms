@@ -99,6 +99,10 @@ switch_ist=1;
 parameter switch_vk switch for vintage production;
 switch_vk=0;
 
+parameter switch_nfs switch for non-fossil share;
+switch_nfs=0;
+
+
 *== in the data process to change the feed stock rate
 *parameter Switch_feed switch for feedstock ;
 
@@ -112,21 +116,21 @@ $include %CalPath%/electricity
 $include %CalPath%/ist
 $include %CalPath%/backstop
 $include %CalPath%/vintage
+$include %CalPath%/ParShock
 $include %DynPath%/trend
 
-*== core model
+*// core model
 $include %ModPath%/core%modstr%
-
 
 *========static simulation========
 *$include %SimPath%/sim%simsce%
 
 *========dynamic simulation========
-*$include %DynPath%/dyncal
+$include %DynPath%/dyncal
 *=======calibration of BAU
 *1st run
 *$include %DynPath%/dynamic_cal
-*$include %DynPath%/dynamic_BAU
+$include %DynPath%/dynamic_BAU
 
 *=======Policy shock
 *$include %DynPath%/dynamic_shock
