@@ -39,9 +39,9 @@ parameters
 ;
 
 parameter
-			invk         sectoral physical capital investment(2005 Chinese 100 million Yuan)
+			invk         sectoral physical capital investment(2005 Chinese 100million Yuan)
 
-			invfk        physical capital investment by factors(2005 Chinese 100 million Yuan)
+			invfk        physical capital investment by factors(2005 Chinese 100million Yuan)
 
 			kstock       physical capital stock(2005 Chinese 100million Yuan)
 			invest_k     aggregate gorss physical capital investment(2005 Chinese 100million Yuan)

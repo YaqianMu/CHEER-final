@@ -126,11 +126,11 @@ $include %ModPath%/core%modstr%
 *$include %SimPath%/sim%simsce%
 
 *========dynamic simulation========
-$include %DynPath%/dyncal
+*$include %DynPath%/dyncal
 *=======calibration of BAU
 *1st run
 *$include %DynPath%/dynamic_cal
-$include %DynPath%/dynamic_BAU
+*$include %DynPath%/dynamic_BAU
 
 *=======Policy shock
 *$include %DynPath%/dynamic_shock
