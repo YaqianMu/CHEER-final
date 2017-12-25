@@ -34,7 +34,7 @@ parameter   V_ff(i)     vintage coefficient for fixed factor
             V_int(j,i)  =   int0(j,i)/output0(i);
             V_K(i)      =   fact0("capital",i)/output0(i);  
             V_L(i)      =   fact0("labor",i)/output0(i);
-            V_CO2(fe,i) =   emission0("co2","e",fe,i)/(int0(fe,i)*(1-r_feed(fe,i)));
+            V_CO2(fe,i)$int0(fe,i) =   emission0("co2","e",fe,i)/(int0(fe,i)*(1-r_feed(fe,i)));
             
             tvk(i)$(not elec(i) and not ist(i))   
                         =   fact0("capital",i)*phi_vk0(i);

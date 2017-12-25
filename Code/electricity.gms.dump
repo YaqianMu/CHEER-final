@@ -68,7 +68,7 @@ parameter
 *==fixed factors for elecpower
 *==to be updata
 parameter theta_elec(sub_elec)     imputed fixed factor share of capital      from Sue Wing 2006
-          p_ff            proportion of fix-factor£»
+          p_ff            proportion of fix-factorï¼›
 
 table ff_data(*,*) cost structure from Sue Wing
                  hydro      nuclear    Wind       Solar      Biomass

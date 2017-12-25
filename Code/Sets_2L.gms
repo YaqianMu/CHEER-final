@@ -20,18 +20,22 @@ SETS
        Roil
        Gas
        Agri
-       mine
-       Food
-       Paper
-       Chem
-       CM
+       Mine
+       PapMfg
+       CheMfg
+       CMMfg
        IST
        NFM
-       EII
-       OM
-       Air
-       Tran
-       Serv
+       MetalPr
+       GenEqp
+       TransEqp
+       ElecEqp
+       OthMfg
+       Constr
+       AirTran
+       OthTran
+       RD
+       Service
 
        fd
 
@@ -48,18 +52,22 @@ SETS
        Roil
        Gas
        Agri
-       mine
-       Food
-       Paper
-       Chem
-       CM
+       Mine
+       PapMfg
+       CheMfg
+       CMMfg
        IST
        NFM
-       EII
-       OM
-       Air
-       Tran
-       Serv
+       MetalPr
+       GenEqp
+       TransEqp
+       ElecEqp
+       OthMfg
+       Constr
+       AirTran
+       OthTran
+       RD
+       Service
        /
 
 *// subset for specific sector groups 
@@ -79,19 +87,10 @@ SETS
       /ist/
 
     cm(i)   sectors selected in carbon market
-      /roil,elec,Paper, Chem,CM,IST,NFM,Air/
+      /roil,elec,PapMfg,CheMfg,CMMfg,IST,NFM,AirTran/
 
     agrmine(i)  agriculture and non-energy mine
       /agri,mine/
-
-    mfg(i)      manufacturing
-      /Food,Paper,Chem,CM,IST,NFM,EII,OM/
-
-    Trans(i)    transport
-      /Tran/
-
-    Serv(i)     services
-      /serv/
 
 alias (i,j),(e,ee),(fe,fee);
 *----------------------------------------------*
