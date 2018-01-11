@@ -1,0 +1,102 @@
+$OFFLISTING
+
+* MPS/GE MODEL GENERATOR FILE
+
+$OFFINLINE
+$INLINECOM { }
+PUT   MPS,'$MODEL:STATIC'/;
+
+{    2}  PUT /;
+ 
+{    2}  PUT'$SECTORS:'/;
+{    3}  PUT /,'Y1';
+{    4}  PUT /,'Y2';
+{    5}  PUT /,'C';
+{    7}  PUT /;
+ 
+{    7}  PUT'$COMMODITIES:'/;
+{    8}  PUT /,'P1';
+{    9}  PUT /,'P2';
+{   10}  PUT /,'PL';
+{   11}  PUT /,'PK';
+{   12}  PUT /,'PC';
+{   14}  PUT /;
+ 
+{   14}  PUT'$CONSUMERS:'/;
+{   15}  PUT /,'HH';
+ 
+{   17}  PUT /;
+{   17}  PUT /,'$PROD:Y1';
+{   17}  IF ((ABS(1) GT MPSEPS),PUT /,'+S:'1;  );
+{   18}  IF(ABS(100) GT MPSEPS,
+{   18}    PUT /,'O:P1';
+{   18}    PUT /,'+Q:'100;
+{   19}  );
+{   19}  IF(ABS(50) GT MPSEPS,
+{   19}    PUT /,'I:PL';
+{   19}    PUT /,'+Q:'50;
+{   20}  );
+{   20}  IF(ABS(50) GT MPSEPS,
+{   20}    PUT /,'I:PK';
+{   20}    PUT /,'+Q:'50;
+{   22}  );
+ 
+{   22}  PUT /;
+{   22}  PUT /,'$PROD:Y2';
+{   22}  IF ((ABS(1) GT MPSEPS),PUT /,'+S:'1;  );
+{   23}  IF(ABS(20) GT MPSEPS,
+{   23}    PUT /,'O:P2';
+{   23}    PUT /,'+Q:'20;
+{   23}    PUT /'+','A:HH';
+{   23}    IF ((ABS(T0) GT MPSEPS),PUT /,'+T:'T0;  );
+{   24}  );
+{   24}  IF(ABS(5) GT MPSEPS,
+{   24}    PUT /,'I:PL';
+{   24}    PUT /,'+Q:'5;
+{   25}  );
+{   25}  IF(ABS(15) GT MPSEPS,
+{   25}    PUT /,'I:PK';
+{   25}    PUT /,'+Q:'15;
+{   28}  );
+ 
+{   28}  PUT /;
+{   28}  PUT /,'$PROD:C';
+{   28}  IF ((ABS(1) GT MPSEPS),PUT /,'+S:'1;  );
+{   29}  IF(ABS(120) GT MPSEPS,
+{   29}    PUT /,'O:PC';
+{   29}    PUT /,'+Q:'120;
+{   30}  );
+{   30}  IF(ABS(100) GT MPSEPS,
+{   30}    PUT /,'I:P1';
+{   30}    PUT /,'+Q:'100;
+{   31}  );
+{   31}  IF(ABS(20) GT MPSEPS,
+{   31}    PUT /,'I:P2';
+{   31}    PUT /,'+Q:'20;
+{   33}  );
+ 
+{   33}  PUT /;
+{   33}  PUT /,'$DEMAND:HH';
+{   33}  IF ((ABS(1) GT MPSEPS),PUT /,'+S:'1;  );
+{   34}  IF(ABS(120) GT MPSEPS,
+{   34}    PUT /,'D:PC';
+{   34}    PUT /,'+Q:'120;
+{   35}  );
+{   35}  IF(ABS(55) GT MPSEPS,
+{   35}    PUT /,'E:PL';
+{   35}    PUT /,'+Q:'55;
+{   36}  );
+{   36}  IF(ABS(65) GT MPSEPS,
+{   36}    PUT /,'E:PK';
+{   36}    PUT /,'+Q:'65;
+{   39}  );
+ 
+OPTION LIMROW=0;
+OPTION LIMCOL=0;
+PUT / '$PEPS:1.E-6'/;
+PUT / '$SOLVE'/;
+PUTCLOSE   MPS;
+STATIC.INTEGER1 = STATIC.INTEGER1 + 1;
+$IF %STATIC%=="12/26/1709:55:30" $EXIT
+$error model.gen file is inconsistent
+$abort preprocessor must be reinvoked
