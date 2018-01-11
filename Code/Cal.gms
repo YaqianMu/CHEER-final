@@ -132,7 +132,7 @@ display   	tx0;
 parameter	etemp energ consumption;
 			etemp(e)    =(output0(e)-(nx0(e)+xinv0(e)+xcons0(e)));
 
-*==armington good
+*//armington good
 parameter a0;
 a0(i)     =output0(i)-ximp0(i);
 display a0,output0,imp0,ximp0,nx0,inv0,cons0,xinv0,xcons0,sub_elec;

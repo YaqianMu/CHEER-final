@@ -25,6 +25,7 @@ yv_ist(sub_ist)$(switch_vk and v_i("ist"))
 
 consum                 !activity level for aggregate consumption
 invest                 !activity level for aggregate physical capital investment
+inv_elec(gen)$NewCap0(gen)            !activity level for electricity capital investment
 welf                   !activity level for aggregate welfare
 
 yelec(sub_elec)                                            !Activity level for electricity production
@@ -73,6 +74,7 @@ pbf(bt_elec)$Switch_bt(bt_elec)                    !domestic price index for fix
 
 pcons                  !price index for aggregate consumption
 pinv                   !price index for aggregate physical capital investment
+*pinv_elec(gen)$NewCap0(gen)           !price index for electricity capital investment
 pu                     !price index for utility
 
 pco2$clim              !shadow value of carbon all sectors covered
@@ -241,12 +243,17 @@ $prod:invest     s:esub_inv
          o:pinv            q:(sum(i,inv0(i)))
          i:py(i)           q:inv0(i)
 
+*//        electricity capital investment
+$prod:inv_elec(gen)$NewCap0(gen)   s:0
+         o:pinv            q:(sum(i,elecinv0(i,gen)))
+         i:py(i)           q:elecinv0(i,gen)         
+
 
 *//        welfare          Ke Wang=1, EPPA=0
 $prod:welf    s:esub_wf
-         o:pu                 q:(sum(i,cons0(i)+inv0(i))+sum(f,consf0(f)+invf0(f)))
+         o:pu                 q:(sum(i,cons0(i)+inv0(i))+sum(f,consf0(f)+invf0(f))+sum((i,gen),elecinv0(i,gen)))
          i:pcons              q:(sum(i,cons0(i))+sum(f,consf0(f)))
-         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f)))
+         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f))+sum((i,gen),elecinv0(i,gen)))
 
 *// vintage production
 $prod:yv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i)) s:0 coal:0 roil:0 gas:0

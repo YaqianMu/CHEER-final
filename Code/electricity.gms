@@ -163,7 +163,7 @@ ecf0=0;
 *display tx0,ecf0;
 
 
-
+*=======block for electricity investment mainly based on Dai 2016
 Table InvShr(i,*)  Investment demand share for non-fossil power generation and other sectors  % from Dai 2016
                  Other    Hydro    Nuclear  Wind     Biomass   Solar
 Agri             2
@@ -185,15 +185,61 @@ TWH2GW        0.596        0.947
 ;
 
 parameter InvCost(*)  Investment cost for power generation from Dai 2016 in billion Yuan per GW
-/Coal       4.38
-Oil         2.85
-Gas        2.85
-Hydro      6
-Nuclear    10
+/Coal_Power       4.38
+Oil_Power         2.85
+Gas_Power         2.85
+Hydro       6
+Nuclear     10
 Wind        9
 Biomass     20
-Solar      20
+Solar       20
 /
 ;
 
+parameter IniCap0   initinal capacity of electricity in base year in GW
+ /coal_Power    753.82
+  oil_Power     3.01
+  gas_Power     37.17
+  nuclear 12.57
+  hydro   249.47
+  wind    61.42
+  solar   3.41
+  biomass 7.69
+  /
+;
 
+parameter IniGen0   initinal generation of electricity in base year in GW
+ /coal_Power  3710.4
+  oil_Power 5.4
+  gas_Power 109.2
+  nuclear 98.3
+  hydro 855.6
+  wind  103
+  solar 3.6
+  biomass 31.6
+  /
+;
+
+parameter elecinv0  initinal value for electricity capacity investment
+          ;
+
+parameter NewCap0   new capacity of electricity in base year in GW
+ /coal_Power    44.53
+  oil_Power     -0.27
+  gas_Power     3.02
+  nuclear       0
+  hydro         16.49
+  wind          15.19
+  solar         1.29
+  biomass       2.1
+  /
+;
+
+*// ignore the tiny negetive change of oil-fired capacity
+  NewCap0(sub_elec)$(NewCap0(sub_elec) le 0) = 0.001;
+
+  elecinv0(i,sub_elec)  = NewCap0(sub_elec)*InvCost(sub_elec)*InvShr(i,sub_elec)/100;
+  elecinv0(i,ffe)       = NewCap0(ffe)*InvCost(ffe)*InvShr(i,'other')/100;
+
+*//update investment data to keep balance; split electricity investment from aggregate investment
+  inv0(i)=inv0(i)-sum(sub_elec,elecinv0(i,sub_elec));
