@@ -56,10 +56,7 @@ $if not set datagg $set datagg oilgas
 $if not set modstr $set modstr _Developing
 
 *== bridge variable for simulation choice
-$if not set simsce $set simsce _0324
-*$if not set simsce $set simsce _exdosub
-*$if not set simsce $set simsce _quota
-*$if not set simsce $set simsce _elecout
+$if not set simsce $set simsce _RE
 
 *========workflows========
 *== definition of sets

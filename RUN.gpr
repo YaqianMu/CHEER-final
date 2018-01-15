@@ -1645,9 +1645,6 @@ Order=1,2,3,4
 Decim=7
 PlaneRownr=-1
 
-[RP:练习题]
-1=
-
 [GDXDISP: xinv0 Par 1]
 PlaneDim=0
 RowDim=1
@@ -1656,11 +1653,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:RUN]
-1=gdx all
-2=
-3= 
 
 [GDXDISP: elecinv0 Par 2]
 PlaneDim=0
@@ -1671,25 +1663,68 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
+[RP:练习题]
+1=
+
+[GDXDISP: NewCap0 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: InvCost Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: InvShr Par 2]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: INV_NF Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:RUN]
+1=gdx all
+2=
+3= 
+
 [MRUFILES]
-1=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\GTAP9_GDX\basedata.gdx
-2=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\GTAP9_GDX\metadata.gdx
-3=D:\Personal\Desktop\FinalPaper\CHEER-model-clear\CHEER-development\Code\vinta.gms
-4=D:\Dropbox\GTAP9_GDX\basedata.gdx
-5=E:\备份0315\桌面\桌面\eppa6\eppa6 - 副本\active\run.gms
-6=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\分省IO\调平\调平\Untitled_1.gms
-7=D:\Personal\Desktop\CHEER-development\Data\IO_TR_OilGas.gdx
-8=D:\Personal\Desktop\CHEER-development\Data-for-CHEER\Run.gms
+1=D:\母亚乾要从清华走了\组内\气候变化经济学2017\练习题.gms
+2=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\GTAP9_GDX\basedata.gdx
+3=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\GTAP9_GDX\metadata.gdx
+4=D:\Personal\Desktop\FinalPaper\CHEER-model-clear\CHEER-development\Code\vinta.gms
+5=D:\Dropbox\GTAP9_GDX\basedata.gdx
+6=E:\备份0315\桌面\桌面\eppa6\eppa6 - 副本\active\run.gms
+7=D:\母亚乾要从清华走了\博士论文\可能会有用的数据\分省IO\调平\调平\Untitled_1.gms
+8=D:\Personal\Desktop\CHEER-development\Data\IO_TR_OilGas.gdx
 
 [OPENWINDOW_1]
 FILE0=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\all.gdx
-FILE1=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\Data\IO_TR_OilGas.gdx
-FILE2=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\run.gms
-FILE3=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\run.lst
-FILE4=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\练习题.lst
-FILE5=D:\母亚乾要从清华走了\组内\气候变化经济学2017\练习题.gms
-FILE6=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\run.gms
-MAXIM=1
+FILE1=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\Data\Electricity_TR_OilGas.gdx
+FILE2=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\Data\IO_TR_OilGas.gdx
+FILE3=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\run.gms
+FILE4=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\run.lst
+FILE5=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\Data\Electricity_TR_OilGas.gdx
+MAXIM=0
 TOP=4
 LEFT=38
 HEIGHT=401

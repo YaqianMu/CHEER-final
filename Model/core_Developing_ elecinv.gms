@@ -590,6 +590,9 @@ clim_m(cm) = 0;
 
 tx0(i)=tx0(i);
 
+*inv_elec.fx("wind")=2;
+*yelec.fx("wind")=2;
+
 CHEER.iterlim =100000;
 
 $include CHEER.gen

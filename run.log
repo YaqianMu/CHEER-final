@@ -1,66 +1,66 @@
 
---- Job run.gms Start 01/11/18 18:39:22 24.4.6 r52609 WEX-WEI x86 64bit/MS Windows
+--- Job run.gms Start 01/15/18 16:12:50 24.4.6 r52609 WEX-WEI x86 64bit/MS Windows
 GAMS 24.4.6   Copyright (C) 1987-2015 GAMS Development. All rights reserved
 Licensee: Yaqian Mu                                      G150107:0436AO-WIN
           Tsinghua University, Res. Centre for International EnvironmDC6727
           License for teaching and research at degree granting institutions
 --- Starting compilation
---- run.gms(66) 3 Mb
+--- run.gms(63) 3 Mb
 --- .code/sets_2L.gms(235) 3 Mb
---- run.gms(111) 3 Mb
+--- run.gms(108) 3 Mb
 --- .code/cal.gms(17) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\IO_TR_oilgas.gdx
 --- .code/cal.gms(139) 3 Mb
---- run.gms(112) 3 Mb
+--- run.gms(109) 3 Mb
 --- .code/elasticities.gms(92) 3 Mb
---- run.gms(113) 3 Mb
+--- run.gms(110) 3 Mb
 --- .code/emission.gms(52) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\CO2_TR_oilgas.gdx
 --- .code/emission.gms(86) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\urban_TR_output.gdx
 --- .code/emission.gms(136) 3 Mb
---- run.gms(114) 3 Mb
+--- run.gms(111) 3 Mb
 --- .code/labor.gms(25) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\labor_TR_oilgas.gdx
 --- .code/labor.gms(109) 3 Mb
---- run.gms(115) 3 Mb
+--- run.gms(112) 3 Mb
 --- .code/electricity.gms(21) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\electricity_TR_oilgas.gdx
---- .code/electricity.gms(245) 3 Mb
---- run.gms(116) 3 Mb
+--- .code/electricity.gms(249) 3 Mb
+--- run.gms(113) 3 Mb
 --- .code/ist.gms(18) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\IST_TR_Output.gdx
 --- .code/ist.gms(78) 3 Mb
---- run.gms(117) 3 Mb
+--- run.gms(114) 3 Mb
 --- .code/backstop.gms(141) 3 Mb
---- run.gms(118) 3 Mb
+--- run.gms(115) 3 Mb
 --- .code/vintage.gms(85) 3 Mb
---- run.gms(119) 3 Mb
+--- run.gms(116) 3 Mb
 --- .code/ParShock.gms(31) 3 Mb
---- run.gms(120) 3 Mb
+--- run.gms(117) 3 Mb
 --- .dynamic/trend.gms(38) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\trend_TR_output.gdx
 --- .dynamic/trend.gms(161) 3 Mb
---- run.gms(123) 3 Mb
---- .model/core_Developing.gms(511) 3 Mb
+--- run.gms(120) 3 Mb
+--- .model/core_Developing.gms(524) 3 Mb
 --- Running the MPSGE preprocessor ...
 --- ..mpsgeset(19) 3 Mb
 --- call gmsge_nx "D:\Personal\Desktop\CHEER-model-clear\CHEER-final\225a\gamscge.dat"
 --- ..mpsgeset(20) 3 Mb
---- ...gamsgeh.dat(1127) 3 Mb
+--- ...gamsgeh.dat(1165) 3 Mb
 --- ..mpsgeset(22) 3 Mb
---- .model/core_Developing.gms(594) 3 Mb
---- ..CHEER.gen(1628) 3 Mb
---- .model/core_Developing.gms(619) 3 Mb
---- run.gms(146) 3 Mb
---- Starting execution: elapsed 0:00:00.264
---- run.gms(4945) 4 Mb
+--- .model/core_Developing.gms(611) 3 Mb
+--- ..CHEER.gen(1659) 3 Mb
+--- .model/core_Developing.gms(636) 3 Mb
+--- run.gms(143) 3 Mb
+--- Starting execution: elapsed 0:00:00.202
+--- run.gms(5032) 4 Mb
 --- Generating MCP model CHEER
---- run.gms(4949) 7 Mb
----   28 rows  1,410 columns  1,515 non-zeroes
----   189 nl-code  62 nl-non-zeroes
---- run.gms(4949) 4 Mb
---- Executing MPSGE: elapsed 0:00:00.318
+--- run.gms(5036) 7 Mb
+---   36 rows  1,443 columns  1,580 non-zeroes
+---   221 nl-code  78 nl-non-zeroes
+--- run.gms(5036) 4 Mb
+--- Executing MPSGE: elapsed 0:00:00.236
 
 MPSGE: Extracting Jacobian nonzero structure.
 
@@ -73,139 +73,78 @@ Calculating Jacobian...
 
 PATH             24.4.6 r52609 Released Jun 26, 2015 WEI x86 64bit/MS Windows 
 
-365 row/cols, 5718 non-zeros, 4.29% dense.
+389 row/cols, 5978 non-zeros, 3.95% dense.
 
 Path 4.7.02 (Fri Jun 26 15:39:32 2015)
 Written by Todd Munson, Steven Dirkse, and Michael Ferris
 
 MCPR: Zero:     0 Single:    10 Double:     0 Forced:     0
-Preprocessed size   : 355
+Preprocessed size   : 379
 
 INITIAL POINT STATISTICS
-Maximum of X. . . . . . . . . .  7.6818e+005 var: (RA)
+Maximum of X. . . . . . . . . .  7.6769e+005 var: (RA)
 Maximum of F. . . . . . . . . .  3.2979e+005 eqn: (L_A.Agri)
 Maximum of Grad F . . . . . . .  6.5318e+005 eqn: (PLS.LabUn)
                                             var: (GPROD2.LabUn)
 
 INITIAL JACOBIAN NORM STATISTICS
-Maximum Row Norm. . . . . . . .  1.5285e+006 eqn: (RA)
+Maximum Row Norm. . . . . . . .  1.5280e+006 eqn: (RA)
 Minimum Row Norm. . . . . . . .  5.7000e-003 eqn: (INV_ELEC.Oil_Power)
 Maximum Column Norm . . . . . .  1.3715e+006 var: (L_S.LabUn)
-Minimum Column Norm . . . . . .  5.7000e-003 var: (INV_ELEC.Oil_Power)
+Minimum Column Norm . . . . . .  8.5500e-003 var: (PINV_ELEC.Oil_Power)
 
 Major Iteration Log
 major minor  func  grad  residual    step  type prox    inorm  (label)
-    0     0     1     1 2.4386e+005           I 1.0e+001 2.0e+005 (L_S.LabUn)
-    1    23     3     2 6.9571e+004  8.0e-001 SB 4.0e+000 5.3e+004 (RGDP)
-    2     5     4     3 7.2410e+005  1.0e+000 SO 1.6e+000 7.2e+005 (PLO.LabUn.Agri)
-    3     4     5     4 2.0565e+004  1.0e+000 SO 6.4e-001 1.6e+004 (RGDP)
-    4   149     6     5 8.6328e+003  1.0e+000 RO 2.6e-001 6.1e+003 (RGDP)
-    5    13     7     6 2.4227e+003  1.0e+000 SO 1.0e-001 1.6e+003 (PLO.LabUn.Servi)
-    6     3     8     7 2.2761e+002  1.0e+000 SO 4.1e-002 1.7e+002 (PELEC.Coal_Powe)
-    7     5     9     8 4.2503e+002  1.0e+000 SO 1.6e-002 3.3e+002 (PELEC.Coal_Powe)
-    8     2    10     9 1.0671e+003  1.0e+000 SO 6.6e-003 7.2e+002 (PLO.LabUn.Agri)
-    9     2    11    10 2.7493e+003  1.0e+000 SO 2.6e-003 1.8e+003 (PLO.LabUn.Agri)
-   10     9    12    11 2.1466e+004  1.0e+000 SO 1.0e-003 2.0e+004 (PK)
-   11    23    13    12 1.4245e+006  1.0e+000 SD 4.2e-004 1.4e+006 (PY.Mine)
-   12    57    15    13 7.3106e+003  8.0e-001 SW 1.0e-003 5.9e+003 (PLO.LabUn.Servi)
-   13    42    16    14 6.1783e+005  1.0e+000 SD 4.2e-004 6.1e+005 (PY.Mine)
-   14    43    18    15 2.6638e+004  8.0e-001 SW 1.0e-003 2.2e+004 (PY.NFM)
-   15    32    20    16 8.9536e+003  8.0e-001 SB 4.2e-004 7.9e+003 (PY.NFM)
-   16    49    22    17 4.8081e+003  8.0e-001 SB 1.7e-004 3.2e+003 (RA)
-   17    44    24    18 5.2939e+003  8.0e-001 SB 6.7e-005 5.1e+003 (RA)
-   18    54    28    19 8.1376e+003  5.1e-001 SB 2.7e-005 7.5e+003 (RA)
-   19    55    37    20 8.3456e+003  2.3e-002 SB 1.1e-005 7.8e+003 (RA)
-
-Restart Log
-proximal_perturbation 0
-crash_method pnewton
-nms_initial_reference_factor 2
-lemke_search_type slack
-
-Crash Log
-major  func  diff  size  residual    step       prox   (label)
-    0     0             2.4386e+005             0.0e+000 (L_S.LabUn)
-    1     2     8   353 1.9888e+005  8.0e-001    1.0e+001 (PY.Agri)
-pn_search terminated: no basis change.
-
-Major Iteration Log
-major minor  func  grad  residual    step  type prox    inorm  (label)
-   19     0    71    22 1.9888e+005           R 9.0e+000 1.0e+005 (PY.Agri)
-   20     9    73    23 1.0532e+005  8.0e-001 SB 3.6e+000 8.5e+004 (PLO.LabUn.Agri)
-   21     3    74    24 1.6271e+005  1.0e+000 SO 1.4e+000 1.4e+005 (PLO.LabUn.Agri)
-   22     7    75    25 1.2586e+004  1.0e+000 SO 5.8e-001 8.1e+003 (RGDP)
-   23     1    76    26 3.2539e+003  1.0e+000 SO 2.3e-001 2.2e+003 (PK)
-   24     2    77    27 5.6008e+002  1.0e+000 SO 9.2e-002 3.4e+002 (PK)
-   25     3    78    28 2.1479e+002  1.0e+000 SO 3.7e-002 1.3e+002 (RGDP)
-   26     5    79    29 4.0605e+002  1.0e+000 SO 1.5e-002 2.7e+002 (PELEC.Coal_Powe)
-   27     1    80    30 1.1138e+003  1.0e+000 SO 5.9e-003 8.0e+002 (PLO.LabUn.Agri)
-   28     3    81    31 3.2125e+003  1.0e+000 SO 2.4e-003 2.1e+003 (PLO.LabUn.Agri)
-   29    10    82    32 3.9298e+004  1.0e+000 SO 9.4e-004 3.8e+004 (PK)
-   30    24    83    33 1.1828e+006  1.0e+000 SD 3.8e-004 1.2e+006 (PY.Mine)
-   31    43    85    34 9.1701e+003  8.0e-001 SW 9.4e-004 6.8e+003 (PK)
-   32    41    86    35 6.2726e+005  1.0e+000 SD 3.8e-004 6.2e+005 (PY.Mine)
-   33    48    88    36 2.0971e+004  8.0e-001 SW 9.4e-004 1.8e+004 (PY.NFM)
-   34    32    90    37 7.8520e+003  8.0e-001 SB 3.8e-004 7.0e+003 (PY.NFM)
-   35    45    92    38 6.5364e+003  8.0e-001 SB 1.5e-004 4.6e+003 (INVEST)
-   36    41    95    39 1.0974e+004  6.4e-001 SB 6.0e-005 9.6e+003 (INVEST)
-   37    49    97    40 1.0060e+004  8.0e-001 SB 2.4e-005 9.3e+003 (RA)
-
-Restart Log
-proximal_perturbation 0
-crash_method none
-crash_perturb no
-nms_initial_reference_factor 10
-nms_memory_size 2
-nms_mstep_frequency 1
-lemke_search_type slack
-
-Major Iteration Log
-major minor  func  grad  residual    step  type prox    inorm  (label)
-   37     0   129    41 2.4386e+005           R 0.0e+000 2.0e+005 (L_S.LabUn)
-   38    24   131    42 6.1382e+004  8.0e-001 SB 0.0e+000 4.7e+004 (L_S.LabUn)
-   39    10   133    43 2.4018e+005  8.0e-001 SB 0.0e+000 2.4e+005 (PLO.LabUn.Agri)
-   40     7   135    44 1.6590e+005  8.0e-001 SB 0.0e+000 1.7e+005 (PLO.LabUn.Agri)
-   41     7   136    45 7.3731e+003  1.0e+000 SM 0.0e+000 5.1e+003 (PY.Agri)
-   42     1   137    46 8.3359e+003  1.0e+000 SM 0.0e+000 8.2e+003 (PLO.LabUn.Agri)
-   43     2   138    47 2.0349e+003  1.0e+000 SM 0.0e+000 1.9e+003 (PLO.LabUn.Agri)
-   44     4   139    48 1.1052e+002  1.0e+000 SM 0.0e+000 7.5e+001 (PLO.LabUn.Agri)
-   45     4   140    49 3.2238e-001  1.0e+000 SM 0.0e+000 2.5e-001 (PLO.LabUn.Agri)
-   46     3   141    50 1.3883e-004  1.0e+000 SM 0.0e+000 7.2e-005 (PY.Constr)
-   47     1   142    51 8.5298e-009  1.0e+000 SM 0.0e+000 7.5e-009 (UR.LabUn)
+    0     0     1     1 2.4431e+005           I 0.0e+000 2.0e+005 (L_S.LabUn)
+    1    16     3     2 6.0859e+004  8.0e-001 SB 0.0e+000 4.7e+004 (L_S.LabUn)
+    2     5     4     3 8.5467e+005  1.0e+000 SO 0.0e+000 8.5e+005 (PLO.LabUn.Agri)
+    3     9     6     4 1.6023e+005  8.0e-001 SB 0.0e+000 1.3e+005 (PLO.LabUn.Agri)
+    4     5     7     5 4.2477e+004  1.0e+000 SO 0.0e+000 3.9e+004 (PLO.LabSk.Metal)
+    5     4     8     6 5.6275e+004  1.0e+000 SO 0.0e+000 5.4e+004 (PLO.LabSk.Metal)
+    6     1     9     7 3.3289e+004  1.0e+000 SO 0.0e+000 3.2e+004 (PLO.LabSk.Metal)
+    7     1    10     8 1.8028e+004  1.0e+000 SO 0.0e+000 1.7e+004 (PLO.LabSk.Metal)
+    8     1    11     9 9.7529e+003  1.0e+000 SO 0.0e+000 9.4e+003 (PLO.LabSk.Metal)
+    9     1    12    10 5.1249e+003  1.0e+000 SO 0.0e+000 4.9e+003 (PLO.LabSk.Metal)
+   10     1    13    11 2.4045e+003  1.0e+000 SO 0.0e+000 2.3e+003 (PLO.LabSk.Metal)
+   11     1    14    12 7.6133e+002  1.0e+000 SO 0.0e+000 7.2e+002 (PLO.LabSk.Metal)
+   12     1    15    13 8.9152e+001  1.0e+000 SO 0.0e+000 7.5e+001 (PLO.LabSk.Metal)
+   13     1    16    14 1.0218e+000  1.0e+000 SO 0.0e+000 7.1e-001 (PLO.LabSk.Metal)
+   14     1    17    15 1.3299e-004  1.0e+000 SO 0.0e+000 8.3e-005 (PLO.LabSk.PapMf)
+   15     1    18    16 9.1189e-009  1.0e+000 SO 0.0e+000 9.1e-009 (PLO.LabUn.Agri)
 
 FINAL STATISTICS
-Inf-Norm of Complementarity . .  5.7364e-007 eqn: (RGDP)
-Inf-Norm of Normal Map. . . . .  3.7535e-009 eqn: (UR.LabUn)
-Inf-Norm of Minimum Map . . . .  3.7535e-009 eqn: (UR.LabUn)
-Inf-Norm of Fischer Function. .  7.5070e-009 eqn: (UR.LabUn)
-Inf-Norm of Grad Fischer Fcn. .  4.8938e-003 eqn: (PLO.LabUn.Service)
-Two-Norm of Grad Fischer Fcn. .  5.2245e-003
+Inf-Norm of Complementarity . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Normal Map. . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Minimum Map . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Fischer Function. .  9.0804e-009 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Grad Fischer Fcn. .  1.4655e-001 eqn: (PLO.LabUn.Agri)
+Two-Norm of Grad Fischer Fcn. .  1.4829e-001
 
 FINAL POINT STATISTICS
-Maximum of X. . . . . . . . . .  5.3679e+004 var: (RGDP)
-Maximum of F. . . . . . . . . .  6.6331e-009 eqn: (UR.LabSk)
+Maximum of X. . . . . . . . . .  5.4186e+004 var: (RGDP)
+Maximum of F. . . . . . . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
 Maximum of Grad F . . . . . . .  1.6230e+007 eqn: (PLO.LabUn.Agri)
                                             var: (PLO.LabUn.Agri)
 
  ** EXIT - solution found.
 
-Major Iterations. . . . 47
-Minor Iterations. . . . 1152
-Restarts. . . . . . . . 2
-Crash Iterations. . . . 1
+Major Iterations. . . . 15
+Minor Iterations. . . . 49
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 0
 Gradient Steps. . . . . 0
-Function Evaluations. . 142
-Gradient Evaluations. . 51
-Total Time. . . . . . . 0.808000
-Residual. . . . . . . . 8.529751e-009
-Postsolved residual: 8.5298e-009
+Function Evaluations. . 18
+Gradient Evaluations. . 16
+Total Time. . . . . . . 0.159000
+Residual. . . . . . . . 9.118854e-009
+Postsolved residual: 9.1189e-009
 
 --- Restarting execution
---- run.gms(4949) 2 Mb
+--- run.gms(5036) 2 Mb
 --- Reading solution for model CHEER
---- Executing after solve: elapsed 0:00:01.987
---- run.gms(4967) 3 Mb
+--- Executing after solve: elapsed 0:00:00.846
+--- run.gms(5054) 3 Mb
 --- Putfile MPS D:\Personal\Desktop\CHEER-model-clear\CHEER-final\225a\gamscge.dat
 --- GDX File D:\Personal\Desktop\CHEER-model-clear\CHEER-final\all.gdx
 *** Status: Normal completion
---- Job run.gms Stop 01/11/18 18:39:24 elapsed 0:00:01.994
+--- Job run.gms Stop 01/15/18 16:12:51 elapsed 0:00:00.851

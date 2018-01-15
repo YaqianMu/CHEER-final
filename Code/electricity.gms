@@ -179,9 +179,9 @@ Service          8        8                 12       5         14
 ;
 
 Table ConEff(*,*)  2012 power generation conversion efficiency
-               wind        solar
-GW2TWH        1.677        1.056
-TWH2GW        0.596        0.947
+        coal_Power  oil_Power gas_Power nuclear hydro wind  solar biomass
+GW2TWh  4.92        1.79      2.94      7.82    3.43  1.68  1.06  4.11
+TWh2GW  0.20        0.56      0.34      0.13    0.29  0.60  0.95  0.24
 ;
 
 parameter InvCost(*)  Investment cost for power generation from Dai 2016 in billion Yuan per GW
@@ -237,9 +237,13 @@ parameter NewCap0   new capacity of electricity in base year in GW
 
 *// ignore the tiny negetive change of oil-fired capacity
   NewCap0(sub_elec)$(NewCap0(sub_elec) le 0) = 0.001;
+  NewCap0(TD)=0;
 
   elecinv0(i,sub_elec)  = NewCap0(sub_elec)*InvCost(sub_elec)*InvShr(i,sub_elec)/100;
   elecinv0(i,ffe)       = NewCap0(ffe)*InvCost(ffe)*InvShr(i,'other')/100;
 
 *//update investment data to keep balance; split electricity investment from aggregate investment
   inv0(i)=inv0(i)-sum(sub_elec,elecinv0(i,sub_elec));
+
+*//update capital data to keep balance; split capital use in electricity sector from aggregate capital 
+  fact("capital")=fact("capital")-sum(gen,kelec0(gen));

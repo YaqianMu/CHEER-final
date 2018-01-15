@@ -25,7 +25,7 @@ yv_ist(sub_ist)$(switch_vk and v_i("ist"))
 
 consum                 !activity level for aggregate consumption
 invest                 !activity level for aggregate physical capital investment
-inv_elec(gen)$NewCap0(gen)            !activity level for electricity capital investment
+inv_elec(sub_elec)$NewCap0(sub_elec)            !activity level for electricity capital investment
 welf                   !activity level for aggregate welfare
 
 yelec(sub_elec)                                            !Activity level for electricity production
@@ -64,6 +64,7 @@ pl_IST(sub_ist)
 plo(lm,i)$(labor_q0(lm,i))                 !domestic price index for labor demand
 
 pk                     !domestic price index for captial
+pk_elec(sub_elec)$gen(sub_elec)           !domestic price index for captial
 pkv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i))                 !domestic price index for vintage captial
 pkv_elec(sub_elec)$(switch_vk and v_i("elec"))               !domestic price index for vintage captial
 pkv_ist(sub_ist)$(switch_vk and v_i("ist"))                 !domestic price index for vintage captial
@@ -74,7 +75,7 @@ pbf(bt_elec)$Switch_bt(bt_elec)                    !domestic price index for fix
 
 pcons                  !price index for aggregate consumption
 pinv                   !price index for aggregate physical capital investment
-*pinv_elec(gen)$NewCap0(gen)           !price index for electricity capital investment
+pinv_elec(sub_elec)$NewCap0(sub_elec)           !price index for electricity capital investment
 pu                     !price index for utility
 
 pco2$clim              !shadow value of carbon all sectors covered
@@ -98,6 +99,8 @@ ur(lm)$Switch_um                   !unemployment rate
 t_re(sub_elec)$cfe(sub_elec)       !FIT for renewable energy
 
 ecf$Switch_fee           !additional electricity consumption fees to cover renewable subsidy
+
+Inv2Cap(sub_elec)$gen(sub_elec)             !transfer electricity investment to capital
 
 rgdp                     !real gdp
 gprod                    !productivity index
@@ -136,7 +139,7 @@ $prod:yelec(sub_elec)$ffe(sub_elec) s:esub_elec("IT",sub_elec)   kle(s):esub_ele
         i:py(i)$(not e(i))               q:(intelec0(i,sub_elec)*emkup(sub_elec))
         i:py(elec)                       q:(intelec0(elec,sub_elec)*aeei("elec")*emkup(sub_elec))
         i:pl_elec(sub_elec)              q:(lelec0(sub_elec)*emkup(sub_elec))                         kl:
-        i:pk                             q:(kelec0(sub_elec)*emkup(sub_elec))                         kl:
+        i:pk_elec(sub_elec)                     q:(kelec0(sub_elec)*emkup(sub_elec))                         kl:
         i:py_c(fe,"elec")                q:(intelec0(fe,sub_elec)*aeei("elec")*emkup(sub_elec))       kle:              
 *        I:Pers$switch_nfs                     Q:((nfs/(1-nfs))*outputelec0(sub_elec))
 
@@ -149,7 +152,7 @@ $prod:yelec(sub_elec)$hnb(sub_elec)  s:esub_elec("NR",sub_elec) a:esub_elec("IT"
         i:py(i)$(not elec(i))                   q:(intelec0(i,sub_elec)*emkup(sub_elec))                                              a:
         i:py(elec)                              q:(intelec0(elec,sub_elec)*emkup(sub_elec))                                              a:
         i:pl_elec(sub_elec)                     q:(lelec0(sub_elec)*emkup(sub_elec))                      va:
-        i:pk                                    q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
+        i:pk_elec(sub_elec)                     q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
         i:pffelec(sub_elec)$ffelec0(sub_elec)   q:(ffelec0(sub_elec)*emkup(sub_elec))      P:1
 
 
@@ -160,7 +163,7 @@ $prod:yelec(sub_elec)$wse(sub_elec) s:esub_elec("NR",sub_elec) b:esub_elec("IT",
         i:py(i)$(not elec(i))    q:(intelec0(i,sub_elec)*emkup(sub_elec))                                              b:
         i:py(elec)               q:(intelec0(elec,sub_elec)*emkup(sub_elec))   b:
         i:pl_elec(sub_elec)      q:(lelec0(sub_elec)*emkup(sub_elec))                     va:
-        i:pk                     q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
+        i:pk_elec(sub_elec)      q:(kelec0(sub_elec)*emkup(sub_elec))                                                  va:
         i:pffelec(sub_elec)$ffelec0(sub_elec)                q:(ffelec0(sub_elec)*emkup(sub_elec))      P:1
 
 *// IST sector
@@ -244,16 +247,17 @@ $prod:invest     s:esub_inv
          i:py(i)           q:inv0(i)
 
 *//        electricity capital investment
-$prod:inv_elec(gen)$NewCap0(gen)   s:0
-         o:pinv            q:(sum(i,elecinv0(i,gen)))
-         i:py(i)           q:elecinv0(i,gen)         
-
+$prod:inv_elec(sub_elec)$NewCap0(sub_elec)   s:0
+         o:pinv_elec(sub_elec)    q:(sum(i,elecinv0(i,sub_elec)))
+         i:py(i)             q:elecinv0(i,sub_elec)         
 
 *//        welfare          Ke Wang=1, EPPA=0
 $prod:welf    s:esub_wf
          o:pu                 q:(sum(i,cons0(i)+inv0(i))+sum(f,consf0(f)+invf0(f))+sum((i,gen),elecinv0(i,gen)))
          i:pcons              q:(sum(i,cons0(i))+sum(f,consf0(f)))
-         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f))+sum((i,gen),elecinv0(i,gen)))
+*         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f))+sum((i,gen),elecinv0(i,gen)))
+         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f)))
+         i:pinv_elec(sub_elec)$NewCap0(sub_elec)       q:(sum(i,elecinv0(i,sub_elec)))
 
 *// vintage production
 $prod:yv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i)) s:0 coal:0 roil:0 gas:0
@@ -352,6 +356,7 @@ e:pkv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i))          q:tvk(i)
 e:pkv_elec(sub_elec)$(switch_vk and v_i("elec"))                        q:tvk_elec(sub_elec)                      r:gprod
 e:pkv_ist(sub_ist)$(switch_vk and v_i("ist"))                           q:tvk_ist(sub_ist)                        r:gprod
 
+e:pk_elec(sub_elec)$gen(sub_elec)                     q:1       r:inv2cap(sub_elec)$gen(sub_elec)
 
 e:pls(lm)                q:(tlabor_s0(lm))                                                 r:gprod
 e:pls(lm)$Switch_um              q:(-tlabor_s0(lm))                  r:gprod2(lm)
@@ -388,6 +393,11 @@ $constraint:sffelec(sub_elec)$(wsb(sub_elec) and re_s eq 0)
      yelec(sub_elec) =e=ret0(sub_elec);
 *     sffelec(sub_elec) =e= 1;
 
+*renewable investment
+$constraint:inv2cap(sub_elec)$gen(sub_elec)
+        Inv2Cap(sub_elec)  =e=    kelec0(sub_elec) 
+                                + (inv_elec(sub_elec)-1)*NewCap0(sub_elec)*ConEff("GW2TWH",sub_elec)*kelec0(sub_elec)/outputelec0(sub_elec);
+
 * wage curve for skilled labor
 $constraint:ur(lm)$(Switch_um  and hl(lm))
       (pls(lm)/pu)/(awage_e(lm)/pu) =E=(ur(lm)/ur0(lm))**(-0.1);
@@ -408,9 +418,11 @@ $constraint:t_re(sub_elec)$(tax_s(sub_elec) eq 1)
 $constraint:ecf$Switch_fee
 sum(sub_elec,yelec(sub_elec)*outputelec0(sub_elec)*costelec0(sub_elec)*pelec(sub_elec)*(taxelec0(sub_elec)-t_re(sub_elec)-subelec_b(sub_elec)))=e= y("elec")*output0("elec") *py("elec")*ecf;
 
-
 $constraint:rgdp
-  pu*rgdp =e= pcons*(sum(i,cons0(i))+sum(f,consf0(f)))*consum+pinv*(sum(i,inv0(i)))*invest+sum(i,py(i)*((nx0(i)+xinv0(i)+xcons0(i))*xscale))   ;
+  pu*rgdp =e= pcons*sum(i,cons0(i))*consum
+              +pinv*(sum(i,inv0(i)))*invest
+              +sum(sub_elec,(pinv_elec(sub_elec)*sum(i,elecinv0(i,sub_elec)))*inv_elec(sub_elec))
+              +sum(i,py(i)*((nx0(i)+xinv0(i)+xcons0(i))*xscale));
 
 
 $constraint:gprod$(simu_s eq 0)
@@ -488,6 +500,7 @@ v:qffin(j)$x(j)        i:pffact(j)   prod:y(j)        !fixed factor inputs
 v:qffelec(sub_elec)$cfe(sub_elec)    i:pffelec(sub_elec)     prod:yelec(sub_elec)      !fixed factor inputs
 
 V:qelec(sub_elec)        o:pelec(sub_elec)       prod:yelec(sub_elec)
+V:Invelec(sub_elec)      o:pinv_elec(sub_elec)     prod:inv_elec(sub_elec) 
 
 v:qkvin(j)              i:pkv(j)          prod:yv(j)        !vintage capital inputs
 
@@ -588,6 +601,10 @@ clim_m(cm) = 0;
 *aeei(i)=0.5;
 
 tx0(i)=tx0(i);
+
+
+*inv_elec.fx("wind")=(1*ConEff("TWH2GW","wind")*InvCost("wind")+sum(i,elecinv0(i,"wind")))/sum(i,elecinv0(i,"wind"));
+*yelec.fx("wind")=(outputelec0("wind")+1)/outputelec0("wind");
 
 CHEER.iterlim =100000;
 
