@@ -1,5 +1,5 @@
 
---- Job run.gms Start 01/15/18 16:12:50 24.4.6 r52609 WEX-WEI x86 64bit/MS Windows
+--- Job run.gms Start 01/15/18 17:43:45 24.4.6 r52609 WEX-WEI x86 64bit/MS Windows
 GAMS 24.4.6   Copyright (C) 1987-2015 GAMS Development. All rights reserved
 Licensee: Yaqian Mu                                      G150107:0436AO-WIN
           Tsinghua University, Res. Centre for International EnvironmDC6727
@@ -26,7 +26,7 @@ Licensee: Yaqian Mu                                      G150107:0436AO-WIN
 --- run.gms(112) 3 Mb
 --- .code/electricity.gms(21) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\electricity_TR_oilgas.gdx
---- .code/electricity.gms(249) 3 Mb
+--- .code/electricity.gms(263) 3 Mb
 --- run.gms(113) 3 Mb
 --- .code/ist.gms(18) 3 Mb
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\IST_TR_Output.gdx
@@ -42,25 +42,25 @@ Licensee: Yaqian Mu                                      G150107:0436AO-WIN
 --- GDXin=D:\Personal\Desktop\CHEER-model-clear\CHEER-final\data\trend_TR_output.gdx
 --- .dynamic/trend.gms(161) 3 Mb
 --- run.gms(120) 3 Mb
---- .model/core_Developing.gms(524) 3 Mb
+--- .model/core_Developing.gms(528) 3 Mb
 --- Running the MPSGE preprocessor ...
 --- ..mpsgeset(19) 3 Mb
 --- call gmsge_nx "D:\Personal\Desktop\CHEER-model-clear\CHEER-final\225a\gamscge.dat"
 --- ..mpsgeset(20) 3 Mb
---- ...gamsgeh.dat(1165) 3 Mb
+--- ...gamsgeh.dat(1170) 3 Mb
 --- ..mpsgeset(22) 3 Mb
---- .model/core_Developing.gms(611) 3 Mb
+--- .model/core_Developing.gms(615) 3 Mb
 --- ..CHEER.gen(1659) 3 Mb
---- .model/core_Developing.gms(636) 3 Mb
+--- .model/core_Developing.gms(640) 3 Mb
 --- run.gms(143) 3 Mb
---- Starting execution: elapsed 0:00:00.202
---- run.gms(5032) 4 Mb
+--- Starting execution: elapsed 0:00:00.205
+--- run.gms(5055) 4 Mb
 --- Generating MCP model CHEER
---- run.gms(5036) 7 Mb
----   36 rows  1,443 columns  1,580 non-zeroes
----   221 nl-code  78 nl-non-zeroes
---- run.gms(5036) 4 Mb
---- Executing MPSGE: elapsed 0:00:00.236
+--- run.gms(5059) 7 Mb
+---   36 rows  1,443 columns  1,571 non-zeroes
+---   212 nl-code  69 nl-non-zeroes
+--- run.gms(5059) 4 Mb
+--- Executing MPSGE: elapsed 0:00:00.237
 
 MPSGE: Extracting Jacobian nonzero structure.
 
@@ -73,7 +73,7 @@ Calculating Jacobian...
 
 PATH             24.4.6 r52609 Released Jun 26, 2015 WEI x86 64bit/MS Windows 
 
-389 row/cols, 5978 non-zeros, 3.95% dense.
+389 row/cols, 5969 non-zeros, 3.94% dense.
 
 Path 4.7.02 (Fri Jun 26 15:39:32 2015)
 Written by Todd Munson, Steven Dirkse, and Michael Ferris
@@ -88,7 +88,7 @@ Maximum of Grad F . . . . . . .  6.5318e+005 eqn: (PLS.LabUn)
                                             var: (GPROD2.LabUn)
 
 INITIAL JACOBIAN NORM STATISTICS
-Maximum Row Norm. . . . . . . .  1.5280e+006 eqn: (RA)
+Maximum Row Norm. . . . . . . .  1.5279e+006 eqn: (RA)
 Minimum Row Norm. . . . . . . .  5.7000e-003 eqn: (INV_ELEC.Oil_Power)
 Maximum Column Norm . . . . . .  1.3715e+006 var: (L_S.LabUn)
 Minimum Column Norm . . . . . .  8.5500e-003 var: (PINV_ELEC.Oil_Power)
@@ -96,33 +96,33 @@ Minimum Column Norm . . . . . .  8.5500e-003 var: (PINV_ELEC.Oil_Power)
 Major Iteration Log
 major minor  func  grad  residual    step  type prox    inorm  (label)
     0     0     1     1 2.4431e+005           I 0.0e+000 2.0e+005 (L_S.LabUn)
-    1    16     3     2 6.0859e+004  8.0e-001 SB 0.0e+000 4.7e+004 (L_S.LabUn)
-    2     5     4     3 8.5467e+005  1.0e+000 SO 0.0e+000 8.5e+005 (PLO.LabUn.Agri)
+    1    16     3     2 6.0853e+004  8.0e-001 SB 0.0e+000 4.7e+004 (L_S.LabUn)
+    2     5     4     3 8.5469e+005  1.0e+000 SO 0.0e+000 8.5e+005 (PLO.LabUn.Agri)
     3     9     6     4 1.6023e+005  8.0e-001 SB 0.0e+000 1.3e+005 (PLO.LabUn.Agri)
-    4     5     7     5 4.2477e+004  1.0e+000 SO 0.0e+000 3.9e+004 (PLO.LabSk.Metal)
-    5     4     8     6 5.6275e+004  1.0e+000 SO 0.0e+000 5.4e+004 (PLO.LabSk.Metal)
-    6     1     9     7 3.3289e+004  1.0e+000 SO 0.0e+000 3.2e+004 (PLO.LabSk.Metal)
-    7     1    10     8 1.8028e+004  1.0e+000 SO 0.0e+000 1.7e+004 (PLO.LabSk.Metal)
-    8     1    11     9 9.7529e+003  1.0e+000 SO 0.0e+000 9.4e+003 (PLO.LabSk.Metal)
-    9     1    12    10 5.1249e+003  1.0e+000 SO 0.0e+000 4.9e+003 (PLO.LabSk.Metal)
-   10     1    13    11 2.4045e+003  1.0e+000 SO 0.0e+000 2.3e+003 (PLO.LabSk.Metal)
-   11     1    14    12 7.6133e+002  1.0e+000 SO 0.0e+000 7.2e+002 (PLO.LabSk.Metal)
-   12     1    15    13 8.9152e+001  1.0e+000 SO 0.0e+000 7.5e+001 (PLO.LabSk.Metal)
-   13     1    16    14 1.0218e+000  1.0e+000 SO 0.0e+000 7.1e-001 (PLO.LabSk.Metal)
-   14     1    17    15 1.3299e-004  1.0e+000 SO 0.0e+000 8.3e-005 (PLO.LabSk.PapMf)
-   15     1    18    16 9.1189e-009  1.0e+000 SO 0.0e+000 9.1e-009 (PLO.LabUn.Agri)
+    4     5     7     5 4.2479e+004  1.0e+000 SO 0.0e+000 3.9e+004 (PLO.LabSk.Metal)
+    5     4     8     6 5.6277e+004  1.0e+000 SO 0.0e+000 5.4e+004 (PLO.LabSk.Metal)
+    6     1     9     7 3.3290e+004  1.0e+000 SO 0.0e+000 3.2e+004 (PLO.LabSk.Metal)
+    7     1    10     8 1.8029e+004  1.0e+000 SO 0.0e+000 1.7e+004 (PLO.LabSk.Metal)
+    8     1    11     9 9.7532e+003  1.0e+000 SO 0.0e+000 9.4e+003 (PLO.LabSk.Metal)
+    9     1    12    10 5.1251e+003  1.0e+000 SO 0.0e+000 4.9e+003 (PLO.LabSk.Metal)
+   10     1    13    11 2.4046e+003  1.0e+000 SO 0.0e+000 2.3e+003 (PLO.LabSk.Metal)
+   11     1    14    12 7.6139e+002  1.0e+000 SO 0.0e+000 7.2e+002 (PLO.LabSk.Metal)
+   12     1    15    13 8.9166e+001  1.0e+000 SO 0.0e+000 7.5e+001 (PLO.LabSk.Metal)
+   13     1    16    14 1.0221e+000  1.0e+000 SO 0.0e+000 7.1e-001 (PLO.LabSk.Metal)
+   14     1    17    15 1.3306e-004  1.0e+000 SO 0.0e+000 8.3e-005 (PLO.LabSk.PapMf)
+   15     1    18    16 1.3299e-009  1.0e+000 SO 0.0e+000 9.9e-010 (PLO.LabUn.Agri)
 
 FINAL STATISTICS
-Inf-Norm of Complementarity . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
-Inf-Norm of Normal Map. . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
-Inf-Norm of Minimum Map . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
-Inf-Norm of Fischer Function. .  9.0804e-009 eqn: (PLO.LabUn.Agri)
-Inf-Norm of Grad Fischer Fcn. .  1.4655e-001 eqn: (PLO.LabUn.Agri)
-Two-Norm of Grad Fischer Fcn. .  1.4829e-001
+Inf-Norm of Complementarity . .  2.2555e-010 eqn: (PLO.LabUn.ElecEqp)
+Inf-Norm of Normal Map. . . . .  9.8953e-010 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Minimum Map . . . .  9.8953e-010 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Fischer Function. .  9.8953e-010 eqn: (PLO.LabUn.Agri)
+Inf-Norm of Grad Fischer Fcn. .  1.4567e-002 eqn: (PLO.LabUn.Agri)
+Two-Norm of Grad Fischer Fcn. .  1.4651e-002
 
 FINAL POINT STATISTICS
 Maximum of X. . . . . . . . . .  5.4186e+004 var: (RGDP)
-Maximum of F. . . . . . . . . .  9.0804e-009 eqn: (PLO.LabUn.Agri)
+Maximum of F. . . . . . . . . .  9.8953e-010 eqn: (PLO.LabUn.Agri)
 Maximum of Grad F . . . . . . .  1.6230e+007 eqn: (PLO.LabUn.Agri)
                                             var: (PLO.LabUn.Agri)
 
@@ -135,16 +135,16 @@ Crash Iterations. . . . 0
 Gradient Steps. . . . . 0
 Function Evaluations. . 18
 Gradient Evaluations. . 16
-Total Time. . . . . . . 0.159000
-Residual. . . . . . . . 9.118854e-009
-Postsolved residual: 9.1189e-009
+Total Time. . . . . . . 0.165000
+Residual. . . . . . . . 1.329901e-009
+Postsolved residual: 1.3299e-009
 
 --- Restarting execution
---- run.gms(5036) 2 Mb
+--- run.gms(5059) 2 Mb
 --- Reading solution for model CHEER
---- Executing after solve: elapsed 0:00:00.846
---- run.gms(5054) 3 Mb
+--- Executing after solve: elapsed 0:00:00.695
+--- run.gms(5077) 3 Mb
 --- Putfile MPS D:\Personal\Desktop\CHEER-model-clear\CHEER-final\225a\gamscge.dat
 --- GDX File D:\Personal\Desktop\CHEER-model-clear\CHEER-final\all.gdx
 *** Status: Normal completion
---- Job run.gms Stop 01/15/18 16:12:51 elapsed 0:00:00.851
+--- Job run.gms Stop 01/15/18 17:43:46 elapsed 0:00:00.699

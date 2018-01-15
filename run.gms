@@ -88,6 +88,7 @@ Switch_pc(i)=0;
 Switch_pc("cm")=1;
 
 parameter Switch_fee switch for additional renewable fees  ;
+*1=endogenous; 2=exogenous;
 Switch_fee=1;
 
 parameter switch_ist switch for disaggregated ist production;

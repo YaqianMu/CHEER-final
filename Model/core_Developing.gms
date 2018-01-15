@@ -415,8 +415,14 @@ $constraint:t_re(sub_elec)$( tax_s(sub_elec) eq 0)
 $constraint:t_re(sub_elec)$(tax_s(sub_elec) eq 1)
          t_re(sub_elec) =e=taxelec0(sub_elec) -subelec0(sub_elec);
 
-$constraint:ecf$Switch_fee
-sum(sub_elec,yelec(sub_elec)*outputelec0(sub_elec)*costelec0(sub_elec)*pelec(sub_elec)*(taxelec0(sub_elec)-t_re(sub_elec)-subelec_b(sub_elec)))=e= y("elec")*output0("elec") *py("elec")*ecf;
+*// balance ecf and FIT
+
+$constraint:ecf$(Switch_fee eq 1)
+        y("elec")*output0("elec")*py("elec")*ecf =e= 
+                sum(sub_elec,yelec(sub_elec)*outputelec0(sub_elec)*costelec0(sub_elec)*(taxelec0(sub_elec)-t_re(sub_elec)));
+
+$constraint:ecf$(Switch_fee eq 2)
+        ecf =e= ecf0;
 
 $constraint:rgdp
   pu*rgdp =e= pcons*sum(i,cons0(i))*consum
@@ -605,7 +611,7 @@ tx0(i)=tx0(i);
 
 *inv_elec.fx("wind")=(1*ConEff("TWH2GW","wind")*InvCost("wind")+sum(i,elecinv0(i,"wind")))/sum(i,elecinv0(i,"wind"));
 *yelec.fx("wind")=(outputelec0("wind")+1)/outputelec0("wind");
-
+ 
 CHEER.iterlim =100000;
 
 $include CHEER.gen

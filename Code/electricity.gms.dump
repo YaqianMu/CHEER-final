@@ -47,7 +47,7 @@ parameter
          outputelec0     Output of electricity generation
          Toutputelec0    Total Output of electricity generation
          subelec_b       Benchmark for electricity subsidy
-         ecf0            initinal electricity comsumption fee to cover the renewable subsidy;
+         ;
 
 *// block for markup factor; do not work if emkup=1;
 parameter
@@ -87,7 +87,7 @@ ff               19         27         20         20         22
 display     taxelec0,ffelec0;
 
 *----------------------------------------------*
-*// covert from value unit (Yuan) to physical unit (GWh)
+*// bleck for tax and subsidy
 *----------------------------------------------*
 parameter   q_gen(*)    data for power generation by technology in GWh from Stats
             subsidy(*)  total value of subsidy by technologies  in  10 thousand yuan
@@ -98,30 +98,39 @@ $GDXIN
 *// convert subsidy from 10 thousand yuan to billion yuan
             subelec0(sub_elec) =    subsidy(sub_elec)/100000;
 
-*// Feed in tariff data
-parameter   FIT(sub_elec)  Feed in tariff Price Yuan per kwh;
+*// Feed in tariff and electricity consumption fee data
+*// allocate ecf to aggregated electricity sector
+parameter   FIT(sub_elec)   Feed in tariff Price Yuan per kwh
+            ecf0            initinal electricity comsumption fee to cover the renewable subsidy ;
             
             FIT(sub_elec)      =    P_elec(sub_elec);
+            ecf0               =    sum(sub_elec,subelec0(sub_elec));        
+*           ecf0=0;
+
+*// split ecf from tax of sub_elec
+            taxelec0(sub_elec) =  taxelec0(sub_elec) 
+                                  -ecf0*q_gen(sub_elec)/sum(sub_elecc,q_gen(sub_elecc));
+display     subelec0, taxelec0;
 
 *// update the gross tax = net tax + subsidy
-            taxelec0(sub_elec) =    taxelec0(sub_elec)+subelec0(sub_elec)  ;
+            taxelec0(sub_elec) =   taxelec0(sub_elec)
+                                   + subelec0(sub_elec)  ;
 
 display     subelec0, taxelec0;
 
-*convert q from MWh to GWh
-            q_gen(sub_elec)    =    q_gen(sub_elec)/1000;
-
-display     q_gen;
-
-*==update outputelec0
+*//update outputelec0
             outputelec0(sub_elec)   =   emkup(sub_elec)*(lelec0(sub_elec)+kelec0(sub_elec)
                                         +ffelec0(sub_elec)+sum(i,intelec0(i,sub_elec)))
                                         +(taxelec0(sub_elec)-subelec0(sub_elec));
 
             Toutputelec0            =   sum(sub_elec,outputelec0(sub_elec));
 
+
+*//convert tax value to tax rate
             taxelec0(sub_elec)$outputelec0(sub_elec)    =   taxelec0(sub_elec)/outputelec0(sub_elec);
             subelec0(sub_elec)$outputelec0(sub_elec)    =   subelec0(sub_elec)/outputelec0(sub_elec);
+            ecf0               =    ecf0/output0("elec");
+
 
             subelec_b(sub_elec)     =   subelec0(sub_elec);
             p_ff(sub_elec)          =   emkup(sub_elec)*ffelec0(sub_elec)/((1-taxelec0(sub_elec))*outputelec0(sub_elec));
@@ -132,6 +141,14 @@ display     q_gen;
             fact('capital')         =   fact('capital')-sum(sub_elec,ffelec0(sub_elec)*emkup(sub_elec));
 
 display lelec0,kelec0,intelec0,outputelec0,taxelec0,subelec0,tx0,emission0,p_ff,Toutputelec0;
+
+*----------------------------------------------*
+*// covert from value unit (Yuan) to physical unit (GWh)
+*----------------------------------------------*
+*convert q from MWh to GWh
+            q_gen(sub_elec)    =    q_gen(sub_elec)/1000;
+
+display     q_gen;
 
 *// transfer elecoutput from value to physical in TWH
 parameter   costelec0(sub_elec) unit generation cost by technomogy in billion yuan per TWH;
@@ -153,15 +170,12 @@ parameter   emissionelec0(*,*,*,*)  electricity emission by source ;
 
 display     costelec0,outputelec0,esub,emissionelec0, esub;
 
-*== electricity comsumption tax rate = total subsidy/ total electricity consumption
-*ecf0=sum(sub_elec,subelec0(sub_elec)*outputelec0(sub_elec))/(sum(i,int0('elec',i))+cons0('elec'));
-*ecf0=sum(sub_elec,subelec0(sub_elec)*costelec0(sub_elec) *outputelec0(sub_elec))/output0('elec');
-ecf0=0;
-*taxelec0(sub_elec)=taxelec0(sub_elec)-ecf0;
-*tx0(i)$Switch_fee=(tx0(i)*output0(i)-ecf0*int0('elec',i))/output0(i);
 
-*display tx0,ecf0;
+parameter check1,check2;
+check1  =        output0("elec")*ecf0 ;
+check2  =        sum(sub_elec, outputelec0(sub_elec)*costelec0(sub_elec)*subelec0(sub_elec));
 
+*$stop
 
 *=======block for electricity investment mainly based on Dai 2016
 Table InvShr(i,*)  Investment demand share for non-fossil power generation and other sectors  % from Dai 2016
