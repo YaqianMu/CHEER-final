@@ -53,7 +53,7 @@ $if not set Labagg $set labagg _2L
 $if not set datagg $set datagg oilgas
 
 *== bridge variable for model choice
-$if not set modstr $set modstr _Developing
+$if not set modstr $set modstr _Developing - classical
 
 *== bridge variable for simulation choice
 $if not set simsce $set simsce _RE
@@ -100,6 +100,8 @@ switch_vk=0;
 parameter switch_nfs switch for non-fossil share;
 switch_nfs=0;
 
+parameter switch_inv switch for elec investment;
+switch_inv=0;
 
 *== in the data process to change the feed stock rate
 *parameter Switch_feed switch for feedstock ;

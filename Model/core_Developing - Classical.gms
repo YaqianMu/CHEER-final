@@ -40,13 +40,13 @@ l_a(i)$(not elec(i) and not ist(i))                          !Activity level for
 l_elec(sub_elec)
 l_IST(sub_IST)
 
-yco2_i(fe,i)            !energy demand include carbon emission 
+yco2_i(fe,i)$(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))            !energy demand include carbon emission 
 yco2_h(fe)              !energy demand include carbon emission 
 
 $Commodities:
 py(i)                  !domestic price inex for goods
 
-py_c(fe,i)               !domestic price inex for energy goods include carbon emission
+py_c(fe,i)$(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))               !domestic price inex for energy goods include carbon emission
 py_ch(fe)               !domestic price inex for energy goods include carbon emission
 
 pelec(sub_elec)        !domestic price inex for subelec
@@ -192,7 +192,7 @@ $prod:y(i)$(not elec(i) and not ist(i)) s:esub("TOP",i) a:esub("NR",i) b(a):esub
         i:py_c(fe,i)                        q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))       ne:
 
 *// energy demand include co2 emission
-$prod:yco2_i(fe,i) s:0
+$prod:yco2_i(fe,i)$(int0(fe,i)*aeei(i)*(1-r_feed(fe,i))) s:0
         o:py_c(fe,i)                        q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))
         i:py(fe)                            q:(int0(fe,i)*aeei(i)*(1-r_feed(fe,i)))   
         i:pco2#(fe)$clim                    q:(emission0("co2","e",fe,i)*aeei(i))      p:1e-5             
@@ -241,9 +241,6 @@ $prod:invest     s:esub_inv
          o:pinv            q:(sum(i,inv0(i)))
          i:py(i)           q:inv0(i)
 
-$prod:inv_elec   s:esub_inv
-         o:pinv            q:(sum(i,inv0(i)))
-         i:py(i)           q:inv0(i)
 
 *//        welfare          Ke Wang=1, EPPA=0
 $prod:welf    s:esub_wf
@@ -401,9 +398,13 @@ $constraint:t_re(sub_elec)$( tax_s(sub_elec) eq 0)
 $constraint:t_re(sub_elec)$(tax_s(sub_elec) eq 1)
          t_re(sub_elec) =e=taxelec0(sub_elec) -subelec0(sub_elec);
 
-$constraint:ecf$Switch_fee
-sum(sub_elec,yelec(sub_elec)*outputelec0(sub_elec)*costelec0(sub_elec)*pelec(sub_elec)*(taxelec0(sub_elec)-t_re(sub_elec)-subelec_b(sub_elec)))=e= y("elec")*output0("elec") *py("elec")*ecf;
+*// balance ecf and FIT
+$constraint:ecf$(Switch_fee eq 1)
+        y("elec")*output0("elec")*py("elec")*ecf =e= 
+                sum(sub_elec,yelec(sub_elec)*outputelec0(sub_elec)*costelec0(sub_elec)*(taxelec0(sub_elec)-t_re(sub_elec)));
 
+$constraint:ecf$(Switch_fee eq 2)
+        ecf =e= ecf0;
 
 $constraint:rgdp
   pu*rgdp =e= pcons*(sum(i,cons0(i))+sum(f,consf0(f)))*consum+pinv*(sum(i,inv0(i)))*invest+sum(i,py(i)*((nx0(i)+xinv0(i)+xcons0(i))*xscale))   ;
