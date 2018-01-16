@@ -88,15 +88,7 @@ parameter   tlprop(t,lm)    share of each labor in total supply;
             tlprop("2012",lm)     =   tlabor_s0(lm)/tqlabor_s0;
 
 *============================emission parameter with trend=========================
-parameter
-            clim          carbon emission allowance
-            clim_t        trend of carbon emission allowance
-            clim0         benchmark of carbon emission allowance
-            clim_s(i)     sectoral carbon emission allowance
-            clim_h        household carbon emission allowance
-            clim_a        selected sectors carbon emission allowance
-            clim_m(s)     selected sectors carbon emission allowance
-            clim_ms       selected sectors carbon emission allowance
+parameter   clim_t        trend of carbon emission allowance
             price_co2     exogenous carbon price
             ;
 $ontext
@@ -145,17 +137,8 @@ table       climit(*,*)     input of emission cap
 2030        0.50048701        0.437926134
 ;
 
-            slim         =    0;
-            clim         =    0;
-            clim_s(i)    =    0;
-            clim_h       =    0;
-            clim_a       =    0;
             clim_t(t)    =    climit(t,"lower");
-            clim0        =    1;
             price_co2    =    0;
 
-            clim_m(s)    =    0;
-            clim_ms      =    0;
-
-display     climit,clim_t,clim0,Temission1,Temission2;
+display     climit,clim_t,Temission1,Temission2;
 

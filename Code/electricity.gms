@@ -257,7 +257,7 @@ parameter NewCap0   new capacity of electricity in base year in GW
   elecinv0(i,ffe)       = NewCap0(ffe)*InvCost(ffe)*InvShr(i,'other')/100;
 
 *//update investment data to keep balance; split electricity investment from aggregate investment
-  inv0(i)=inv0(i)-sum(sub_elec,elecinv0(i,sub_elec));
+  inv0(i)$switch_inv = inv0(i)-sum(sub_elec,elecinv0(i,sub_elec));
 
 *//update capital data to keep balance; split capital use in electricity sector from aggregate capital 
-  fact("capital")=fact("capital")-sum(gen,kelec0(gen));
+  fact("capital")$switch_inv = fact("capital")-sum(gen,kelec0(gen));

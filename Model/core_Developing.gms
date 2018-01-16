@@ -4,15 +4,6 @@
 *1128，modify CHEER based on EPPA
 *201712, use individual production functions for labor allocation and co2 constrains
 *----------------------------------------------*
-parameter      A                      /1/         ;
-
-parameter simu_s,tax_s,re_s;
-*simu_s=1,GDP endogenous,simu_s=0,GDP exdogenous
-*tax_s=1,exdogenous renewable tax；tax_s=0，endogenous renewable tax；
-
-simu_s=1;
-tax_s(sub_elec)=1;
-re_s=1;
 
 $ONTEXT
 $Model:CHEER
@@ -25,7 +16,7 @@ yv_ist(sub_ist)$(switch_vk and v_i("ist"))
 
 consum                 !activity level for aggregate consumption
 invest                 !activity level for aggregate physical capital investment
-inv_elec(sub_elec)$NewCap0(sub_elec)            !activity level for electricity capital investment
+inv_elec(sub_elec)$(switch_inv and NewCap0(sub_elec))            !activity level for electricity capital investment
 welf                   !activity level for aggregate welfare
 
 yelec(sub_elec)                                            !Activity level for electricity production
@@ -75,7 +66,7 @@ pbf(bt_elec)$Switch_bt(bt_elec)                    !domestic price index for fix
 
 pcons                  !price index for aggregate consumption
 pinv                   !price index for aggregate physical capital investment
-pinv_elec(sub_elec)$NewCap0(sub_elec)           !price index for electricity capital investment
+pinv_elec(sub_elec)$(switch_inv and NewCap0(sub_elec))         !price index for electricity capital investment
 pu                     !price index for utility
 
 pco2$clim              !shadow value of carbon all sectors covered
@@ -247,7 +238,7 @@ $prod:invest     s:esub_inv
          i:py(i)           q:inv0(i)
 
 *//        electricity capital investment
-$prod:inv_elec(sub_elec)$NewCap0(sub_elec)   s:0
+$prod:inv_elec(sub_elec)$(switch_inv and NewCap0(sub_elec))   s:0
          o:pinv_elec(sub_elec)    q:(sum(i,elecinv0(i,sub_elec)))
          i:py(i)             q:elecinv0(i,sub_elec)         
 
@@ -255,9 +246,8 @@ $prod:inv_elec(sub_elec)$NewCap0(sub_elec)   s:0
 $prod:welf    s:esub_wf
          o:pu                 q:(sum(i,cons0(i)+inv0(i))+sum(f,consf0(f)+invf0(f))+sum((i,gen),elecinv0(i,gen)))
          i:pcons              q:(sum(i,cons0(i))+sum(f,consf0(f)))
-*         i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f))+sum((i,gen),elecinv0(i,gen)))
          i:pinv               q:(sum(i,inv0(i))+sum(f,invf0(f)))
-         i:pinv_elec(sub_elec)$NewCap0(sub_elec)       q:(sum(i,elecinv0(i,sub_elec)))
+         i:pinv_elec(sub_elec)$(switch_inv and NewCap0(sub_elec))       q:(sum(i,elecinv0(i,sub_elec)))
 
 *// vintage production
 $prod:yv(i)$(switch_vk and v_i(i) and not elec(i) and not ist(i)) s:0 coal:0 roil:0 gas:0
@@ -506,7 +496,7 @@ v:qffin(j)$x(j)        i:pffact(j)   prod:y(j)        !fixed factor inputs
 v:qffelec(sub_elec)$cfe(sub_elec)    i:pffelec(sub_elec)     prod:yelec(sub_elec)      !fixed factor inputs
 
 V:qelec(sub_elec)        o:pelec(sub_elec)       prod:yelec(sub_elec)
-V:Invelec(sub_elec)      o:pinv_elec(sub_elec)     prod:inv_elec(sub_elec) 
+V:Invelec(sub_elec)$switch_inv      o:pinv_elec(sub_elec)     prod:inv_elec(sub_elec) 
 
 v:qkvin(j)              i:pkv(j)          prod:yv(j)        !vintage capital inputs
 
@@ -555,63 +545,7 @@ ur0(lm)$(1-switch_um)=0;
 ur.l(lm)=ur0(lm);
 ur.lo(lm)=ur0(lm);
 
-*== policy shock for static model ==============================================
 
-
-*== national emission cap
-clim=1;
-clim0 = 0.9;
-
-*== sectoral emission cap
-clim_s(i)=0;
-*clim_s("construction")=0.5*Temission0('co2',"construction");
-*clim_s("transport")=1*Temission0('co2',"transport");
-*clim_s("EII")=0.5*Temission0('co2',"EII");
-*clim_s("cm")=0.7*Temission0('co2',"cm");
-
-*== switch for emission cap
-clim_h=0;
-*clim_h=0.9*Temission0('co2',"fd");
-
-
-*== multisectoral emission cap
-clim_a=0;
-*clim0 = 0.5;
-
-*== national emission cap with selected sectors
-clim_ms=0;
-*clim_m(s) = 0;
-clim_m(cm) = 0;
-*pco2_ms.fx(i)$(not cm(i) )=0;
-*clim_m("fd") = 0;
-*clim0 =0.8;
-*tclim.fx=clim0*temission2("co2");
-
-*== FIT
-*pelec.fx(sub_elec)$wsb(sub_elec)=1.1*costelec0(sub_elec);
-
-*== subsidy
-*subelec0(sub_elec)=subelec0(sub_elec);
-
-*== technilical change
-*emkup(sub_elec)$wsb(sub_elec)=emkup(sub_elec)*0.1;
-
-*yelec.fx("wind")  = 20;
-
-*tax_s("wind")=0;
-
-*ret0("wind") =1+(outputelec0("wind")+200)/outputelec0("wind");
-*clim=4;
-*Switch_fee=0;
-
-*aeei(i)=0.5;
-
-tx0(i)=tx0(i);
-
-
-*inv_elec.fx("wind")=(1*ConEff("TWH2GW","wind")*InvCost("wind")+sum(i,elecinv0(i,"wind")))/sum(i,elecinv0(i,"wind"));
-*yelec.fx("wind")=(outputelec0("wind")+1)/outputelec0("wind");
- 
 CHEER.iterlim =100000;
 
 $include CHEER.gen
@@ -625,18 +559,3 @@ CHEER.Savepoint = 1;
 
 display CHEER.modelstat, CHEER.solvestat,ur.l,clim;
 
-*check2 =   (tlabor_q0(lm)/(1-ur0(lm))*ur.l(lm))-
-*check2(lm) = (1-ur.l(lm))*tlabor_s0(lm)-    sum(j,qlin.l(lm,j))- sum(sub_elec, qlin_ele.l(lm,sub_elec));
-parameter check;
-check= sum(cfe,qelec.l(cfe)*GWh2J)/
-        (sum(cfe,qelec.l(cfe)*GWh2J)
-        +sum(fe,qdout.l(fe)*Y2J(fe)))
-                                ;
-*check = sum(sub_elec,eet(sub_elec))/
-*       (sum(sub_elec,eet(sub_elec))
-*        +sum(fe,eet(fe)))
-display check;
-
-$ontext
-
-$offtext

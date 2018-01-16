@@ -31,6 +31,33 @@ parameter nf2ff     coefficient from no-fossil to fossil
           nf2ff(fe)=Y2J(fe)*(1/(1/nfs-1))/GWh2J;
 
 *----------------------------------------------*
+*//parameter for emission shocks 
+*----------------------------------------------*
+parameter   clim          carbon emission allowance
+            clim0         benchmark of carbon emission allowance
+            clim_s(i)     sectoral carbon emission allowance
+            clim_h        household carbon emission allowance
+            clim_a        selected sectors carbon emission allowance
+            clim_m(s)     selected sectors carbon emission allowance
+            clim_ms       selected sectors carbon emission allowance
+
+            slim          so2 emission limits million ton
+            nlim          NOX emission limits million ton;
+            ;
+
+            slim         =    0;
+            nlim         =    0;
+
+            clim         =    0;
+            clim_s(i)    =    0;
+            clim_h       =    0;
+            clim_a       =    0;
+            clim0        =    1;
+
+            clim_m(s)    =    0;
+            clim_ms      =    0;
+
+*----------------------------------------------*
 *//parameter for technological change 
 *----------------------------------------------*
 parameter A   aeei;

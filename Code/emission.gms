@@ -88,12 +88,7 @@ $LOAD     urban
 $GDXIN
 
 parameter ncoef_e(*,*)        NOX emission million ton per billion yuan
-          nlim                        NOX emission limits million ton;
-parameter scoef_e(*,*)        SO2 emission million ton per billion yuan
-          slim                        so2 emission limits million ton;
-
-parameter ncoef_e(*,*)        NOX emission million ton per billion yuan
-          nlim                        NOX emission limits million ton;
+          scoef_e(*,*)        SO2 emission million ton per billion yuan;
 
 
           scoef_e('process',i)     =urban('SO2',i)/output0(i);

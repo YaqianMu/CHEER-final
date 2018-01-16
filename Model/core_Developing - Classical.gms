@@ -589,19 +589,3 @@ solve CHEER using mcp;
 CHEER.Savepoint = 1;
 
 display CHEER.modelstat, CHEER.solvestat,ur.l,clim;
-
-*check2 =   (tlabor_q0(lm)/(1-ur0(lm))*ur.l(lm))-
-*check2(lm) = (1-ur.l(lm))*tlabor_s0(lm)-    sum(j,qlin.l(lm,j))- sum(sub_elec, qlin_ele.l(lm,sub_elec));
-parameter check;
-check= sum(cfe,qelec.l(cfe)*GWh2J)/
-        (sum(cfe,qelec.l(cfe)*GWh2J)
-        +sum(fe,qdout.l(fe)*Y2J(fe)))
-                                ;
-*check = sum(sub_elec,eet(sub_elec))/
-*       (sum(sub_elec,eet(sub_elec))
-*        +sum(fe,eet(fe)))
-display check;
-
-$ontext
-
-$offtext

@@ -88,6 +88,7 @@ Switch_pc(i)=0;
 Switch_pc("cm")=1;
 
 parameter Switch_fee switch for additional renewable fees  ;
+*1=endogenous; 2=exogenous;
 Switch_fee=1;
 
 parameter switch_ist switch for disaggregated ist production;
@@ -99,6 +100,8 @@ switch_vk=0;
 parameter switch_nfs switch for non-fossil share;
 switch_nfs=0;
 
+parameter switch_inv switch for elec investment;
+switch_inv=0;
 
 *== in the data process to change the feed stock rate
 *parameter Switch_feed switch for feedstock ;
@@ -118,6 +121,7 @@ $include %DynPath%/trend
 
 *// core model
 $include %ModPath%/core%modstr%
+$include %SimPath%/Sim_Test
 
 *========static simulation========
 *$include %SimPath%/sim%simsce%
