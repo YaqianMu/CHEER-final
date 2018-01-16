@@ -29,3 +29,23 @@ parameter nf2ff     coefficient from no-fossil to fossil
 
           nfs=0.3;
           nf2ff(fe)=Y2J(fe)*(1/(1/nfs-1))/GWh2J;
+
+*----------------------------------------------*
+*//parameter for technological change 
+*----------------------------------------------*
+parameter A   aeei;
+          A   =    1;
+
+*----------------------------------------------*
+*//parameter for simulation options
+*----------------------------------------------*
+*// simu_s=1,GDP endogenous,simu_s=0,GDP exdogenous
+*// tax_s=1,exdogenous renewable tax；tax_s=0，endogenous renewable tax；
+*// re_s=1, fixed facor follow supply curve; re_s=1, fixed facor change endogenously to meet renewable target;
+parameter simu_s  options for GDP calibration
+          tax_s   options for renewable tax
+          re_s    options for renewable fixed factor;
+
+          simu_s    =    1;
+          tax_s(sub_elec)     =    1;
+          re_s      =    1;          

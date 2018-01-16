@@ -4,15 +4,6 @@
 *1128，modify CHEER based on EPPA
 *201712, use individual production functions for labor allocation and co2 constrains
 *----------------------------------------------*
-parameter      A                      /1/         ;
-
-parameter simu_s,tax_s,re_s;
-*simu_s=1,GDP endogenous,simu_s=0,GDP exdogenous
-*tax_s=1,exdogenous renewable tax；tax_s=0，endogenous renewable tax；
-
-simu_s=1;
-tax_s(sub_elec)=1;
-re_s=1;
 
 $ONTEXT
 $Model:CHEER
